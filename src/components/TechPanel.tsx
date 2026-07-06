@@ -6,48 +6,48 @@ import Reveal from "./Reveal";
 
 const items = [
   {
-    name: "Diffusion rendering",
+    name: "Frontend & Design",
     detail:
-      "A diffusion-based generative model builds each output progressively, refining a noisy starting point into a coherent frame.",
+      "React, Next.js, TypeScript, and Tailwind CSS for interfaces that are fast, accessible, and easy to maintain.",
     specs: [
-      { k: "Latency", v: "4.2s median" },
-      { k: "Resolution", v: "up to 8K" },
+      { k: "Frameworks", v: "React / Next.js" },
+      { k: "Lighthouse", v: "90+ target" },
     ],
   },
   {
-    name: "Temporal consistency",
+    name: "Backend & APIs",
     detail:
-      "For video, the engine keeps characters, style, and motion consistent across frames instead of generating each one independently.",
+      "Node.js, Python, and REST/GraphQL APIs power everything from marketing sites to enterprise ERP and CRM systems.",
     specs: [
-      { k: "Frame rate", v: "up to 60fps" },
-      { k: "Max length", v: "3 min / clip" },
-    ],
-  },
-  {
-    name: "Prompt understanding",
-    detail:
-      "Subject, style, composition, and mood are parsed before a single pixel renders, so structure is set before generation starts.",
-    specs: [
-      { k: "Languages", v: "12 supported" },
-      { k: "Context", v: "500 tokens" },
-    ],
-  },
-  {
-    name: "GPU-accelerated inference",
-    detail:
-      "Generation runs on infrastructure built for low-latency inference, scaling from a single request to batch workloads on the same path.",
-    specs: [
+      { k: "Runtimes", v: "Node / Python" },
       { k: "Uptime", v: "99.9%" },
-      { k: "Regions", v: "4 active" },
     ],
   },
   {
-    name: "Content safety filtering",
+    name: "AI & Automation",
     detail:
-      "Automated filtering runs on both prompts and outputs to reduce harmful or disallowed content before it ever reaches a user.",
+      "Custom GPT integrations, ML pipelines, and workflow automation tools that remove manual work from your business.",
     specs: [
-      { k: "Coverage", v: "prompt + output" },
-      { k: "Review", v: "continuous" },
+      { k: "Models", v: "GPT / custom ML" },
+      { k: "Pipelines", v: "No-code + code" },
+    ],
+  },
+  {
+    name: "Cloud & DevOps",
+    detail:
+      "AWS, Google Cloud, and Azure deployments with CI/CD pipelines, monitoring, and auto-scaling built in from day one.",
+    specs: [
+      { k: "Providers", v: "AWS / GCP / Azure" },
+      { k: "Deploys", v: "CI/CD automated" },
+    ],
+  },
+  {
+    name: "Security & Compliance",
+    detail:
+      "Encryption at rest and in transit, access controls, and regular audits so client data stays protected as you scale.",
+    specs: [
+      { k: "Encryption", v: "AES-256" },
+      { k: "Reviews", v: "Continuous" },
     ],
   },
 ];
@@ -57,9 +57,9 @@ export default function TechPanel() {
   const current = items[active];
 
   return (
-    <section className="hairline-b py-24">
+    <section id="software-development" className="hairline-b scroll-mt-24 py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionHeading eyebrow="Technology" title="Advanced AI, explained plainly" />
+        <SectionHeading eyebrow="Technology Stack" title="Modern technology, explained plainly" />
         <Reveal className="grid gap-px overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--line)] lg:grid-cols-[280px_1fr]">
           <div className="bg-[var(--ink)] p-2">
             {items.map((item, i) => (

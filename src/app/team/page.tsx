@@ -13,7 +13,51 @@ const team = [
   {
     name: "Ramesh Sharma",
     role: "Founder & CEO",
-    bio: "Leads product and company direction at Sutertai, based in Prayagraj, India.",
+    qualification: "B.Tech Computer Science",
+    experience: "10+ Years",
+    bio: "Leads AI strategy, business development, digital transformation, and enterprise consulting with expertise in scalable technology solutions.",
+  },
+  {
+    name: "Karan Kumar",
+    role: "Senior Software Engineer",
+    qualification: "B.Tech Information Technology",
+    experience: "8+ Years",
+    bio: "Specializes in full-stack development, enterprise software, cloud applications, APIs, and system architecture.",
+  },
+  {
+    name: "Rohit Singh",
+    role: "Digital Marketing Manager",
+    qualification: "MBA Marketing",
+    experience: "7+ Years",
+    bio: "Expert in SEO, PPC, social media campaigns, content strategy, analytics, and lead generation.",
+  },
+  {
+    name: "Aman Singh",
+    role: "UI/UX Designer",
+    qualification: "Bachelor of Design",
+    experience: "6+ Years",
+    bio: "Designs intuitive user experiences with modern interfaces, accessibility standards, and interactive prototypes.",
+  },
+  {
+    name: "Raunit Kumar",
+    role: "AI & Automation Engineer",
+    qualification: "B.Tech Artificial Intelligence",
+    experience: "5+ Years",
+    bio: "Builds AI-powered chatbots, automation workflows, machine learning integrations, and intelligent business systems.",
+  },
+  {
+    name: "Nisha Singh",
+    role: "HR & Client Success Manager",
+    qualification: "MBA Human Resources",
+    experience: "6+ Years",
+    bio: "Manages talent acquisition, client relationships, onboarding, and long-term customer success.",
+  },
+  {
+    name: "Mayank Yadav",
+    role: "Business Development Executive",
+    qualification: "MBA Business Management",
+    experience: "5+ Years",
+    bio: "Drives partnerships, identifies growth opportunities, manages enterprise sales, and develops strategic business relationships.",
   },
 ];
 
@@ -27,12 +71,12 @@ export default function TeamPage() {
             The people building <span className="text-generated">Sutertai</span>
           </>
         }
-        description="A small, focused team working on generative AI for image and video creation."
+        description="A focused team of engineers, marketers, designers, and strategists working across AI, software, and digital marketing."
       />
 
       <section className="py-24">
         <div className="mx-auto max-w-6xl px-6">
-          <SectionHeading eyebrow="Leadership" title="Meet the team" />
+          <SectionHeading eyebrow="Leadership & Team" title="Meet the team" />
           <div className="hairline-t grid gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
             {team.map((member, i) => (
               <Reveal key={member.name} delay={i * 60} className="hairline-b py-8">
@@ -40,7 +84,7 @@ export default function TeamPage() {
                   className="font-display flex h-16 w-16 items-center justify-center rounded-full text-xl text-pure"
                   style={{
                     backgroundImage:
-                      "linear-gradient(150deg, rgba(91,95,255,0.9), rgba(27,36,38,0.9))",
+                      "linear-gradient(150deg, rgba(91,33,255,0.9), rgba(27,36,38,0.9))",
                   }}
                   aria-hidden="true"
                 >
@@ -51,14 +95,12 @@ export default function TeamPage() {
                 </div>
                 <h3 className="font-display mt-4 text-lg text-paper">{member.name}</h3>
                 <p className="mono-label mt-1 text-[11px] text-accent">{member.role}</p>
+                <p className="mono-label mt-2 text-[10px] text-muted-2">
+                  {member.qualification} · {member.experience}
+                </p>
                 <p className="mt-3 text-sm text-muted">{member.bio}</p>
               </Reveal>
             ))}
-            <Reveal delay={team.length * 60} className="hairline-b flex flex-col justify-center py-8">
-              <p className="text-sm text-muted">
-                We&apos;re growing. More team members will be added here soon.
-              </p>
-            </Reveal>
           </div>
         </div>
       </section>

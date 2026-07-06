@@ -5,46 +5,47 @@ import SectionHeading from "./SectionHeading";
 const tiers = [
   {
     name: "Starter",
-    price: "$0",
-    period: "forever",
-    description: "For exploring what Sutertai can generate.",
+    price: "$499",
+    period: "one-time project",
+    description: "For startups launching their first website or brand.",
     features: [
-      "50 image generations / month",
-      "Standard resolution output",
-      "Community prompt library",
-      "Personal watermark on exports",
+      "5-page marketing website",
+      "Basic on-page SEO setup",
+      "Brand starter kit (logo + palette)",
+      "1 round of revisions",
+      "2 weeks turnaround",
     ],
-    cta: "Start free",
-    href: "/generate",
+    cta: "Start a project",
+    href: "/contact",
     featured: false,
   },
   {
-    name: "Professional",
-    price: "$49",
-    period: "per month",
-    description: "For creators and small teams shipping regularly.",
+    name: "Growth",
+    price: "$1,999",
+    period: "per month retainer",
+    description: "For businesses ready to invest in marketing and product together.",
     features: [
-      "2,000 image generations / month",
-      "200 video generations / month",
-      "4K upscaling and commercial license",
-      "Brand style presets",
-      "Priority render queue",
+      "Website or app development",
+      "SEO + performance ad management",
+      "Social media & content marketing",
+      "Monthly reporting & strategy calls",
+      "Priority support",
     ],
-    cta: "Start Professional trial",
-    href: "/generate",
+    cta: "Start Growth plan",
+    href: "/contact",
     featured: true,
   },
   {
     name: "Enterprise",
     price: "Custom",
     period: "annual contract",
-    description: "For studios and companies running production at scale.",
+    description: "For companies running software, marketing, and automation at scale.",
     features: [
-      "Unlimited generation volume",
-      "Dedicated rendering capacity",
-      "API access and SSO",
-      "Enterprise dashboard and audit logs",
-      "Dedicated success engineer",
+      "Dedicated project & account team",
+      "Custom software, CRM, or ERP builds",
+      "AI automation & chatbot deployment",
+      "SLA-backed support and security review",
+      "Quarterly business reviews",
     ],
     cta: "Talk to sales",
     href: "/contact",
@@ -58,8 +59,8 @@ export default function Pricing() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="Pricing"
-          title="Plans that scale with your output"
-          description="Start free. Upgrade when your team needs more volume, resolution, or control."
+          title="Plans that scale with your business"
+          description="Project-based pricing to launch, or a monthly retainer for ongoing marketing, development, and automation."
           align="center"
         />
         <div className="grid gap-6 lg:grid-cols-3">

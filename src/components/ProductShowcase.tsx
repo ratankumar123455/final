@@ -4,36 +4,36 @@ import { useState } from "react";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 
-const products = [
+const services = [
   {
-    tag: "Image",
-    title: "Text to Image AI",
-    description: "Photorealistic images, illustration, and product visuals from a single prompt.",
-    features: ["Photorealistic output", "Multiple art styles", "Commercial license", "Batch generation"],
+    tag: "Marketing",
+    title: "AI Digital Marketing",
+    description: "SEO, paid ads, content, and AI automation that turn visibility into revenue.",
+    features: ["SEO & performance ads", "AI marketing automation", "Content & email marketing", "Conversion optimization"],
   },
   {
-    tag: "Video",
-    title: "Text to Video AI",
-    description: "Cinematic video generated directly from text, with consistent motion and style.",
-    features: ["Motion synthesis", "Camera control", "Voice sync", "4K export"],
+    tag: "Development",
+    title: "Website & Software Development",
+    description: "Corporate sites, ecommerce, ERP, CRM, and SaaS platforms built to scale.",
+    features: ["Custom websites & ecommerce", "ERP, CRM & SaaS platforms", "API integration", "Cloud hosting & DevOps"],
   },
   {
-    tag: "Edit",
-    title: "AI Image & Video Editing",
-    description: "Inpainting, outpainting, and background removal — for stills and for motion.",
-    features: ["Inpainting & outpainting", "Background removal", "Style transfer", "Frame-accurate edits"],
+    tag: "AI",
+    title: "AI Solutions & Automation",
+    description: "Chatbots, AI agents, and workflow automation that cut manual work to zero.",
+    features: ["Chatbots & AI agents", "Workflow automation", "Custom GPT integrations", "Data analytics & ML"],
   },
   {
-    tag: "Workspace",
-    title: "Prompt Studio",
-    description: "A workspace for prompts, brand presets, and generated assets.",
-    features: ["Prompt library", "Brand templates", "Asset management", "Team workspaces"],
+    tag: "Mobile",
+    title: "Mobile App Development",
+    description: "Native and cross-platform apps designed for retention, not just launch.",
+    features: ["iOS & Android native", "Cross-platform builds", "App Store optimization", "Post-launch support"],
   },
   {
-    tag: "Build",
-    title: "AI API Platform",
-    description: "Every capability in the product, available as a documented REST API.",
-    features: ["REST + SDKs", "Webhooks", "Rate-limit free tiers", "Enterprise SSO"],
+    tag: "Cloud",
+    title: "Business Automation & Cloud",
+    description: "CRM, ERP, and cloud infrastructure that removes manual, repetitive work.",
+    features: ["CRM & ERP implementation", "Workflow automation", "Cloud migration & scaling", "Security & monitoring"],
   },
 ];
 
@@ -41,18 +41,18 @@ export default function ProductShowcase() {
   const [open, setOpen] = useState(0);
 
   return (
-    <section id="products" className="hairline-b py-24">
+    <section id="services-preview" className="hairline-b py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
-          eyebrow="Products"
-          title="One engine. Every way to create."
-          description="Everything Sutertai builds runs on the same core model — tuned for image, for video, and for teams running both at scale."
+          eyebrow="What we do"
+          title="One partner. Every digital capability."
+          description="Sutertai brings marketing, engineering, and AI under one roof — so your growth strategy and your technology actually work together."
         />
         <div className="grid gap-3">
-          {products.map((product, i) => {
+          {services.map((service, i) => {
             const isOpen = open === i;
             return (
-              <Reveal key={product.title} delay={i * 40}>
+              <Reveal key={service.title} delay={i * 40}>
                 <button
                   onClick={() => setOpen(isOpen ? -1 : i)}
                   aria-expanded={isOpen}
@@ -66,7 +66,7 @@ export default function ProductShowcase() {
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <h3 className="font-display text-xl text-paper sm:text-2xl">
-                        {product.title}
+                        {service.title}
                       </h3>
                     </div>
                     <span
@@ -80,9 +80,9 @@ export default function ProductShowcase() {
                   </div>
                   {isOpen && (
                     <div className="mt-6 grid gap-6 border-t border-[var(--line)] pt-6 sm:grid-cols-[1fr_1fr]">
-                      <p className="max-w-md text-sm text-muted">{product.description}</p>
+                      <p className="max-w-md text-sm text-muted">{service.description}</p>
                       <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-muted">
-                        {product.features.map((feature) => (
+                        {service.features.map((feature) => (
                           <li key={feature} className="flex items-start gap-2">
                             <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent" />
                             {feature}

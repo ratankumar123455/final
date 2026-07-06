@@ -5,69 +5,69 @@ import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "How We Work",
+  title: "Our Process",
   description:
-    "How Sutertai turns a text prompt into a finished image or video, step by step.",
+    "How Sutertai runs a project from first call to launch and ongoing growth — discovery, strategy, design, development, launch, and support.",
 };
 
 const detailedSteps = [
   {
     step: "01",
-    title: "Describe your idea",
+    title: "Discovery call",
     description:
-      "Start with a plain-language description of what you want — a scene, a product shot, a short story for a video. You don't need design or animation experience, just a clear description of the outcome.",
+      "We start with a plain conversation about your business, your goals, and what's currently getting in the way — no jargon, no assumptions about what you need.",
   },
   {
     step: "02",
-    title: "Sutertai interprets the prompt",
+    title: "Strategy & scope",
     description:
-      "Our models parse the prompt for subject, style, composition, and mood, then map it onto a generation plan — a single frame for images, or a sequence of shots for video.",
+      "We turn that conversation into a concrete scope of work — the exact pages, features, or campaigns involved, a timeline, and a fixed or retainer price.",
   },
   {
     step: "03",
-    title: "Generate and preview",
+    title: "Design & build",
     description:
-      "The engine renders your result in seconds. For images, you get a finished frame; for video, you get a short clip with consistent characters, motion, and pacing across the sequence.",
+      "Design and development run in short sprints with regular check-ins, so you're seeing progress every week, not waiting for a single big reveal at the end.",
   },
   {
     step: "04",
-    title: "Refine and export",
+    title: "Test & refine",
     description:
-      "Not quite right? Adjust the prompt and regenerate, or request variations. Once you're happy with the result, export it in a format ready for your website, app, or campaign.",
+      "Every build goes through QA, cross-device testing, and a review round with you before anything goes live — issues get caught before customers see them.",
   },
   {
     step: "05",
-    title: "Deploy or integrate",
+    title: "Launch & grow",
     description:
-      "Publish the finished asset directly, or wire generation into your own pipeline through the API — the same workflow, running unattended.",
+      "We deploy, monitor, and stay on as your partner — most engagements move into an ongoing retainer for updates, marketing, or continued feature development.",
   },
 ];
 
-const imageWorkflow = [
-  "Write a description of the subject, setting, and style you want.",
-  "Choose an aspect ratio suited to your use case — square for social, widescreen for banners, portrait for stories.",
-  "Generate multiple variations at once and pick the strongest result.",
-  "Download in a ready-to-use image format.",
+const websiteWorkflow = [
+  "Kickoff call to confirm sitemap, features, and brand direction.",
+  "Wireframes and UI design reviewed and approved before development starts.",
+  "Development in weekly sprints, with a staging link you can check anytime.",
+  "QA, performance tuning, and launch, followed by a 30-day support window.",
 ];
 
-const videoWorkflow = [
-  "Provide a script, storyline, or a single descriptive sentence.",
-  "Sutertai breaks the idea into a sequence of shots, keeping characters and style consistent across frames.",
-  "Preview the generated clip and adjust pacing or style through the prompt.",
-  "Export the finished clip for reels, ads, or product demos.",
+const marketingWorkflow = [
+  "Audit of your current SEO, ads, and content performance.",
+  "A 90-day strategy covering channels, budget, and target metrics.",
+  "Campaign build and launch, with weekly optimization in the first month.",
+  "Monthly reporting in plain language, tied to leads and revenue.",
 ];
 
 export default function HowWeWorkPage() {
   return (
     <div>
       <PageHero
-        eyebrow="How we work"
+        eyebrow="Our process"
         title={
           <>
-            How <span className="text-generated">Sutertai</span> works
+            How a project with <span className="text-generated">Sutertai</span> works
           </>
         }
-        description="From a written idea to a finished image or video, here's what happens behind the scenes when you use Sutertai."
+        description="From the first call to a live product and an ongoing growth plan — here's exactly what happens at each stage."
       />
 
       <section className="hairline-b py-24">
@@ -92,9 +92,9 @@ export default function HowWeWorkPage() {
       <section className="hairline-b py-24">
         <div className="mx-auto grid max-w-6xl gap-6 px-6 sm:grid-cols-2">
           <Reveal className="card-lift rounded-2xl border border-[var(--line)] p-8">
-            <h3 className="font-display text-2xl text-paper">Image workflow</h3>
+            <h3 className="font-display text-2xl text-paper">Website & software workflow</h3>
             <ol className="mt-6 space-y-4">
-              {imageWorkflow.map((item, i) => (
+              {websiteWorkflow.map((item, i) => (
                 <li key={item} className="flex gap-3 text-sm text-muted">
                   <span className="font-display text-accent">{i + 1}.</span>
                   {item}
@@ -103,9 +103,9 @@ export default function HowWeWorkPage() {
             </ol>
           </Reveal>
           <Reveal delay={80} className="card-lift rounded-2xl border border-[var(--line)] p-8">
-            <h3 className="font-display text-2xl text-paper">Video workflow</h3>
+            <h3 className="font-display text-2xl text-paper">Marketing workflow</h3>
             <ol className="mt-6 space-y-4">
-              {videoWorkflow.map((item, i) => (
+              {marketingWorkflow.map((item, i) => (
                 <li key={item} className="flex gap-3 text-sm text-muted">
                   <span className="font-display text-accent">{i + 1}.</span>
                   {item}
@@ -119,17 +119,17 @@ export default function HowWeWorkPage() {
       <section className="hairline-b py-24">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <SectionHeading
-            eyebrow="Quality and control"
-            title="You stay in control of the result"
-            description="Every generation is a starting point you can refine. Sutertai is built so you can iterate quickly — regenerate, adjust the prompt, or try a different style — until the output matches what you had in mind."
+            eyebrow="Communication"
+            title="You always know where your project stands"
+            description="Weekly updates, a shared project channel, and a single point of contact — no chasing people for status, and no surprises at delivery."
             align="center"
           />
         </div>
       </section>
 
       <CtaBanner
-        title="See it for yourself"
-        description="Try the live text-to-image generator, or get in touch to discuss text-to-video for your team."
+        title="Ready to start the discovery call?"
+        description="Tell us about your business and we'll scope a plan within a few days."
       />
     </div>
   );

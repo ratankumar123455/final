@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CursorGlow from "@/components/CursorGlow";
 import ScrollProgress from "@/components/ScrollProgress";
+import FloatingActions from "@/components/FloatingActions";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -27,28 +28,30 @@ const siteUrl = "https://www.sutertai.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Sutertai — Build Intelligence. Create Anything.",
+    default: "Sutertai — Transform Your Business With AI-Powered Digital Solutions",
     template: "%s | Sutertai",
   },
   description:
-    "Sutertai builds generative AI systems for image and video creation. Photorealistic text-to-image, cinematic text-to-video, and a single studio to run production at scale.",
+    "Sutertai Private Limited is an AI-powered digital marketing and technology agency — websites, software, AI products, SEO, branding, mobile apps, and business automation for startups and enterprises.",
   keywords: [
     "Sutertai",
-    "generative AI",
-    "text to image AI",
-    "text to video AI",
-    "AI image generator",
-    "AI video generator",
-    "AI studio",
-    "AI for marketing teams",
-    "enterprise generative AI",
+    "AI digital marketing agency",
+    "website development",
+    "software development company",
+    "AI product development",
+    "SEO agency India",
+    "social media marketing",
+    "business automation",
+    "CRM development",
+    "cloud solutions",
+    "branding agency Prayagraj",
   ],
   authors: [{ name: "Sutertai Private Limited" }],
   creator: "Sutertai Private Limited",
   openGraph: {
-    title: "Sutertai — Build Intelligence. Create Anything.",
+    title: "Sutertai — Transform Your Business With AI-Powered Digital Solutions",
     description:
-      "Photorealistic text-to-image, cinematic text-to-video, and one studio to run creative production at scale.",
+      "Websites, software, AI products, marketing, and automation — everything a growing business needs under one roof.",
     url: siteUrl,
     siteName: "Sutertai",
     type: "website",
@@ -56,9 +59,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sutertai — Build Intelligence. Create Anything.",
+    title: "Sutertai — Transform Your Business With AI-Powered Digital Solutions",
     description:
-      "Photorealistic text-to-image, cinematic text-to-video, and one studio to run creative production at scale.",
+      "Websites, software, AI products, marketing, and automation — everything a growing business needs under one roof.",
   },
   robots: {
     index: true,
@@ -71,7 +74,7 @@ export const metadata: Metadata = {
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "ProfessionalService",
   name: "Sutertai Private Limited",
   url: siteUrl,
   logo: `${siteUrl}/favicon.ico`,
@@ -92,20 +95,19 @@ const organizationJsonLd = {
     "@type": "ContactPoint",
     telephone: "+91-7459887412",
     contactType: "sales",
+    email: "hello@sutertai.com",
   },
-};
-
-const softwareJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: "Sutertai AI Studio",
-  applicationCategory: "MultimediaApplication",
-  operatingSystem: "Web",
-  offers: {
-    "@type": "Offer",
-    price: "49",
-    priceCurrency: "USD",
-  },
+  areaServed: "Worldwide",
+  makesOffer: [
+    "AI Powered Digital Marketing",
+    "Website Development",
+    "Software Development",
+    "AI Product Development",
+    "Mobile App Development",
+    "UI/UX Design",
+    "Business Automation & CRM",
+    "Cloud Solutions",
+  ].map((name) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name } })),
 };
 
 export default function RootLayout({
@@ -123,10 +125,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
-        />
         <div className="noise-layer" aria-hidden="true" />
         <CursorGlow />
         <ScrollProgress />
@@ -135,6 +133,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </div>
+        <FloatingActions />
       </body>
     </html>
   );

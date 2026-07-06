@@ -8,16 +8,18 @@
   --pure: #ffffff;
   --muted: #94a3b8;
   --muted-2: rgba(148, 163, 184, 0.6);
-  --signal: #5b5fff;
+  --signal: #5b21ff;
   --signal-bright: #8b5cf6;
-  --scope: #00e5ff;
+  --scope: #00d9ff;
   --scope-bright: #7cf1ff;
-  --accent: var(--signal);
-  --line: rgba(148, 163, 184, 0.16);
-  --line-strong: rgba(148, 163, 184, 0.3);
+  --green: #14f195;
+  --accent: var(--green);
+  --line: rgba(255, 255, 255, 0.12);
+  --line-strong: rgba(255, 255, 255, 0.24);
   --surface-soft: rgba(17, 24, 39, 0.7);
-  --gradient-brand: linear-gradient(100deg, #5b5fff 0%, #8b5cf6 100%);
-  --gradient-brand-bright: linear-gradient(100deg, #8b5cf6 0%, #00e5ff 100%);
+  --glass: rgba(255, 255, 255, 0.08);
+  --gradient-brand: linear-gradient(100deg, #5b21ff 0%, #8b5cf6 100%);
+  --gradient-brand-bright: linear-gradient(100deg, #5b21ff 0%, #00d9ff 100%);
 }
 
 @theme inline {
@@ -31,6 +33,7 @@
   --color-accent: var(--accent);
   --color-signal: var(--signal);
   --color-scope: var(--scope);
+  --color-green: var(--green);
   --color-indigo: var(--signal);
   --color-violet: var(--signal-bright);
   --color-background: var(--ink);
@@ -174,10 +177,10 @@ body {
 .glass-panel {
   background: linear-gradient(
     160deg,
-    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.1),
     rgba(13, 19, 35, 0.94)
   );
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid var(--line-strong);
   backdrop-filter: blur(20px);
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.06) inset,
     0 30px 60px -20px rgba(0, 0, 0, 0.7);
@@ -376,6 +379,44 @@ body {
   box-shadow: 0 0 6px 1px rgba(0, 229, 255, 0.6);
 }
 
+/* ---------------------------------------------------- */
+/* Neobrutalism: bold borders, offset shadow, hard edges */
+/* Used on the Solutions page only, deliberately distinct */
+/* from the glassmorphism system used everywhere else.    */
+/* ---------------------------------------------------- */
+
+.neo-card {
+  background: var(--surface);
+  border: 2px solid var(--paper);
+  border-radius: 20px;
+  box-shadow: 6px 6px 0 0 var(--green);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neo-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 0 var(--green);
+}
+
+.neo-card-alt {
+  box-shadow: 6px 6px 0 0 var(--scope);
+}
+
+.neo-card-alt:hover {
+  box-shadow: 9px 9px 0 0 var(--scope);
+}
+
+.neo-chip {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid var(--paper);
+  border-radius: 999px;
+  background: var(--signal);
+  color: var(--pure);
+  font-weight: 700;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -384,6 +425,7 @@ body {
   .marquee-track,
   .magnetic,
   .card-lift,
+  .neo-card,
   .btn-primary,
   .btn-secondary,
   .float-slow,

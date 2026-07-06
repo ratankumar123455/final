@@ -4,31 +4,31 @@ import SectionHeading from "./SectionHeading";
 const testimonials = [
   {
     quote:
-      "We stopped briefing stock photo libraries and started briefing Sutertai. The output is closer to what the client actually asked for, on the first pass.",
+      "Sutertai rebuilt our website and our SEO strategy at the same time — for the first time, our marketing and our technology were actually pulling in the same direction.",
     name: "Aditi Rao",
-    role: "Creative Director, Fieldnote Agency",
-    tone: "linear-gradient(150deg, rgba(91,95,255,0.9), rgba(27,36,38,0.9))",
+    role: "Marketing Director, a retail chain client",
+    tone: "linear-gradient(150deg, rgba(91,33,255,0.9), rgba(27,36,38,0.9))",
   },
   {
     quote:
-      "The API meant our engineers could wire generation straight into our listing pipeline. It wasn't a separate tool bolted onto our workflow — it was infrastructure.",
+      "The CRM and automation build paid for itself in the first quarter. Our sales team spends its time closing deals now, not entering data.",
     name: "Karan Mehta",
-    role: "Founder, Meridian Goods",
-    tone: "linear-gradient(150deg, rgba(0,229,255,0.85), rgba(27,36,38,0.9))",
+    role: "Founder, a real estate client",
+    tone: "linear-gradient(150deg, rgba(0,217,255,0.85), rgba(27,36,38,0.9))",
   },
   {
     quote:
-      "Client-ready renders in days instead of weeks changed how many concepts we can afford to explore before committing to one.",
+      "They shipped our MVP in three weeks flat and stayed on afterward as our technology partner. That long-term relationship is rare to find.",
     name: "Priya Nair",
-    role: "Marketing Head, Blueprint House",
-    tone: "linear-gradient(150deg, rgba(139,92,246,0.85), rgba(27,36,38,0.9))",
+    role: "Founder, a SaaS startup client",
+    tone: "linear-gradient(150deg, rgba(20,241,149,0.85), rgba(27,36,38,0.9))",
   },
   {
     quote:
-      "Consistency across a few thousand generations is the hard part. Style locking is the one feature I'd fight to keep.",
+      "The AI chatbot they built handles most of our intake now. Response times dropped from hours to seconds, and our staff finally has room to breathe.",
     name: "Devansh Iyer",
-    role: "Product Manager, Novara Studio",
-    tone: "linear-gradient(150deg, rgba(91,95,255,0.6), rgba(0,229,255,0.5))",
+    role: "Operations Lead, a healthcare client",
+    tone: "linear-gradient(150deg, rgba(91,33,255,0.6), rgba(0,217,255,0.5))",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function Testimonials() {
     <section className="hairline-b py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
-          eyebrow="What people say"
+          eyebrow="What clients say"
           title="Trusted by the teams doing the work"
         />
         <div className="grid gap-6 sm:grid-cols-2">

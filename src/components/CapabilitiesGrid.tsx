@@ -3,51 +3,61 @@ import SectionHeading from "./SectionHeading";
 
 const capabilities = [
   {
-    tag: "Image",
-    title: "Text to Image",
-    description: "Photorealistic images, illustration, and product visuals.",
-    tone: "linear-gradient(150deg, rgba(91,95,255,0.5), rgba(27,36,38,0.92) 70%)",
+    tag: "Growth",
+    title: "SEO & Performance Ads",
+    description: "Technical SEO, content, and paid campaigns engineered for ROI.",
+    tone: "linear-gradient(150deg, rgba(91,33,255,0.5), rgba(27,36,38,0.92) 70%)",
   },
   {
-    tag: "Video",
-    title: "Text to Video",
-    description: "Short-form and cinematic video from a written script.",
-    tone: "linear-gradient(150deg, rgba(0,229,255,0.4), rgba(27,36,38,0.92) 70%)",
+    tag: "Reach",
+    title: "Social Media Marketing",
+    description: "Content, community management, and paid social that compounds.",
+    tone: "linear-gradient(150deg, rgba(0,217,255,0.4), rgba(27,36,38,0.92) 70%)",
   },
   {
-    tag: "Edit",
-    title: "AI Editing",
-    description: "Inpainting, outpainting, and background removal, built in.",
-    tone: "linear-gradient(150deg, rgba(139,92,246,0.45), rgba(27,36,38,0.92) 70%)",
+    tag: "Identity",
+    title: "Branding",
+    description: "Positioning, visual identity, and messaging that earns trust fast.",
+    tone: "linear-gradient(150deg, rgba(20,241,149,0.4), rgba(27,36,38,0.92) 70%)",
   },
   {
-    tag: "Resolution",
-    title: "Upscaling",
-    description: "Clean 4K output ready for print and broadcast.",
-    tone: "linear-gradient(150deg, rgba(91,95,255,0.3), rgba(0,229,255,0.2) 60%, rgba(27,36,38,0.92))",
+    tag: "Automation",
+    title: "AI Marketing Automation",
+    description: "Lead scoring, nurture flows, and campaigns that run themselves.",
+    tone: "linear-gradient(150deg, rgba(91,33,255,0.3), rgba(0,217,255,0.2) 60%, rgba(27,36,38,0.92))",
   },
   {
-    tag: "Build",
-    title: "API",
-    description: "Every capability available through a documented REST API.",
-    tone: "linear-gradient(150deg, rgba(0,229,255,0.25), rgba(27,36,38,0.92) 70%)",
+    tag: "Content",
+    title: "Content & Email Marketing",
+    description: "Editorial calendars, lifecycle email, and content that converts.",
+    tone: "linear-gradient(150deg, rgba(0,217,255,0.25), rgba(27,36,38,0.92) 70%)",
   },
   {
-    tag: "Compute",
-    title: "Cloud Rendering",
-    description: "Auto-scaling render capacity with no local GPU required.",
-    tone: "linear-gradient(150deg, rgba(91,95,255,0.22), rgba(27,36,38,0.92) 70%)",
+    tag: "Pipeline",
+    title: "Lead Generation",
+    description: "Full-funnel campaigns built to fill your pipeline, not just your inbox.",
+    tone: "linear-gradient(150deg, rgba(91,33,255,0.22), rgba(27,36,38,0.92) 70%)",
   },
 ];
 
 export default function CapabilitiesGrid() {
   return (
-    <section className="hairline-b section-tint py-24">
+    <section id="digital-marketing" className="hairline-b section-tint scroll-mt-24 py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
-          eyebrow="Capabilities"
-          title="Every way to create a visual, in one platform"
+          eyebrow="AI Digital Marketing"
+          title="Marketing built to be measured, not just admired"
         />
+        <p className="mb-10 max-w-2xl text-muted">
+          Traffic without conversion is a vanity metric. Sutertai runs SEO,
+          paid media, content, and AI-driven marketing automation as one
+          connected system — so every channel feeds the next, and every
+          rupee spent is traceable to a lead, a signup, or a sale. From
+          performance marketing and email lifecycles to branding that makes
+          people trust you before they&apos;ve spoken to your team, this is
+          marketing built for businesses that need to grow, not just look
+          good doing it.
+        </p>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {capabilities.map((item, i) => (
             <Reveal

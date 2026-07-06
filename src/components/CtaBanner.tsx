@@ -2,12 +2,12 @@ import MagneticLink from "./MagneticLink";
 import Reveal from "./Reveal";
 
 export default function CtaBanner({
-  title = "Start creating with AI.",
-  description = "Try the studio free, or talk to our team about running Sutertai at production scale.",
-  primaryHref = "/generate",
-  primaryLabel = "Get started",
+  title = "Ready to transform your business?",
+  description = "Talk to our team about AI-powered marketing, a new website, or a custom software build — get a free consultation, no obligation.",
+  primaryHref = "/contact",
+  primaryLabel = "Get Started",
   secondaryHref = "/contact",
-  secondaryLabel = "Book a demo",
+  secondaryLabel = "Book Free Consultation",
 }: {
   title?: string;
   description?: string;

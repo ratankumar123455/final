@@ -1,60 +1,66 @@
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
-const faqs = [
+export type FaqItem = { q: string; a: string };
+
+const defaultFaqs: FaqItem[] = [
   {
-    q: "What exactly does Sutertai generate?",
-    a: "Images and video from natural-language prompts — product photography, concept art, marketing visuals, illustrations, architecture renders, and short-form video with motion, camera movement, and voice synchronization.",
+    q: "What services does Sutertai actually offer?",
+    a: "AI-powered digital marketing, website and software development, AI product development, mobile apps, UI/UX design, and business automation with CRM and cloud solutions — everything a growing business needs, under one roof.",
   },
   {
-    q: "Do I own the rights to what I generate?",
-    a: "Yes. Paid plans include a commercial license for everything you generate. You can use outputs in client work, advertising, and products without attribution.",
+    q: "Do you work with startups or only large enterprises?",
+    a: "Both. We run lean, fixed-scope engagements for startups and long-term retainers for enterprises, and scope every project to the budget and stage of the business we're working with.",
   },
   {
-    q: "Can I control the style of the output?",
-    a: "Yes. You can guide composition, lighting, camera angle, and art direction through your prompt, and save brand presets so every generation stays consistent with your visual identity.",
+    q: "How long does a typical website or app project take?",
+    a: "A marketing website typically ships in 2-4 weeks. Custom software, CRM, or app builds range from 6-16 weeks depending on scope, with a working version live early in the process.",
   },
   {
-    q: "How is Sutertai different from a general-purpose image model?",
-    a: "Sutertai is built around production workflows — batch generation, brand consistency, team workspaces, and an API — rather than a single-prompt playground.",
+    q: "Can you handle both marketing and development for us?",
+    a: "Yes — that's the point. Sutertai runs marketing and engineering as one team, so your website, SEO, and ad campaigns are built to work together instead of being handed off between agencies.",
   },
   {
-    q: "What resolution can I export at?",
-    a: "Standard plans export at high resolution; Pro and Enterprise plans include 4K upscaling for both images and video.",
+    q: "Do you offer ongoing support after launch?",
+    a: "Yes. Every engagement includes a support window after launch, and most clients move into an ongoing retainer for updates, monitoring, and continued growth work.",
   },
   {
-    q: "Is there an API?",
-    a: "Yes. Pro and Enterprise plans include REST API access and client SDKs so you can plug generation directly into your own application or content pipeline.",
+    q: "What does pricing look like?",
+    a: "Project-based pricing for defined scopes of work, and monthly retainers for ongoing marketing, development, or automation support. See our Pricing page for starting ranges.",
   },
   {
-    q: "How does team collaboration work?",
-    a: "Team workspaces keep prompts, brand presets, and generated assets organized and shared, with role-based access on Enterprise plans.",
+    q: "Do we own the code, content, and designs you build?",
+    a: "Yes. On completed and paid engagements, you own the resulting code, content, and designs outright.",
   },
   {
-    q: "What happens to my prompts and generated assets?",
-    a: "Your data is encrypted at rest and in transit. We do not use your prompts or outputs to train shared models unless you explicitly opt in.",
+    q: "How do you handle data and client confidentiality?",
+    a: "All client data is encrypted at rest and in transit, access is role-restricted, and we sign NDAs on request before any project kickoff.",
   },
   {
-    q: "Can I cancel or change plans at any time?",
-    a: "Yes. You can upgrade, downgrade, or cancel from your account at any time — changes take effect at the start of your next billing cycle.",
+    q: "Can you integrate with the tools we already use?",
+    a: "Yes — CRMs, payment gateways, ERPs, marketing platforms, and internal tools are integrated through APIs as part of most engagements.",
   },
   {
-    q: "Do you offer support for enterprise deployments?",
-    a: "Enterprise plans include a dedicated success engineer, custom rendering capacity, and support for SSO and audit logging.",
+    q: "How do we get started?",
+    a: "Book a free consultation through our Contact page. We'll scope your project, propose a plan and timeline, and get started once you're ready.",
   },
 ];
 
-export default function Faq() {
+export default function Faq({
+  items = defaultFaqs,
+  eyebrow = "FAQ",
+  title = "Questions, answered",
+}: {
+  items?: FaqItem[];
+  eyebrow?: string;
+  title?: string;
+}) {
   return (
     <section id="faq" className="hairline-b py-24">
       <div className="mx-auto max-w-3xl px-6">
-        <SectionHeading
-          eyebrow="FAQ"
-          title="Questions, answered"
-          align="center"
-        />
+        <SectionHeading eyebrow={eyebrow} title={title} align="center" />
         <div className="hairline-t">
-          {faqs.map((item, i) => (
+          {items.map((item, i) => (
             <Reveal key={item.q} delay={Math.min(i * 30, 200)} as="details" className="group hairline-b py-5">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left">
                 <span className="font-display text-base text-paper sm:text-lg">
