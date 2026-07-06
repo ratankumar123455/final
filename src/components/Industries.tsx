@@ -5,42 +5,42 @@ const industries = [
   {
     title: "Retail & E-commerce",
     description: "Storefronts, catalogs, and marketing funnels engineered to convert browsers into buyers.",
-    tone: "linear-gradient(150deg, rgba(91,33,255,0.45), rgba(27,36,38,0.92) 70%)",
+    tone: "linear-gradient(150deg, rgba(5,150,105,0.45), rgba(18,18,18,0.92) 70%)",
   },
   {
     title: "Real Estate",
     description: "Listing platforms, CRM, and lead-gen campaigns built for long sales cycles.",
-    tone: "linear-gradient(150deg, rgba(0,217,255,0.35), rgba(27,36,38,0.92) 70%)",
+    tone: "linear-gradient(150deg, rgba(34,197,94,0.35), rgba(18,18,18,0.92) 70%)",
   },
   {
     title: "Healthcare",
     description: "Patient-facing apps and internal automation that respect compliance from day one.",
-    tone: "linear-gradient(150deg, rgba(20,241,149,0.35), rgba(27,36,38,0.92) 70%)",
+    tone: "linear-gradient(150deg, rgba(20,241,149,0.35), rgba(18,18,18,0.92) 70%)",
   },
   {
     title: "Finance & Fintech",
     description: "Secure platforms, dashboards, and automation that meet audit and compliance needs.",
-    tone: "linear-gradient(150deg, rgba(91,33,255,0.25), rgba(0,217,255,0.2) 60%, rgba(27,36,38,0.92))",
+    tone: "linear-gradient(150deg, rgba(5,150,105,0.25), rgba(34,197,94,0.2) 60%, rgba(18,18,18,0.92))",
   },
   {
     title: "Education",
     description: "Learning platforms and enrollment funnels that scale with your student base.",
-    tone: "linear-gradient(150deg, rgba(0,217,255,0.28), rgba(27,36,38,0.92) 70%)",
+    tone: "linear-gradient(150deg, rgba(34,197,94,0.28), rgba(18,18,18,0.92) 70%)",
   },
   {
     title: "Hospitality & Travel",
     description: "Booking systems and marketing campaigns tuned to seasonal demand.",
-    tone: "linear-gradient(150deg, rgba(91,33,255,0.35), rgba(27,36,38,0.92) 70%)",
+    tone: "linear-gradient(150deg, rgba(5,150,105,0.35), rgba(18,18,18,0.92) 70%)",
   },
   {
     title: "Manufacturing & Logistics",
     description: "ERP, inventory, and workflow automation that replace spreadsheets for good.",
-    tone: "linear-gradient(150deg, rgba(0,217,255,0.32), rgba(27,36,38,0.92) 70%)",
+    tone: "linear-gradient(150deg, rgba(34,197,94,0.32), rgba(18,18,18,0.92) 70%)",
   },
   {
     title: "Professional Services",
     description: "Branding, websites, and CRM that make a small team look and run like a big one.",
-    tone: "linear-gradient(150deg, rgba(20,241,149,0.3), rgba(0,217,255,0.18) 60%, rgba(27,36,38,0.92))",
+    tone: "linear-gradient(150deg, rgba(20,241,149,0.3), rgba(34,197,94,0.18) 60%, rgba(18,18,18,0.92))",
   },
 ];
 

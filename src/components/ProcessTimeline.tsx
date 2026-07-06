@@ -29,7 +29,7 @@ const steps = [
           className="h-24 rounded-lg"
           style={{
             backgroundImage:
-              "linear-gradient(135deg, rgba(91,33,255,0.5), rgba(0,217,255,0.25) 60%, rgba(27,36,38,0.92))",
+              "linear-gradient(135deg, rgba(5,150,105,0.5), rgba(34,197,94,0.25) 60%, rgba(18,18,18,0.92))",
           }}
         />
         <div className="mt-3 flex items-center gap-2">

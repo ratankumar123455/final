@@ -6,37 +6,37 @@ const capabilities = [
     tag: "Support",
     title: "Chatbots & AI Agents",
     description: "Always-on conversational agents that qualify leads and resolve support tickets.",
-    tone: "linear-gradient(150deg, rgba(91,33,255,0.5), rgba(27,36,38,0.92) 70%)",
+    tone: "linear-gradient(150deg, rgba(5,150,105,0.5), rgba(18,18,18,0.92) 70%)",
   },
   {
     tag: "Ops",
     title: "Business & Workflow Automation",
     description: "Repetitive tasks — invoicing, follow-ups, reporting — running without a human in the loop.",
-    tone: "linear-gradient(150deg, rgba(0,217,255,0.4), rgba(27,36,38,0.92) 70%)",
+    tone: "linear-gradient(150deg, rgba(34,197,94,0.4), rgba(18,18,18,0.92) 70%)",
   },
   {
     tag: "Build",
     title: "Custom GPT & AI Integrations",
     description: "Purpose-built AI tools wired into your existing systems and data.",
-    tone: "linear-gradient(150deg, rgba(20,241,149,0.4), rgba(27,36,38,0.92) 70%)",
+    tone: "linear-gradient(150deg, rgba(20,241,149,0.4), rgba(18,18,18,0.92) 70%)",
   },
   {
     tag: "Insight",
     title: "Data Analytics & ML",
     description: "Predictive models and dashboards that turn raw data into decisions.",
-    tone: "linear-gradient(150deg, rgba(91,33,255,0.3), rgba(0,217,255,0.2) 60%, rgba(27,36,38,0.92))",
+    tone: "linear-gradient(150deg, rgba(5,150,105,0.3), rgba(34,197,94,0.2) 60%, rgba(18,18,18,0.92))",
   },
   {
     tag: "Scale",
     title: "Automation Pipelines",
     description: "End-to-end pipelines connecting your CRM, marketing, and operations tools.",
-    tone: "linear-gradient(150deg, rgba(0,217,255,0.25), rgba(27,36,38,0.92) 70%)",
+    tone: "linear-gradient(150deg, rgba(34,197,94,0.25), rgba(18,18,18,0.92) 70%)",
   },
   {
     tag: "Future",
     title: "Machine Learning Solutions",
     description: "Applied ML for forecasting, personalization, and fraud detection.",
-    tone: "linear-gradient(150deg, rgba(91,33,255,0.22), rgba(27,36,38,0.92) 70%)",
+    tone: "linear-gradient(150deg, rgba(5,150,105,0.22), rgba(18,18,18,0.92) 70%)",
   },
 ];
 

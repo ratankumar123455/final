@@ -33,7 +33,7 @@ export default function Home() {
           className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[720px]"
           style={{
             background:
-              "radial-gradient(800px circle at 15% -10%, rgba(91,33,255,0.28), transparent 60%), radial-gradient(800px circle at 90% 15%, rgba(0,217,255,0.14), transparent 55%)",
+              "radial-gradient(800px circle at 15% -10%, rgba(5,150,105,0.28), transparent 60%), radial-gradient(800px circle at 90% 15%, rgba(34,197,94,0.14), transparent 55%)",
           }}
           aria-hidden="true"
         />

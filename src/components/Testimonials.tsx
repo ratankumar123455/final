@@ -7,28 +7,28 @@ const testimonials = [
       "Sutertai rebuilt our website and our SEO strategy at the same time — for the first time, our marketing and our technology were actually pulling in the same direction.",
     name: "Aditi Rao",
     role: "Marketing Director, a retail chain client",
-    tone: "linear-gradient(150deg, rgba(91,33,255,0.9), rgba(27,36,38,0.9))",
+    tone: "linear-gradient(150deg, rgba(5,150,105,0.9), rgba(18,18,18,0.9))",
   },
   {
     quote:
       "The CRM and automation build paid for itself in the first quarter. Our sales team spends its time closing deals now, not entering data.",
     name: "Karan Mehta",
     role: "Founder, a real estate client",
-    tone: "linear-gradient(150deg, rgba(0,217,255,0.85), rgba(27,36,38,0.9))",
+    tone: "linear-gradient(150deg, rgba(34,197,94,0.85), rgba(18,18,18,0.9))",
   },
   {
     quote:
       "They shipped our MVP in three weeks flat and stayed on afterward as our technology partner. That long-term relationship is rare to find.",
     name: "Priya Nair",
     role: "Founder, a SaaS startup client",
-    tone: "linear-gradient(150deg, rgba(20,241,149,0.85), rgba(27,36,38,0.9))",
+    tone: "linear-gradient(150deg, rgba(20,241,149,0.85), rgba(18,18,18,0.9))",
   },
   {
     quote:
       "The AI chatbot they built handles most of our intake now. Response times dropped from hours to seconds, and our staff finally has room to breathe.",
     name: "Devansh Iyer",
     role: "Operations Lead, a healthcare client",
-    tone: "linear-gradient(150deg, rgba(91,33,255,0.6), rgba(0,217,255,0.5))",
+    tone: "linear-gradient(150deg, rgba(5,150,105,0.6), rgba(34,197,94,0.5))",
   },
 ];
 
