@@ -35,10 +35,11 @@ const items = [
   {
     name: "Cloud & DevOps",
     detail:
-      "AWS, Google Cloud, and Azure deployments with CI/CD pipelines, monitoring, and auto-scaling built in from day one.",
+      "We run client platforms on AWS — EC2 for virtual servers, S3 for object storage, and Amplify for full-stack web and mobile apps — with CI/CD pipelines, monitoring, and auto-scaling built in from day one.",
     specs: [
-      { k: "Providers", v: "AWS / GCP / Azure" },
-      { k: "Deploys", v: "CI/CD automated" },
+      { k: "Compute", v: "AWS EC2" },
+      { k: "Storage", v: "AWS S3" },
+      { k: "Full-stack", v: "AWS Amplify" },
     ],
   },
   {
