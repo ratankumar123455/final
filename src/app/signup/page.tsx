@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useForm, Controller } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 import AuthShell from "@/components/auth/AuthShell";
 import FloatingInput from "@/components/auth/FloatingInput";
 import SocialButtons from "@/components/auth/SocialButtons";
@@ -9,42 +12,41 @@ import OtpInput from "@/components/auth/OtpInput";
 
 type View = "signup" | "otp" | "success";
 
-type Errors = {
-  name?: string;
-  email?: string;
-  password?: string;
-  confirm?: string;
-  terms?: string;
-};
+const signupSchema = z
+  .object({
+    name: z.string().min(2, "Enter your full name."),
+    email: z.string().min(1, "Enter your email.").email("Enter a valid email address."),
+    password: z.string().min(8, "Password must be at least 8 characters."),
+    confirm: z.string(),
+    agreed: z.boolean().refine((v) => v, { message: "You must agree to the terms to continue." }),
+  })
+  .refine((data) => data.password === data.confirm, {
+    message: "Passwords don't match.",
+    path: ["confirm"],
+  });
+
+type SignupValues = z.infer<typeof signupSchema>;
 
 export default function SignupPage() {
   const [view, setView] = useState<View>("signup");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirm, setConfirm] = useState("");
-  const [agreed, setAgreed] = useState(false);
+  const [signupEmail, setSignupEmail] = useState("");
   const [otp, setOtp] = useState("");
   const [otpError, setOtpError] = useState("");
-  const [errors, setErrors] = useState<Errors>({});
   const [loading, setLoading] = useState(false);
   const [notice, setNotice] = useState("");
 
-  function validate() {
-    const next: Errors = {};
-    if (name.trim().length < 2) next.name = "Enter your full name.";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next.email = "Enter a valid email address.";
-    if (password.length < 8) next.password = "Password must be at least 8 characters.";
-    if (confirm !== password) next.confirm = "Passwords don't match.";
-    if (!agreed) next.terms = "You must agree to the terms to continue.";
-    setErrors(next);
-    return Object.keys(next).length === 0;
-  }
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<SignupValues>({
+    resolver: zodResolver(signupSchema),
+    defaultValues: { name: "", email: "", password: "", confirm: "", agreed: false },
+  });
 
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    if (!validate()) return;
+  function onSubmit(data: SignupValues) {
     setLoading(true);
+    setSignupEmail(data.email);
     setTimeout(() => {
       setLoading(false);
       setView("otp");
@@ -85,7 +87,7 @@ export default function SignupPage() {
 
   if (view === "otp") {
     return (
-      <AuthShell eyebrow="Client Portal" title="Verify your email" description={`Enter the 6-digit code we sent to ${email}.`}>
+      <AuthShell eyebrow="Client Portal" title="Verify your email" description={`Enter the 6-digit code we sent to ${signupEmail}.`}>
         <form onSubmit={handleVerify} className="flex flex-col gap-5">
           <OtpInput value={otp} onChange={setOtp} />
           {otpError && <p className="text-xs text-red-400">{otpError}</p>}
@@ -106,36 +108,66 @@ export default function SignupPage() {
 
   return (
     <AuthShell eyebrow="Client Portal" title="Create your account" description="Set up access to Sutertai's client portal.">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-        <FloatingInput label="Full name" value={name} onChange={setName} error={errors.name} autoComplete="name" />
-        <FloatingInput label="Email address" type="email" value={email} onChange={setEmail} error={errors.email} autoComplete="email" />
-        <FloatingInput
-          label="Password"
-          value={password}
-          onChange={setPassword}
-          error={errors.password}
-          autoComplete="new-password"
-          showToggle
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5" noValidate>
+        <Controller
+          name="name"
+          control={control}
+          render={({ field }) => (
+            <FloatingInput label="Full name" value={field.value} onChange={field.onChange} error={errors.name?.message} autoComplete="name" />
+          )}
         />
-        <FloatingInput
-          label="Confirm password"
-          value={confirm}
-          onChange={setConfirm}
-          error={errors.confirm}
-          autoComplete="new-password"
-          showToggle
+        <Controller
+          name="email"
+          control={control}
+          render={({ field }) => (
+            <FloatingInput label="Email address" type="email" value={field.value} onChange={field.onChange} error={errors.email?.message} autoComplete="email" />
+          )}
+        />
+        <Controller
+          name="password"
+          control={control}
+          render={({ field }) => (
+            <FloatingInput
+              label="Password"
+              value={field.value}
+              onChange={field.onChange}
+              error={errors.password?.message}
+              autoComplete="new-password"
+              showToggle
+            />
+          )}
+        />
+        <Controller
+          name="confirm"
+          control={control}
+          render={({ field }) => (
+            <FloatingInput
+              label="Confirm password"
+              value={field.value}
+              onChange={field.onChange}
+              error={errors.confirm?.message}
+              autoComplete="new-password"
+              showToggle
+            />
+          )}
         />
         <div>
-          <label className="flex items-start gap-2 text-sm text-muted">
-            <input
-              type="checkbox"
-              checked={agreed}
-              onChange={(e) => setAgreed(e.target.checked)}
-              className="mt-0.5 h-4 w-4 rounded border-[var(--line-strong)] bg-black/30 accent-[var(--signal)]"
-            />
-            I agree to the Terms & Conditions and Privacy Policy.
-          </label>
-          {errors.terms && <p className="mt-1.5 text-xs text-red-400">{errors.terms}</p>}
+          <Controller
+            name="agreed"
+            control={control}
+            render={({ field }) => (
+              <label className="flex items-start gap-2 text-sm text-muted">
+                <input
+                  type="checkbox"
+                  checked={field.value}
+                  onChange={(e) => field.onChange(e.target.checked)}
+                  className="mt-0.5 h-4 w-4 rounded border-[var(--line-strong)] bg-black/30 accent-[var(--signal)]"
+                />
+                I agree to the Terms & Conditions and Privacy Policy.
+              </label>
+            )}
+          />
+          {errors.agreed && <p className="mt-1.5 text-xs text-red-400">{errors.agreed.message}</p>}
         </div>
         {notice && <p className="text-xs text-muted">{notice}</p>}
         <button type="submit" disabled={loading} className="btn-primary rounded-xl px-6 py-3 text-sm font-semibold disabled:opacity-60">

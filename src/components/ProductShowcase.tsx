@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Plus } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 
@@ -69,14 +70,13 @@ export default function ProductShowcase() {
                         {service.title}
                       </h3>
                     </div>
-                    <span
-                      className={`font-display text-xl text-accent transition-transform ${
+                    <Plus
+                      className={`h-5 w-5 shrink-0 text-accent transition-transform ${
                         isOpen ? "rotate-45" : ""
                       }`}
+                      strokeWidth={1.5}
                       aria-hidden="true"
-                    >
-                      +
-                    </span>
+                    />
                   </div>
                   {isOpen && (
                     <div className="mt-6 grid gap-6 border-t border-[var(--line)] pt-6 sm:grid-cols-[1fr_1fr]">

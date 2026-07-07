@@ -4,24 +4,27 @@ import Reveal from "@/components/Reveal";
 import LogoMarquee from "@/components/LogoMarquee";
 import HeroVisual from "@/components/HeroVisual";
 import Gallery from "@/components/Gallery";
+import BentoFeatures from "@/components/BentoFeatures";
 import ProductShowcase from "@/components/ProductShowcase";
 import WhySutertai from "@/components/WhySutertai";
 import CapabilitiesGrid from "@/components/CapabilitiesGrid";
 import AiSolutions from "@/components/AiSolutions";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import TechPanel from "@/components/TechPanel";
+import TechLogos from "@/components/TechLogos";
 import ScaleChart from "@/components/ScaleChart";
 import Industries from "@/components/Industries";
 import CaseStudies from "@/components/CaseStudies";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import Faq from "@/components/Faq";
+import AnimatedCounter from "@/components/AnimatedCounter";
 
 const heroStats = [
-  { value: "150+", label: "Happy clients" },
-  { value: "300+", label: "Projects delivered" },
-  { value: "12", label: "Countries served" },
-  { value: "4.9/5", label: "Client rating" },
+  { value: "500+", label: "Projects" },
+  { value: "200+", label: "Clients" },
+  { value: "98%", label: "Satisfaction" },
+  { value: "24/7", label: "Support" },
 ];
 
 export default function Home() {
@@ -33,7 +36,7 @@ export default function Home() {
           className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[720px]"
           style={{
             background:
-              "radial-gradient(800px circle at 15% -10%, rgba(5,150,105,0.28), transparent 60%), radial-gradient(800px circle at 90% 15%, rgba(34,197,94,0.14), transparent 55%)",
+              "radial-gradient(800px circle at 15% -10%, rgba(91,33,255,0.28), transparent 60%), radial-gradient(800px circle at 90% 15%, rgba(0,217,255,0.14), transparent 55%)",
           }}
           aria-hidden="true"
         />
@@ -47,31 +50,32 @@ export default function Home() {
             </Reveal>
             <Reveal delay={80}>
               <h1 className="font-display mt-6 max-w-2xl text-6xl leading-[1.02] font-medium text-paper sm:text-8xl">
-                Transform your business{" "}
-                <span className="font-light text-muted">with</span>
-                <br />
-                <span className="text-generated">AI-powered digital solutions.</span>
+                Empowering Businesses with{" "}
+                <span className="text-generated">AI-Powered Digital Solutions</span>
               </h1>
             </Reveal>
             <Reveal delay={160}>
               <p className="mt-8 max-w-xl text-xl text-muted">
-                Sutertai helps startups and enterprises grow with AI-driven
-                marketing, high-performance websites, custom software, and
-                business automation — all under one roof.
+                We help businesses accelerate growth with intelligent
+                websites, AI automation, custom software, digital marketing,
+                branding, and scalable technology solutions that drive
+                measurable success.
               </p>
             </Reveal>
             <Reveal delay={240} className="mt-10 flex flex-col gap-4 sm:flex-row">
               <MagneticLink href="/contact" variant="primary">
                 Get Started
               </MagneticLink>
-              <MagneticLink href="/contact#consultation" variant="secondary">
-                Book Free Consultation
+              <MagneticLink href="/services" variant="secondary">
+                Explore Services
               </MagneticLink>
             </Reveal>
             <Reveal delay={300} className="mt-12 grid w-full max-w-lg grid-cols-4 gap-4 border-t border-[var(--line)] pt-6">
               {heroStats.map((stat) => (
                 <div key={stat.label}>
-                  <p className="font-display text-xl text-paper sm:text-2xl">{stat.value}</p>
+                  <p className="font-display text-xl text-paper sm:text-2xl">
+                    <AnimatedCounter value={stat.value} />
+                  </p>
                   <p className="mono-label mt-1 text-[9px] text-muted-2">{stat.label}</p>
                 </div>
               ))}
@@ -85,6 +89,8 @@ export default function Home() {
 
       <LogoMarquee />
 
+      <BentoFeatures />
+
       <ProductShowcase />
 
       {/* Section 1: AI Digital Marketing */}
@@ -93,6 +99,7 @@ export default function Home() {
       {/* Section 2: Website & Software Development */}
       <ProcessTimeline />
       <TechPanel />
+      <TechLogos />
 
       {/* Section 3: AI Solutions & Automation */}
       <AiSolutions />

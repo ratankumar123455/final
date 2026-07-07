@@ -1,3 +1,4 @@
+import { Plus } from "lucide-react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
@@ -66,9 +67,7 @@ export default function Faq({
                 <span className="font-display text-base text-paper sm:text-lg">
                   {item.q}
                 </span>
-                <span className="mono-label shrink-0 text-lg text-accent transition-transform group-open:rotate-45">
-                  +
-                </span>
+                <Plus className="h-5 w-5 shrink-0 text-accent transition-transform group-open:rotate-45" strokeWidth={1.5} />
               </summary>
               <p className="mt-3 max-w-2xl text-sm text-muted">{item.a}</p>
             </Reveal>

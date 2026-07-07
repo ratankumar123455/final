@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ArrowRight } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import NewsletterForm from "@/components/NewsletterForm";
 import PageHero from "@/components/PageHero";
@@ -119,9 +120,9 @@ export default function ContactPage() {
                   href={mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 inline-block text-sm font-medium text-accent hover:underline"
+                  className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:underline"
                 >
-                  View on Google Maps →
+                  View on Google Maps <ArrowRight className="h-4 w-4" />
                 </a>
               </div>
             </Reveal>

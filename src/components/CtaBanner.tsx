@@ -2,12 +2,12 @@ import MagneticLink from "./MagneticLink";
 import Reveal from "./Reveal";
 
 export default function CtaBanner({
-  title = "Ready to transform your business?",
-  description = "Talk to our team about AI-powered marketing, a new website, or a custom software build — get a free consultation, no obligation.",
-  primaryHref = "/contact",
-  primaryLabel = "Get Started",
+  title = "Ready to Transform Your Business?",
+  description = "Let's build intelligent digital solutions together.",
+  primaryHref = "/contact#consultation",
+  primaryLabel = "Schedule a Meeting",
   secondaryHref = "/contact",
-  secondaryLabel = "Book Free Consultation",
+  secondaryLabel = "Contact Us",
 }: {
   title?: string;
   description?: string;
@@ -24,7 +24,7 @@ export default function CtaBanner({
             className="pointer-events-none absolute inset-0 opacity-40"
             style={{
               background:
-                "radial-gradient(600px circle at 50% 0%, rgba(79,70,229,0.25), transparent 60%)",
+                "radial-gradient(600px circle at 50% 0%, rgba(91,33,255,0.25), transparent 60%)",
             }}
             aria-hidden="true"
           />

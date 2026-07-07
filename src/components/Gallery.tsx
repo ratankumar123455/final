@@ -6,37 +6,37 @@ const tiles = [
     label: "Ecommerce storefront",
     span: "lg:col-span-4 lg:row-span-2",
     height: "h-64 lg:h-full",
-    tone: "linear-gradient(155deg, rgba(5,150,105,0.55), rgba(18,18,18,0.95) 65%)",
+    tone: "linear-gradient(155deg, rgba(91,33,255,0.55), rgba(27,36,38,0.95) 65%)",
   },
   {
     label: "SaaS dashboard UI",
     span: "lg:col-span-4",
     height: "h-48",
-    tone: "linear-gradient(155deg, rgba(34,197,94,0.4), rgba(18,18,18,0.95) 65%)",
+    tone: "linear-gradient(155deg, rgba(0,217,255,0.4), rgba(27,36,38,0.95) 65%)",
   },
   {
     label: "Brand identity system",
     span: "lg:col-span-4",
     height: "h-48",
-    tone: "linear-gradient(155deg, rgba(20,241,149,0.4), rgba(18,18,18,0.95) 65%)",
+    tone: "linear-gradient(155deg, rgba(20,241,149,0.4), rgba(27,36,38,0.95) 65%)",
   },
   {
     label: "Mobile app design",
     span: "lg:col-span-4",
     height: "h-48",
-    tone: "linear-gradient(155deg, rgba(5,150,105,0.3), rgba(34,197,94,0.25) 60%, rgba(18,18,18,0.95))",
+    tone: "linear-gradient(155deg, rgba(91,33,255,0.3), rgba(0,217,255,0.25) 60%, rgba(27,36,38,0.95))",
   },
   {
     label: "Marketing campaign creative",
     span: "lg:col-span-4",
     height: "h-48",
-    tone: "linear-gradient(155deg, rgba(34,197,94,0.5), rgba(18,18,18,0.95) 65%)",
+    tone: "linear-gradient(155deg, rgba(0,217,255,0.5), rgba(27,36,38,0.95) 65%)",
   },
   {
     label: "CRM & automation build",
     span: "lg:col-span-4",
     height: "h-48",
-    tone: "linear-gradient(155deg, rgba(5,150,105,0.5), rgba(18,18,18,0.95) 65%)",
+    tone: "linear-gradient(155deg, rgba(91,33,255,0.5), rgba(27,36,38,0.95) 65%)",
   },
 ];
 

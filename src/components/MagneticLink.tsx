@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { useRef } from "react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
+
+const MotionLink = motion.create(Link);
 
 export default function MagneticLink({
   href,
@@ -15,37 +18,39 @@ export default function MagneticLink({
   className?: string;
 }) {
   const ref = useRef<HTMLAnchorElement>(null);
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const springX = useSpring(x, { stiffness: 300, damping: 20, mass: 0.5 });
+  const springY = useSpring(y, { stiffness: 300, damping: 20, mass: 0.5 });
 
   const onPointerMove = (event: React.PointerEvent<HTMLAnchorElement>) => {
     const node = ref.current;
     if (!node || window.matchMedia("(pointer: coarse)").matches) return;
     const rect = node.getBoundingClientRect();
-    const mx = (event.clientX - rect.left - rect.width / 2) * 0.25;
-    const my = (event.clientY - rect.top - rect.height / 2) * 0.35;
-    node.style.setProperty("--mx", `${mx}px`);
-    node.style.setProperty("--my", `${my}px`);
+    x.set((event.clientX - rect.left - rect.width / 2) * 0.3);
+    y.set((event.clientY - rect.top - rect.height / 2) * 0.4);
   };
 
   const onPointerLeave = () => {
-    const node = ref.current;
-    if (!node) return;
-    node.style.setProperty("--mx", "0px");
-    node.style.setProperty("--my", "0px");
+    x.set(0);
+    y.set(0);
   };
 
-  const base =
-    "magnetic inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-semibold";
+  const base = "inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-semibold";
   const variantClass = variant === "primary" ? "btn-primary" : "btn-secondary";
 
   return (
-    <Link
+    <MotionLink
       ref={ref}
       href={href}
       onPointerMove={onPointerMove}
       onPointerLeave={onPointerLeave}
+      style={{ x: springX, y: springY }}
+      whileHover={{ scale: 1.04 }}
+      whileTap={{ scale: 0.96 }}
       className={`${base} ${variantClass} ${className}`}
     >
       {children}
-    </Link>
+    </MotionLink>
   );
 }
