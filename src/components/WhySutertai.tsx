@@ -1,5 +1,7 @@
+import { Sparkles, Blocks, Users, Layers, Rocket, Headset } from "lucide-react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
+import AnimatedCounter from "./AnimatedCounter";
 
 const secondary = [
   {
@@ -29,6 +31,39 @@ const supporting = [
     stat: "12",
     title: "Countries served",
     description: "Clients across India, the Gulf, Europe, and North America.",
+  },
+];
+
+const reasons = [
+  {
+    icon: Sparkles,
+    title: "AI-first approach",
+    description: "Every engagement looks for where AI genuinely saves time, not where it's a buzzword.",
+  },
+  {
+    icon: Blocks,
+    title: "Custom-built solutions",
+    description: "No fixed templates — every build is scoped to your workflow, not the other way around.",
+  },
+  {
+    icon: Users,
+    title: "Experienced developers",
+    description: "A senior-led team that has shipped production software across a dozen industries.",
+  },
+  {
+    icon: Layers,
+    title: "Modern technology stack",
+    description: "React, Next.js, and AWS infrastructure built to scale from day one.",
+  },
+  {
+    icon: Rocket,
+    title: "Fast delivery",
+    description: "Most projects reach a live, working first version inside three weeks.",
+  },
+  {
+    icon: Headset,
+    title: "Dedicated support",
+    description: "A named account team, not a rotating support queue.",
   },
 ];
 
@@ -94,26 +129,28 @@ export default function WhySutertai() {
               delay={(i + 3) * 60}
               className="card-lift rounded-2xl border border-[var(--line)] p-7 lg:col-span-4"
             >
-              <p className="font-display text-2xl text-generated">{item.stat}</p>
+              <p className="font-display text-2xl text-generated">
+                <AnimatedCounter value={item.stat} />
+              </p>
               <h3 className="font-display mt-3 text-lg text-paper">{item.title}</h3>
               <p className="mt-2 text-sm text-muted">{item.description}</p>
             </Reveal>
           ))}
         </div>
 
-        <Reveal delay={360} className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {[
-            "Experienced, senior-led team",
-            "Affordable, transparent pricing",
-            "Latest AI & cloud technology",
-            "Scalable, custom-built solutions",
-            "Long-term partnership, not one-off delivery",
-          ].map((reason) => (
-            <div key={reason} className="hairline-t pt-4 text-sm text-muted">
-              {reason}
-            </div>
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {reasons.map((reason, i) => (
+            <Reveal
+              key={reason.title}
+              delay={i * 50}
+              className="card-lift rounded-2xl border border-[var(--line)] p-6"
+            >
+              <reason.icon className="h-6 w-6 text-accent" strokeWidth={1.5} />
+              <h3 className="font-display mt-4 text-base text-paper">{reason.title}</h3>
+              <p className="mt-2 text-sm text-muted">{reason.description}</p>
+            </Reveal>
           ))}
-        </Reveal>
+        </div>
       </div>
     </section>
   );

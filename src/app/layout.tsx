@@ -5,6 +5,8 @@ import Footer from "@/components/Footer";
 import CursorGlow from "@/components/CursorGlow";
 import ScrollProgress from "@/components/ScrollProgress";
 import FloatingActions from "@/components/FloatingActions";
+import SmoothScroll from "@/components/SmoothScroll";
+import PageTransition from "@/components/PageTransition";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -126,11 +128,14 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         <div className="noise-layer" aria-hidden="true" />
+        <SmoothScroll />
         <CursorGlow />
         <ScrollProgress />
         <div className="relative z-10 flex min-h-full flex-col">
           <Header />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1">
+            <PageTransition>{children}</PageTransition>
+          </main>
           <Footer />
         </div>
         <FloatingActions />

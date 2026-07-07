@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import MagneticLink from "./MagneticLink";
 
 const navItems = [
@@ -94,9 +95,9 @@ export default function Header() {
                 <Link
                   href="/services"
                   onClick={() => setMenuOpen(false)}
-                  className="mt-3 block rounded-lg p-3 text-xs font-semibold normal-case tracking-normal text-accent hover:bg-white/5"
+                  className="mt-3 flex items-center gap-1.5 rounded-lg p-3 text-xs font-semibold normal-case tracking-normal text-accent hover:bg-white/5"
                 >
-                  View all services →
+                  View all services <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
             )}
@@ -131,8 +132,8 @@ export default function Header() {
           <Link href="/login" className="mono-label text-[11px] text-muted transition-colors hover:text-paper">
             Login
           </Link>
-          <MagneticLink href="/contact" variant="primary" className="!px-5 !py-2 !text-xs">
-            Get Started
+          <MagneticLink href="/contact" variant="primary" className="!px-5 !py-2 !text-xs whitespace-nowrap">
+            Book Free Consultation
           </MagneticLink>
         </div>
 
@@ -142,7 +143,7 @@ export default function Header() {
           onClick={() => setOpen((v) => !v)}
           className="mono-label flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] text-paper xl:hidden"
         >
-          {open ? "×" : "≡"}
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
@@ -181,7 +182,7 @@ export default function Header() {
             onClick={() => setOpen(false)}
             className="btn-primary mt-2 rounded-full px-5 py-2.5 text-center text-sm font-semibold"
           >
-            Get Started
+            Book Free Consultation
           </Link>
         </nav>
       )}

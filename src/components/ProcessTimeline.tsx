@@ -1,129 +1,58 @@
-import Reveal from "./Reveal";
+"use client";
+
+import { Search, Target, PenTool, Code2, TestTube2, Rocket, type LucideIcon } from "lucide-react";
+import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 
-const steps = [
-  {
-    step: "01",
-    title: "Discover & scope",
-    description: "We map your business goals, users, and constraints before a line of code is written.",
-    visual: (
-      <div className="flex flex-wrap gap-2">
-        {["business goals", "user research", "tech audit", "roadmap"].map((tag) => (
-          <span
-            key={tag}
-            className="mono-label rounded-full border border-[var(--line-strong)] px-3 py-1.5 text-[10px] text-paper"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-    ),
-  },
-  {
-    step: "02",
-    title: "Design the experience",
-    description: "Wireframes and UI/UX design turn the plan into a clickable, testable product.",
-    visual: (
-      <div>
-        <div
-          className="h-24 rounded-lg"
-          style={{
-            backgroundImage:
-              "linear-gradient(135deg, rgba(5,150,105,0.5), rgba(34,197,94,0.25) 60%, rgba(18,18,18,0.92))",
-          }}
-        />
-        <div className="mt-3 flex items-center gap-2">
-          <span className="h-1 flex-1 overflow-hidden rounded-full bg-white/10">
-            <span className="block h-full w-4/5 rounded-full bg-gradient-brand" />
-          </span>
-          <span className="mono-label text-[9px] text-muted-2">v2 approved</span>
-        </div>
-      </div>
-    ),
-  },
-  {
-    step: "03",
-    title: "Build & integrate",
-    description: "Engineers ship in short sprints — website, software, or app — with APIs and cloud wired in.",
-    visual: (
-      <div className="space-y-3">
-        {["Frontend", "Backend & APIs", "QA & testing"].map((label, i) => (
-          <div key={label}>
-            <div className="mono-label mb-1.5 flex justify-between text-[9px] text-muted-2">
-              <span>{label}</span>
-              <span>{[80, 65, 55][i]}%</span>
-            </div>
-            <span className="block h-1 overflow-hidden rounded-full bg-white/10">
-              <span
-                className="block h-full rounded-full bg-gradient-brand"
-                style={{ width: `${[80, 65, 55][i]}%` }}
-              />
-            </span>
-          </div>
-        ))}
-      </div>
-    ),
-  },
-  {
-    step: "04",
-    title: "Test & refine",
-    description: "Real users, real devices, real load — issues get fixed before launch, not after.",
-    visual: (
-      <div className="flex flex-wrap gap-2">
-        {["Cross-browser", "Load testing", "Security review", "Accessibility"].map((tag) => (
-          <span
-            key={tag}
-            className="mono-label rounded-md border border-[var(--line-strong)] px-3 py-1.5 text-[10px] text-scope"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-    ),
-  },
-  {
-    step: "05",
-    title: "Launch & grow",
-    description: "We deploy, monitor, and keep improving — Sutertai stays on as your technology partner.",
-    visual: (
-      <div className="flex items-center justify-between">
-        <div>
-          <p className="mono-label text-[9px] text-muted-2">Environment</p>
-          <p className="mt-1 text-sm text-paper">Production</p>
-        </div>
-        <span className="flex items-center gap-2">
-          <span className="status-dot" />
-          <span className="mono-label text-[10px] text-scope">Live</span>
-        </span>
-      </div>
-    ),
-  },
+type Step = { icon: LucideIcon; title: string; description: string };
+
+const steps: Step[] = [
+  { icon: Search, title: "Discovery", description: "Goals, users, and constraints, mapped before anything is built." },
+  { icon: Target, title: "Strategy", description: "A concrete plan, timeline, and scope of work you sign off on." },
+  { icon: PenTool, title: "Design", description: "Wireframes and UI/UX turn the plan into a testable product." },
+  { icon: Code2, title: "Development", description: "Short sprints ship website, software, or app with APIs wired in." },
+  { icon: TestTube2, title: "Testing", description: "Cross-device QA, load, and security checks before launch." },
+  { icon: Rocket, title: "Launch", description: "We deploy, monitor, and stay on as your growth partner." },
 ];
 
 export default function ProcessTimeline() {
   return (
     <section id="website-development" className="hairline-b scroll-mt-24 py-24">
-      <div className="mx-auto max-w-5xl px-6">
+      <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
-          eyebrow="Website & Software Development"
+          eyebrow="Our Process"
           title="From idea to a live, working product"
           description="Custom websites, ecommerce, ERP, CRM, and SaaS platforms — built on a process that keeps you informed at every stage, not just at delivery."
         />
-        <div className="hairline-t">
-          {steps.map((item, i) => (
-            <Reveal
-              key={item.step}
-              delay={i * 60}
-              className="hairline-b grid gap-8 py-12 sm:grid-cols-[80px_1fr_1fr] sm:items-center"
-            >
-              <span className="font-display text-3xl text-generated">{item.step}</span>
-              <div>
-                <h3 className="font-display text-xl text-paper sm:text-2xl">{item.title}</h3>
-                <p className="mt-3 max-w-sm text-sm text-muted">{item.description}</p>
-              </div>
-              <div className="surface rounded-xl p-5">{item.visual}</div>
-            </Reveal>
-          ))}
+        <div className="relative overflow-x-auto pb-4">
+          <div className="grid min-w-[720px] grid-cols-6 gap-4 sm:min-w-0">
+            {steps.map((step, i) => (
+              <motion.div
+                key={step.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                className="relative flex flex-col items-center text-center"
+              >
+                {i < steps.length - 1 && (
+                  <span
+                    className="absolute top-7 left-1/2 hidden h-px w-full sm:block"
+                    style={{ backgroundImage: "linear-gradient(90deg, var(--line-strong), transparent)" }}
+                    aria-hidden="true"
+                  />
+                )}
+                <div className="glass-panel relative flex h-14 w-14 items-center justify-center rounded-full">
+                  <step.icon className="h-6 w-6 text-accent" strokeWidth={1.5} />
+                  <span className="mono-label absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-gradient-brand text-[9px] text-pure">
+                    {i + 1}
+                  </span>
+                </div>
+                <h3 className="font-display mt-4 text-base text-paper">{step.title}</h3>
+                <p className="mt-2 text-xs text-muted">{step.description}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

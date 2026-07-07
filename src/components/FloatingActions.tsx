@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { ArrowUp } from "lucide-react";
 
 export default function FloatingActions() {
   const [showTop, setShowTop] = useState(false);
@@ -22,7 +23,7 @@ export default function FloatingActions() {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="glass-panel flex h-11 w-11 items-center justify-center rounded-full text-paper transition-transform hover:-translate-y-0.5"
         >
-          ↑
+          <ArrowUp className="h-5 w-5" strokeWidth={1.5} />
         </button>
       )}
       <a

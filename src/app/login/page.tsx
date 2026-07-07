@@ -2,32 +2,46 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useForm, Controller } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 import AuthShell from "@/components/auth/AuthShell";
 import FloatingInput from "@/components/auth/FloatingInput";
 import SocialButtons from "@/components/auth/SocialButtons";
 
 type View = "login" | "forgot" | "sent" | "success";
 
+const loginSchema = z.object({
+  email: z.string().min(1, "Enter your email.").email("Enter a valid email address."),
+  password: z.string().min(8, "Password must be at least 8 characters."),
+});
+type LoginValues = z.infer<typeof loginSchema>;
+
+const forgotSchema = z.object({
+  email: z.string().min(1, "Enter your email.").email("Enter a valid email address."),
+});
+type ForgotValues = z.infer<typeof forgotSchema>;
+
 export default function LoginPage() {
   const [view, setView] = useState<View>("login");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(true);
-  const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
   const [loading, setLoading] = useState(false);
   const [notice, setNotice] = useState("");
+  const [resetEmail, setResetEmail] = useState("");
 
-  function validate() {
-    const next: typeof errors = {};
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next.email = "Enter a valid email address.";
-    if (password.length < 8) next.password = "Password must be at least 8 characters.";
-    setErrors(next);
-    return Object.keys(next).length === 0;
-  }
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<LoginValues>({ resolver: zodResolver(loginSchema) });
 
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    if (!validate()) return;
+  const {
+    control: forgotControl,
+    handleSubmit: handleForgotSubmit,
+    formState: { errors: forgotErrors },
+  } = useForm<ForgotValues>({ resolver: zodResolver(forgotSchema) });
+
+  function onSubmit() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
@@ -35,13 +49,9 @@ export default function LoginPage() {
     }, 1200);
   }
 
-  function handleForgotSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setErrors({ email: "Enter a valid email address." });
-      return;
-    }
+  function onForgotSubmit(data: ForgotValues) {
     setLoading(true);
+    setResetEmail(data.email);
     setTimeout(() => {
       setLoading(false);
       setView("sent");
@@ -68,7 +78,7 @@ export default function LoginPage() {
 
   if (view === "sent") {
     return (
-      <AuthShell eyebrow="Client Portal" title="Check your email" description={`We've sent a password reset link to ${email}.`}>
+      <AuthShell eyebrow="Client Portal" title="Check your email" description={`We've sent a password reset link to ${resetEmail}.`}>
         <div className="text-center">
           <p className="text-sm text-muted">
             Didn&apos;t get it? Check spam, or try again in a minute.
@@ -87,8 +97,22 @@ export default function LoginPage() {
   if (view === "forgot") {
     return (
       <AuthShell eyebrow="Client Portal" title="Reset your password" description="Enter your email and we'll send you a reset link.">
-        <form onSubmit={handleForgotSubmit} className="flex flex-col gap-5">
-          <FloatingInput label="Email address" type="email" value={email} onChange={setEmail} error={errors.email} autoComplete="email" />
+        <form onSubmit={handleForgotSubmit(onForgotSubmit)} className="flex flex-col gap-5" noValidate>
+          <Controller
+            name="email"
+            control={forgotControl}
+            defaultValue=""
+            render={({ field }) => (
+              <FloatingInput
+                label="Email address"
+                type="email"
+                value={field.value}
+                onChange={field.onChange}
+                error={forgotErrors.email?.message}
+                autoComplete="email"
+              />
+            )}
+          />
           <button type="submit" disabled={loading} className="btn-primary rounded-xl px-6 py-3 text-sm font-semibold disabled:opacity-60">
             {loading ? "Sending…" : "Send reset link"}
           </button>
@@ -106,15 +130,36 @@ export default function LoginPage() {
 
   return (
     <AuthShell eyebrow="Client Portal" title="Welcome back" description="Sign in to your Sutertai account.">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-        <FloatingInput label="Email address" type="email" value={email} onChange={setEmail} error={errors.email} autoComplete="email" />
-        <FloatingInput
-          label="Password"
-          value={password}
-          onChange={setPassword}
-          error={errors.password}
-          autoComplete="current-password"
-          showToggle
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5" noValidate>
+        <Controller
+          name="email"
+          control={control}
+          defaultValue=""
+          render={({ field }) => (
+            <FloatingInput
+              label="Email address"
+              type="email"
+              value={field.value}
+              onChange={field.onChange}
+              error={errors.email?.message}
+              autoComplete="email"
+            />
+          )}
+        />
+        <Controller
+          name="password"
+          control={control}
+          defaultValue=""
+          render={({ field }) => (
+            <FloatingInput
+              label="Password"
+              value={field.value}
+              onChange={field.onChange}
+              error={errors.password?.message}
+              autoComplete="current-password"
+              showToggle
+            />
+          )}
         />
         <div className="flex items-center justify-between text-sm">
           <label className="flex items-center gap-2 text-muted">
