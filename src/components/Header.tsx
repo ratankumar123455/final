@@ -10,6 +10,7 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/solutions", label: "Solutions" },
+  { href: "/services", label: "Services" },
   { href: "/team", label: "Team" },
   { href: "/contact", label: "Contact" },
 ];
@@ -32,7 +33,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="hairline-b sticky top-0 z-50 bg-ink/70 backdrop-blur-xl shadow-[0_1px_0_0_rgba(91,33,255,0.15)]">
+    <header className="hairline-b sticky top-0 z-50 bg-ink/70 backdrop-blur-xl shadow-[0_1px_0_0_rgba(20,241,149,0.15)]">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <Link
           href="/"
@@ -58,6 +59,14 @@ export default function Header() {
             }`}
           >
             About
+          </Link>
+          <Link
+            href="/solutions"
+            className={`border-b pb-1 transition-colors hover:text-paper ${
+              pathname === "/solutions" ? "border-indigo text-paper" : "border-transparent"
+            }`}
+          >
+            Solutions
           </Link>
           <div
             className="relative"
@@ -103,14 +112,6 @@ export default function Header() {
             )}
           </div>
           <Link
-            href="/solutions"
-            className={`border-b pb-1 transition-colors hover:text-paper ${
-              pathname === "/solutions" ? "border-indigo text-paper" : "border-transparent"
-            }`}
-          >
-            Solutions
-          </Link>
-          <Link
             href="/team"
             className={`border-b pb-1 transition-colors hover:text-paper ${
               pathname === "/team" ? "border-indigo text-paper" : "border-transparent"
@@ -149,15 +150,6 @@ export default function Header() {
 
       {open && (
         <nav className="hairline-t flex flex-col gap-1 bg-ink px-6 py-4 xl:hidden">
-          <Link
-            href="/services"
-            onClick={() => setOpen(false)}
-            className={`mono-label rounded-lg px-3 py-2 text-xs transition-colors hover:bg-white/5 hover:text-paper ${
-              pathname === "/services" ? "text-paper" : "text-muted"
-            }`}
-          >
-            Services
-          </Link>
           {navItems.map((item) => (
             <Link
               key={item.href}

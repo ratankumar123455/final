@@ -5,8 +5,8 @@ import { motion, useReducedMotion } from "framer-motion";
 type Blob = { size: number; top: string; left: string; color: string; duration: number };
 
 const blobs: Blob[] = [
-  { size: 420, top: "-10%", left: "5%", color: "rgba(91,33,255,0.28)", duration: 14 },
-  { size: 360, top: "10%", left: "70%", color: "rgba(0,217,255,0.18)", duration: 18 },
+  { size: 420, top: "-10%", left: "5%", color: "rgba(5,150,105,0.28)", duration: 14 },
+  { size: 360, top: "10%", left: "70%", color: "rgba(34,197,94,0.18)", duration: 18 },
   { size: 300, top: "55%", left: "35%", color: "rgba(20,241,149,0.12)", duration: 22 },
 ];
 

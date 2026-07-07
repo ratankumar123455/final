@@ -17,7 +17,7 @@ export default function AuthShell({
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[600px]"
         style={{
           background:
-            "radial-gradient(700px circle at 20% 0%, rgba(91,33,255,0.3), transparent 60%), radial-gradient(700px circle at 85% 20%, rgba(0,217,255,0.16), transparent 55%)",
+            "radial-gradient(700px circle at 20% 0%, rgba(5,150,105,0.3), transparent 60%), radial-gradient(700px circle at 85% 20%, rgba(34,197,94,0.16), transparent 55%)",
         }}
         aria-hidden="true"
       />
