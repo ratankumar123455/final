@@ -4,11 +4,11 @@ import SectionHeading from "./SectionHeading";
 const steps = [
   {
     step: "01",
-    title: "Provide your input",
-    description: "Describe the shot, or drop in a reference. Sutertai reads both.",
+    title: "Discover & scope",
+    description: "We map your business goals, users, and constraints before a line of code is written.",
     visual: (
       <div className="flex flex-wrap gap-2">
-        {["ceramic bottle", "golden hour", "85mm", "product photo"].map((tag) => (
+        {["business goals", "user research", "tech audit", "roadmap"].map((tag) => (
           <span
             key={tag}
             className="mono-label rounded-full border border-[var(--line-strong)] px-3 py-1.5 text-[10px] text-paper"
@@ -21,42 +21,42 @@ const steps = [
   },
   {
     step: "02",
-    title: "Generate with AI",
-    description: "The model renders a first pass in seconds, ready to review.",
+    title: "Design the experience",
+    description: "Wireframes and UI/UX design turn the plan into a clickable, testable product.",
     visual: (
       <div>
         <div
           className="h-24 rounded-lg"
           style={{
             backgroundImage:
-              "linear-gradient(135deg, rgba(91,95,255,0.5), rgba(0,229,255,0.25) 60%, rgba(27,36,38,0.92))",
+              "linear-gradient(135deg, rgba(5,150,105,0.5), rgba(34,197,94,0.25) 60%, rgba(18,18,18,0.92))",
           }}
         />
         <div className="mt-3 flex items-center gap-2">
           <span className="h-1 flex-1 overflow-hidden rounded-full bg-white/10">
             <span className="block h-full w-4/5 rounded-full bg-gradient-brand" />
           </span>
-          <span className="mono-label text-[9px] text-muted-2">4.2s</span>
+          <span className="mono-label text-[9px] text-muted-2">v2 approved</span>
         </div>
       </div>
     ),
   },
   {
     step: "03",
-    title: "Refine the result",
-    description: "Nudge lighting, style, or composition without rewriting the prompt.",
+    title: "Build & integrate",
+    description: "Engineers ship in short sprints — website, software, or app — with APIs and cloud wired in.",
     visual: (
       <div className="space-y-3">
-        {["Lighting", "Style strength", "Camera angle"].map((label, i) => (
+        {["Frontend", "Backend & APIs", "QA & testing"].map((label, i) => (
           <div key={label}>
             <div className="mono-label mb-1.5 flex justify-between text-[9px] text-muted-2">
               <span>{label}</span>
-              <span>{[70, 45, 60][i]}%</span>
+              <span>{[80, 65, 55][i]}%</span>
             </div>
             <span className="block h-1 overflow-hidden rounded-full bg-white/10">
               <span
                 className="block h-full rounded-full bg-gradient-brand"
-                style={{ width: `${[70, 45, 60][i]}%` }}
+                style={{ width: `${[80, 65, 55][i]}%` }}
               />
             </span>
           </div>
@@ -66,11 +66,11 @@ const steps = [
   },
   {
     step: "04",
-    title: "Export",
-    description: "Production-ready output, or pipe it straight into your app via API.",
+    title: "Test & refine",
+    description: "Real users, real devices, real load — issues get fixed before launch, not after.",
     visual: (
       <div className="flex flex-wrap gap-2">
-        {["PNG · 8K", "MP4 · 4K60", "JSON via API", "PSD layers"].map((tag) => (
+        {["Cross-browser", "Load testing", "Security review", "Accessibility"].map((tag) => (
           <span
             key={tag}
             className="mono-label rounded-md border border-[var(--line-strong)] px-3 py-1.5 text-[10px] text-scope"
@@ -83,8 +83,8 @@ const steps = [
   },
   {
     step: "05",
-    title: "Deploy",
-    description: "Push the finished asset live, or wire the workflow into your pipeline via API.",
+    title: "Launch & grow",
+    description: "We deploy, monitor, and keep improving — Sutertai stays on as your technology partner.",
     visual: (
       <div className="flex items-center justify-between">
         <div>
@@ -102,11 +102,12 @@ const steps = [
 
 export default function ProcessTimeline() {
   return (
-    <section className="hairline-b py-24">
+    <section id="website-development" className="hairline-b scroll-mt-24 py-24">
       <div className="mx-auto max-w-5xl px-6">
         <SectionHeading
-          eyebrow="Process"
-          title="From idea to finished asset in five steps"
+          eyebrow="Website & Software Development"
+          title="From idea to a live, working product"
+          description="Custom websites, ecommerce, ERP, CRM, and SaaS platforms — built on a process that keeps you informed at every stage, not just at delivery."
         />
         <div className="hairline-t">
           {steps.map((item, i) => (

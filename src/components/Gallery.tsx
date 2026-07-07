@@ -3,40 +3,40 @@ import SectionHeading from "./SectionHeading";
 
 const tiles = [
   {
-    label: "Product photography",
+    label: "Ecommerce storefront",
     span: "lg:col-span-4 lg:row-span-2",
     height: "h-64 lg:h-full",
-    tone: "linear-gradient(155deg, rgba(91,95,255,0.55), rgba(27,36,38,0.95) 65%)",
+    tone: "linear-gradient(155deg, rgba(5,150,105,0.55), rgba(18,18,18,0.95) 65%)",
   },
   {
-    label: "Architecture render",
+    label: "SaaS dashboard UI",
     span: "lg:col-span-4",
     height: "h-48",
-    tone: "linear-gradient(155deg, rgba(0,229,255,0.4), rgba(27,36,38,0.95) 65%)",
+    tone: "linear-gradient(155deg, rgba(34,197,94,0.4), rgba(18,18,18,0.95) 65%)",
   },
   {
-    label: "Fashion editorial",
+    label: "Brand identity system",
     span: "lg:col-span-4",
     height: "h-48",
-    tone: "linear-gradient(155deg, rgba(139,92,246,0.45), rgba(27,36,38,0.95) 65%)",
+    tone: "linear-gradient(155deg, rgba(20,241,149,0.4), rgba(18,18,18,0.95) 65%)",
   },
   {
-    label: "Concept art",
+    label: "Mobile app design",
     span: "lg:col-span-4",
     height: "h-48",
-    tone: "linear-gradient(155deg, rgba(91,95,255,0.3), rgba(0,229,255,0.25) 60%, rgba(27,36,38,0.95))",
+    tone: "linear-gradient(155deg, rgba(5,150,105,0.3), rgba(34,197,94,0.25) 60%, rgba(18,18,18,0.95))",
   },
   {
-    label: "Motion & video frame",
+    label: "Marketing campaign creative",
     span: "lg:col-span-4",
     height: "h-48",
-    tone: "linear-gradient(155deg, rgba(0,229,255,0.5), rgba(27,36,38,0.95) 65%)",
+    tone: "linear-gradient(155deg, rgba(34,197,94,0.5), rgba(18,18,18,0.95) 65%)",
   },
   {
-    label: "Brand campaign",
+    label: "CRM & automation build",
     span: "lg:col-span-4",
     height: "h-48",
-    tone: "linear-gradient(155deg, rgba(91,95,255,0.5), rgba(27,36,38,0.95) 65%)",
+    tone: "linear-gradient(155deg, rgba(5,150,105,0.5), rgba(18,18,18,0.95) 65%)",
   },
 ];
 
@@ -45,9 +45,9 @@ export default function Gallery() {
     <section className="hairline-b py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
-          eyebrow="Gallery"
-          title="A sample of what gets generated"
-          description="Every tile below is a Sutertai output — different industries, same engine."
+          eyebrow="Portfolio"
+          title="A sample of what we've shipped"
+          description="A cross-section of recent work — websites, apps, brands, and automation, built for real businesses."
         />
         <div className="grid gap-4 lg:grid-cols-12 lg:grid-rows-2">
           {tiles.map((tile, i) => (

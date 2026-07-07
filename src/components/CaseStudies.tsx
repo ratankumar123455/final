@@ -3,36 +3,36 @@ import SectionHeading from "./SectionHeading";
 
 const cases = [
   {
-    tag: "Marketing Agency",
-    metric: "84%",
-    metricLabel: "less production time",
-    title: "Fieldnote Agency cut campaign turnaround from weeks to days",
+    tag: "Retail",
+    metric: "186%",
+    metricLabel: "increase in organic traffic",
+    title: "A regional retail chain rebuilt its SEO and content from scratch",
     description:
-      "Fieldnote replaced a chunk of its stock photography and freelance illustration spend with Sutertai's Text to Image, keeping client review cycles inside the same week as the brief.",
+      "Sutertai rebuilt technical SEO, restructured the content strategy, and shipped a faster storefront — organic traffic nearly tripled within two quarters.",
   },
   {
-    tag: "E-commerce",
-    metric: "200,000+",
-    metricLabel: "product images generated",
-    title: "Meridian Goods scaled catalog photography without a studio",
+    tag: "Real Estate",
+    metric: "240%",
+    metricLabel: "more qualified leads",
+    title: "A real estate developer replaced spreadsheets with a real CRM",
     description:
-      "Batch generation let Meridian produce consistent lifestyle and packshot imagery across its full SKU range, with brand style locked in through saved presets.",
+      "A custom CRM and automated lead-scoring pipeline meant sales teams stopped chasing cold leads and started closing warm ones, faster.",
   },
   {
-    tag: "Architecture",
-    metric: "150+",
-    metricLabel: "3D visualizations delivered",
-    title: "Blueprint House pitches concepts before the first model is built",
+    tag: "Healthcare",
+    metric: "62%",
+    metricLabel: "faster patient onboarding",
+    title: "A healthcare provider automated intake with an AI chatbot",
     description:
-      "Early-stage renders and walkthroughs that used to wait for a 3D pass now go out same-week, giving Blueprint House more shots at winning a pitch.",
+      "An AI-powered intake assistant cut manual data entry and appointment scheduling time, freeing front-desk staff for higher-value work.",
   },
   {
-    tag: "Media & Entertainment",
-    metric: "12x",
-    metricLabel: "faster video production",
-    title: "Novara Studio produces more video with the same team",
+    tag: "SaaS",
+    metric: "3 weeks",
+    metricLabel: "from kickoff to launch",
+    title: "A startup shipped its MVP in three weeks, not three months",
     description:
-      "Text to Video handles first-pass storyboarding and previsualization, so Novara's editors spend their time finishing cuts instead of starting them from scratch.",
+      "A tightly scoped sprint plan and a proven technology stack got a SaaS founder in front of investors with a working product, not a deck.",
   },
 ];
 
@@ -42,7 +42,7 @@ export default function CaseStudies() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="Case studies"
-          title="What teams build with Sutertai"
+          title="What businesses build with Sutertai"
         />
         <div className="grid gap-6 sm:grid-cols-2">
           {cases.map((item, i) => (

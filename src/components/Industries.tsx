@@ -3,44 +3,44 @@ import SectionHeading from "./SectionHeading";
 
 const industries = [
   {
-    title: "Marketing",
-    description: "Campaign visuals, ad variants, and social content at the pace of a brief, not a production schedule.",
-    tone: "linear-gradient(150deg, rgba(91,95,255,0.45), rgba(27,36,38,0.92) 70%)",
-  },
-  {
     title: "Retail & E-commerce",
-    description: "Catalog photography and lifestyle imagery for thousands of SKUs without a studio booking.",
-    tone: "linear-gradient(150deg, rgba(0,229,255,0.35), rgba(27,36,38,0.92) 70%)",
+    description: "Storefronts, catalogs, and marketing funnels engineered to convert browsers into buyers.",
+    tone: "linear-gradient(150deg, rgba(5,150,105,0.45), rgba(18,18,18,0.92) 70%)",
   },
   {
-    title: "Architecture & Real Estate",
-    description: "Concept renders and walkthroughs clients can react to before a single brick is laid.",
-    tone: "linear-gradient(150deg, rgba(139,92,246,0.4), rgba(27,36,38,0.92) 70%)",
-  },
-  {
-    title: "Media & Entertainment",
-    description: "Storyboards, previsualization, and short-form video for teams that iterate fast.",
-    tone: "linear-gradient(150deg, rgba(91,95,255,0.25), rgba(0,229,255,0.2) 60%, rgba(27,36,38,0.92))",
-  },
-  {
-    title: "Education",
-    description: "Illustrated explainers and course visuals that would otherwise need a design queue.",
-    tone: "linear-gradient(150deg, rgba(0,229,255,0.28), rgba(27,36,38,0.92) 70%)",
-  },
-  {
-    title: "Gaming",
-    description: "Concept art, environment studies, and asset exploration ahead of production art.",
-    tone: "linear-gradient(150deg, rgba(91,95,255,0.35), rgba(27,36,38,0.92) 70%)",
+    title: "Real Estate",
+    description: "Listing platforms, CRM, and lead-gen campaigns built for long sales cycles.",
+    tone: "linear-gradient(150deg, rgba(34,197,94,0.35), rgba(18,18,18,0.92) 70%)",
   },
   {
     title: "Healthcare",
-    description: "Patient education visuals and internal communication assets, generated on brand.",
-    tone: "linear-gradient(150deg, rgba(0,229,255,0.32), rgba(27,36,38,0.92) 70%)",
+    description: "Patient-facing apps and internal automation that respect compliance from day one.",
+    tone: "linear-gradient(150deg, rgba(20,241,149,0.35), rgba(18,18,18,0.92) 70%)",
   },
   {
-    title: "Finance",
-    description: "Investor decks, product explainers, and campaign visuals that meet compliance review.",
-    tone: "linear-gradient(150deg, rgba(139,92,246,0.32), rgba(0,229,255,0.18) 60%, rgba(27,36,38,0.92))",
+    title: "Finance & Fintech",
+    description: "Secure platforms, dashboards, and automation that meet audit and compliance needs.",
+    tone: "linear-gradient(150deg, rgba(5,150,105,0.25), rgba(34,197,94,0.2) 60%, rgba(18,18,18,0.92))",
+  },
+  {
+    title: "Education",
+    description: "Learning platforms and enrollment funnels that scale with your student base.",
+    tone: "linear-gradient(150deg, rgba(34,197,94,0.28), rgba(18,18,18,0.92) 70%)",
+  },
+  {
+    title: "Hospitality & Travel",
+    description: "Booking systems and marketing campaigns tuned to seasonal demand.",
+    tone: "linear-gradient(150deg, rgba(5,150,105,0.35), rgba(18,18,18,0.92) 70%)",
+  },
+  {
+    title: "Manufacturing & Logistics",
+    description: "ERP, inventory, and workflow automation that replace spreadsheets for good.",
+    tone: "linear-gradient(150deg, rgba(34,197,94,0.32), rgba(18,18,18,0.92) 70%)",
+  },
+  {
+    title: "Professional Services",
+    description: "Branding, websites, and CRM that make a small team look and run like a big one.",
+    tone: "linear-gradient(150deg, rgba(20,241,149,0.3), rgba(34,197,94,0.18) 60%, rgba(18,18,18,0.92))",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function Industries() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="Industries"
-          title="Built for teams that make things"
+          title="Built for businesses that are ready to grow"
         />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {industries.map((item, i) => (

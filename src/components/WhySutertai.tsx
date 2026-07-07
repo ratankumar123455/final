@@ -3,32 +3,32 @@ import SectionHeading from "./SectionHeading";
 
 const secondary = [
   {
-    stat: "SOC 2",
-    title: "Enterprise ready",
-    description: "Role-based access, audit logs, and dedicated workspaces built in from day one.",
+    stat: "24/7",
+    title: "Always-on support",
+    description: "A dedicated account team that responds inside a business day, every day.",
   },
   {
     stat: "AES-256",
     title: "Security by default",
-    description: "Assets and prompts are encrypted at rest and in transit, always.",
+    description: "Client data, credentials, and code are encrypted at rest and in transit, always.",
   },
 ];
 
 const supporting = [
   {
-    stat: "REST + SDK",
-    title: "Built for developers",
-    description: "A documented API and client libraries so generation fits directly into your pipeline.",
+    stat: "150+",
+    title: "Happy clients",
+    description: "Startups and enterprises who've shipped growth with Sutertai.",
   },
   {
-    stat: "100%",
-    title: "Creative freedom",
-    description: "No fixed templates — direct style, composition, and camera the way you'd brief a team.",
+    stat: "300+",
+    title: "Projects delivered",
+    description: "Websites, apps, and AI systems shipped on time, on budget.",
   },
   {
-    stat: "99.9%",
-    title: "Uptime",
-    description: "Auto-scaling render infrastructure across multiple regions, monitored around the clock.",
+    stat: "12",
+    title: "Countries served",
+    description: "Clients across India, the Gulf, Europe, and North America.",
   },
 ];
 
@@ -38,20 +38,20 @@ export default function WhySutertai() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="Why Sutertai"
-          title="Engineering, not just prompts"
-          description="Serious creative work needs serious infrastructure. Here's what's underneath the studio."
+          title="Engineering and strategy, not just promises"
+          description="Serious growth needs serious infrastructure. Here's what's underneath every engagement."
         />
 
         <div className="grid gap-5 lg:grid-cols-12">
           <Reveal className="card-lift flex flex-col justify-between rounded-2xl border border-[var(--line)] p-8 lg:col-span-5 lg:row-span-2">
             <div>
-              <span className="mono-label text-[10px] text-accent">Generation speed</span>
+              <span className="mono-label text-[10px] text-accent">Delivery speed</span>
               <h3 className="font-display mt-3 text-2xl text-paper">
-                Renders as fast as you iterate
+                Fast delivery without cutting corners
               </h3>
               <p className="mt-3 max-w-xs text-sm text-muted">
-                Median time from prompt to first render on our production
-                inference cluster.
+                Median time from kickoff to a live, working first version across
+                our website and app engagements.
               </p>
             </div>
             <div className="mt-8 flex items-center gap-6">
@@ -63,13 +63,13 @@ export default function WhySutertai() {
                 }}
               >
                 <div className="flex h-[88px] w-[88px] items-center justify-center rounded-full bg-[var(--ink)]">
-                  <span className="font-display text-2xl text-generated">4.2s</span>
+                  <span className="font-display text-2xl text-generated">3 wks</span>
                 </div>
               </div>
               <p className="mono-label text-[10px] text-muted-2">
-                85% of requests
+                85% of projects
                 <br />
-                render under 5s
+                reach v1 on schedule
               </p>
             </div>
           </Reveal>
@@ -100,6 +100,20 @@ export default function WhySutertai() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={360} className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          {[
+            "Experienced, senior-led team",
+            "Affordable, transparent pricing",
+            "Latest AI & cloud technology",
+            "Scalable, custom-built solutions",
+            "Long-term partnership, not one-off delivery",
+          ].map((reason) => (
+            <div key={reason} className="hairline-t pt-4 text-sm text-muted">
+              {reason}
+            </div>
+          ))}
+        </Reveal>
       </div>
     </section>
   );

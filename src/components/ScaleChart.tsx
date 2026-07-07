@@ -22,9 +22,9 @@ function toAreaPath() {
 }
 
 const supporting = [
-  "No rate limits on generation volume",
-  "Dedicated rendering capacity on Enterprise",
-  "Multi-region failover, 99.9% uptime",
+  "Automation pipelines that run around the clock, not just business hours",
+  "AI agents that qualify leads before a human ever picks up the phone",
+  "Dashboards that show ROI in real time, not at the end of the quarter",
 ];
 
 export default function ScaleChart() {
@@ -33,8 +33,8 @@ export default function ScaleChart() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="Built for scale"
-          title="Infrastructure that grows with your output"
-          description="Generation volume across the Sutertai platform, indexed to launch month."
+          title="Automation that compounds your output"
+          description="Average growth in qualified leads for clients running Sutertai's AI automation and chatbot systems, indexed to month one."
         />
         <Reveal className="surface rounded-2xl p-6 sm:p-10">
           <div className="wide-chart" style={{ overflowX: "auto" }}>
@@ -43,7 +43,7 @@ export default function ScaleChart() {
               className="w-full"
               style={{ minWidth: 480 }}
               role="img"
-              aria-label="Generation volume trending upward over twelve months"
+              aria-label="Qualified leads trending upward over twelve months"
             >
               <defs>
                 <linearGradient id="scale-fill" x1="0" y1="0" x2="0" y2="1">

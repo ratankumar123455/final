@@ -1,11 +1,11 @@
 const logos = [
-  "NOVARA STUDIO",
-  "ARCFORM LABS",
-  "PIXELWORKS MEDIA",
-  "HALCYON RETAIL",
+  "NOVARA RETAIL",
+  "ARCFORM REALTY",
+  "PIXELWORKS HEALTH",
+  "HALCYON FINANCE",
   "BLUEPRINT HOUSE",
-  "ORBITAL GAMES",
-  "FIELDNOTE AGENCY",
+  "ORBITAL LOGISTICS",
+  "FIELDNOTE HOSPITALITY",
   "MERIDIAN GOODS",
 ];
 
@@ -15,7 +15,7 @@ export default function LogoMarquee() {
     <section className="hairline-b py-14">
       <div className="mx-auto max-w-6xl px-6">
         <p className="mono-label text-center text-[11px] text-muted">
-          Trusted by teams shipping creative work every day
+          Trusted by growing businesses across industries
         </p>
         <div className="relative mt-8 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="marquee-track gap-16">
