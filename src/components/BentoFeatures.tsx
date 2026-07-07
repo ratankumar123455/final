@@ -19,14 +19,14 @@ const features: Feature[] = [
     title: "AI Digital Marketing",
     description: "Growth marketing built around measurable pipeline, not vanity metrics.",
     points: ["SEO", "Paid Ads", "Content Marketing", "Lead Generation", "Analytics"],
-    tone: "linear-gradient(150deg, rgba(91,33,255,0.35), transparent 70%)",
+    tone: "linear-gradient(150deg, rgba(5,150,105,0.35), transparent 70%)",
   },
   {
     icon: Code2,
     title: "Website & Software Development",
     description: "Corporate sites, ecommerce, and custom software engineered to scale.",
     points: ["Corporate Websites", "E-commerce", "CRM", "ERP", "Web Apps", "Custom Software"],
-    tone: "linear-gradient(150deg, rgba(0,217,255,0.3), transparent 70%)",
+    tone: "linear-gradient(150deg, rgba(34,197,94,0.3), transparent 70%)",
   },
   {
     icon: Bot,
