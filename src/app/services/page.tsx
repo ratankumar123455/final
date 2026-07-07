@@ -44,7 +44,7 @@ const services: Service[] = [
       "When off-the-shelf tools stop fitting how your business actually operates, custom software closes the gap. We build ERP systems, CRM platforms, SaaS products, admin panels, and internal tools tailored to your workflows, with APIs that connect cleanly to the systems you already run on.",
     benefits: ["Built around your exact workflow, not a template", "Scales from MVP to enterprise load", "Clean API architecture for future integrations", "Dedicated support after launch"],
     process: ["Requirements & architecture", "Sprint-based development", "Integration & testing", "Deployment & handover"],
-    technologies: ["Node.js", "Python", "PostgreSQL", "AWS / GCP"],
+    technologies: ["Node.js", "Python", "PostgreSQL", "AWS EC2 / Amplify"],
     value: "Software that fits your business, instead of forcing your business to fit the software.",
   },
   {
@@ -118,10 +118,10 @@ const services: Service[] = [
     tag: "09",
     title: "Business Automation & Cloud Solutions",
     overview:
-      "We implement CRM and ERP systems, automate the workflows around them, and migrate infrastructure to the cloud — so your operations scale without scaling headcount at the same rate. Security and monitoring are part of the build, not an add-on afterward.",
-    benefits: ["Manual work replaced with reliable automation", "CRM/ERP tailored to your actual sales process", "Cloud infrastructure that scales with demand", "Built-in monitoring, backups, and security review"],
-    process: ["Workflow audit", "CRM/ERP implementation", "Automation build", "Cloud migration & monitoring"],
-    technologies: ["Salesforce / HubSpot / custom CRM", "AWS / Azure / GCP", "Zapier / custom automation", "Monitoring & alerting tools"],
+      "We implement CRM and ERP systems, automate the workflows around them, and run infrastructure on AWS — EC2 for virtual servers, S3 for object storage, and Amplify for full-stack web and mobile apps — so your operations scale without scaling headcount at the same rate.",
+    benefits: ["Manual work replaced with reliable automation", "CRM/ERP tailored to your actual sales process", "AWS infrastructure that scales with demand", "Built-in monitoring, backups, and security review"],
+    process: ["Workflow audit", "CRM/ERP implementation", "Automation build", "AWS deployment & monitoring"],
+    technologies: ["Salesforce / HubSpot / custom CRM", "AWS EC2 & S3", "AWS Amplify", "Zapier / custom automation"],
     value: "Operations that keep working smoothly as you take on more customers.",
   },
 ];
