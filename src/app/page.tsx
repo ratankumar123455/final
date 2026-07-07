@@ -19,6 +19,7 @@ import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import Faq from "@/components/Faq";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import AmbientBlobs from "@/components/AmbientBlobs";
 
 const heroStats = [
   { value: "500+", label: "Projects" },
@@ -32,14 +33,7 @@ export default function Home() {
     <div>
       {/* Hero */}
       <section className="hairline-b relative overflow-hidden">
-        <div
-          className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[720px]"
-          style={{
-            background:
-              "radial-gradient(800px circle at 15% -10%, rgba(91,33,255,0.28), transparent 60%), radial-gradient(800px circle at 90% 15%, rgba(0,217,255,0.14), transparent 55%)",
-          }}
-          aria-hidden="true"
-        />
+        <AmbientBlobs className="h-[720px]" />
         <div className="mx-auto grid max-w-6xl gap-12 px-6 pt-24 pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="flex flex-col items-start">
             <Reveal>
