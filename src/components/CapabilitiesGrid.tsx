@@ -6,37 +6,37 @@ const capabilities = [
     tag: "Growth",
     title: "SEO & Performance Ads",
     description: "Technical SEO, content, and paid campaigns engineered for ROI.",
-    tone: "linear-gradient(150deg, rgba(5,150,105,0.5), rgba(18,18,18,0.92) 70%)",
+    tone: "linear-gradient(150deg, rgba(143,188,148,0.5), rgba(253,246,233,0.92) 70%)",
   },
   {
     tag: "Reach",
     title: "Social Media Marketing",
     description: "Content, community management, and paid social that compounds.",
-    tone: "linear-gradient(150deg, rgba(34,197,94,0.4), rgba(18,18,18,0.92) 70%)",
+    tone: "linear-gradient(150deg, rgba(168,216,232,0.4), rgba(253,246,233,0.92) 70%)",
   },
   {
     tag: "Identity",
     title: "Branding",
     description: "Positioning, visual identity, and messaging that earns trust fast.",
-    tone: "linear-gradient(150deg, rgba(20,241,149,0.4), rgba(18,18,18,0.92) 70%)",
+    tone: "linear-gradient(150deg, rgba(244,169,136,0.4), rgba(253,246,233,0.92) 70%)",
   },
   {
     tag: "Automation",
     title: "AI Marketing Automation",
     description: "Lead scoring, nurture flows, and campaigns that run themselves.",
-    tone: "linear-gradient(150deg, rgba(5,150,105,0.3), rgba(34,197,94,0.2) 60%, rgba(18,18,18,0.92))",
+    tone: "linear-gradient(150deg, rgba(143,188,148,0.3), rgba(168,216,232,0.2) 60%, rgba(253,246,233,0.92))",
   },
   {
     tag: "Content",
     title: "Content & Email Marketing",
     description: "Editorial calendars, lifecycle email, and content that converts.",
-    tone: "linear-gradient(150deg, rgba(34,197,94,0.25), rgba(18,18,18,0.92) 70%)",
+    tone: "linear-gradient(150deg, rgba(168,216,232,0.25), rgba(253,246,233,0.92) 70%)",
   },
   {
     tag: "Pipeline",
     title: "Lead Generation",
     description: "Full-funnel campaigns built to fill your pipeline, not just your inbox.",
-    tone: "linear-gradient(150deg, rgba(5,150,105,0.22), rgba(18,18,18,0.92) 70%)",
+    tone: "linear-gradient(150deg, rgba(143,188,148,0.22), rgba(253,246,233,0.92) 70%)",
   },
 ];
 

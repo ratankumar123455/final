@@ -12,7 +12,7 @@ const testimonials = [
     name: "Aditi Rao",
     role: "Marketing Director",
     company: "a retail chain client",
-    tone: "linear-gradient(150deg, rgba(5,150,105,0.9), rgba(18,18,18,0.9))",
+    tone: "linear-gradient(150deg, rgba(143,188,148,0.9), rgba(253,246,233,0.9))",
   },
   {
     quote:
@@ -20,7 +20,7 @@ const testimonials = [
     name: "Karan Mehta",
     role: "Founder",
     company: "a real estate client",
-    tone: "linear-gradient(150deg, rgba(34,197,94,0.85), rgba(18,18,18,0.9))",
+    tone: "linear-gradient(150deg, rgba(168,216,232,0.85), rgba(253,246,233,0.9))",
   },
   {
     quote:
@@ -28,7 +28,7 @@ const testimonials = [
     name: "Priya Nair",
     role: "Founder",
     company: "a SaaS startup client",
-    tone: "linear-gradient(150deg, rgba(20,241,149,0.85), rgba(18,18,18,0.9))",
+    tone: "linear-gradient(150deg, rgba(244,169,136,0.85), rgba(253,246,233,0.9))",
   },
   {
     quote:
@@ -36,7 +36,7 @@ const testimonials = [
     name: "Devansh Iyer",
     role: "Operations Lead",
     company: "a healthcare client",
-    tone: "linear-gradient(150deg, rgba(5,150,105,0.6), rgba(34,197,94,0.5))",
+    tone: "linear-gradient(150deg, rgba(143,188,148,0.6), rgba(168,216,232,0.5))",
   },
 ];
 

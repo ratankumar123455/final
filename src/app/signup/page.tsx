@@ -161,7 +161,7 @@ export default function SignupPage() {
                   type="checkbox"
                   checked={field.value}
                   onChange={(e) => field.onChange(e.target.checked)}
-                  className="mt-0.5 h-4 w-4 rounded border-[var(--line-strong)] bg-black/30 accent-[var(--signal)]"
+                  className="mt-0.5 h-4 w-4 rounded border-[var(--line-strong)] bg-white/50 accent-[var(--signal)]"
                 />
                 I agree to the Terms & Conditions and Privacy Policy.
               </label>

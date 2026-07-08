@@ -33,7 +33,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="hairline-b sticky top-0 z-50 bg-ink/70 backdrop-blur-xl shadow-[0_1px_0_0_rgba(20,241,149,0.15)]">
+    <header className="hairline-b sticky top-0 z-50 bg-ink/70 backdrop-blur-xl shadow-[0_1px_0_0_rgba(244,169,136,0.15)]">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <Link
           href="/"

@@ -42,7 +42,7 @@ export default function OtpInput({
           inputMode="numeric"
           maxLength={1}
           aria-label={`Digit ${i + 1}`}
-          className="h-14 w-full rounded-xl border border-[var(--line)] bg-black/30 text-center text-xl text-paper focus:border-accent focus:outline-none"
+          className="h-14 w-full rounded-xl border border-[var(--line)] bg-white/50 text-center text-xl text-paper focus:border-accent focus:outline-none"
         />
       ))}
     </div>

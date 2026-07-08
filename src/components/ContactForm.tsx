@@ -36,7 +36,7 @@ export default function ContactForm() {
           id="name"
           {...register("name")}
           placeholder="Jane Doe"
-          className={`mt-2 w-full rounded-xl border bg-black/30 p-3 text-sm text-paper placeholder:text-muted/70 focus:outline-none ${
+          className={`mt-2 w-full rounded-xl border bg-white/50 p-3 text-sm text-paper placeholder:text-muted/70 focus:outline-none ${
             errors.name ? "border-red-400/70 focus:border-red-400" : "border-[var(--line)] focus:border-accent"
           }`}
         />
@@ -51,7 +51,7 @@ export default function ContactForm() {
           {...register("message")}
           rows={4}
           placeholder="Tell us about your project or question"
-          className={`mt-2 w-full resize-none rounded-xl border bg-black/30 p-3 text-sm text-paper placeholder:text-muted/70 focus:outline-none ${
+          className={`mt-2 w-full resize-none rounded-xl border bg-white/50 p-3 text-sm text-paper placeholder:text-muted/70 focus:outline-none ${
             errors.message ? "border-red-400/70 focus:border-red-400" : "border-[var(--line)] focus:border-accent"
           }`}
         />

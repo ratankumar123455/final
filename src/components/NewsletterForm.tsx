@@ -39,7 +39,7 @@ export default function NewsletterForm() {
           {...register("email")}
           placeholder="you@company.com"
           aria-label="Email address"
-          className={`w-full min-w-0 rounded-full border bg-black/30 px-4 py-2.5 text-sm text-paper placeholder:text-muted/70 focus:outline-none ${
+          className={`w-full min-w-0 rounded-full border bg-white/50 px-4 py-2.5 text-sm text-paper placeholder:text-muted/70 focus:outline-none ${
             errors.email ? "border-red-400/70 focus:border-red-400" : "border-[var(--line)] focus:border-accent"
           }`}
         />

@@ -36,7 +36,7 @@ export default function FloatingInput({
           onChange={(e) => onChange(e.target.value)}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
-          className={`peer w-full rounded-xl border bg-black/30 px-4 pt-6 pb-2.5 text-base text-paper focus:outline-none ${
+          className={`peer w-full rounded-xl border bg-white/50 px-4 pt-6 pb-2.5 text-base text-paper focus:outline-none ${
             error ? "border-red-400/70 focus:border-red-400" : "border-[var(--line)] focus:border-accent"
           }`}
         />

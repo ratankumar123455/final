@@ -84,7 +84,7 @@ export default function TeamPage() {
                   className="font-display flex h-16 w-16 items-center justify-center rounded-full text-xl text-pure"
                   style={{
                     backgroundImage:
-                      "linear-gradient(150deg, rgba(5,150,105,0.9), rgba(18,18,18,0.9))",
+                      "linear-gradient(150deg, rgba(143,188,148,0.9), rgba(253,246,233,0.9))",
                   }}
                   aria-hidden="true"
                 >

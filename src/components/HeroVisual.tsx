@@ -1,8 +1,8 @@
 const metrics = [
-  { label: "Organic traffic", value: "+186%", tone: "linear-gradient(150deg, rgba(5,150,105,0.5), rgba(18,18,18,0.92) 70%)" },
-  { label: "Qualified leads", value: "+240%", tone: "linear-gradient(150deg, rgba(34,197,94,0.35), rgba(18,18,18,0.92) 70%)" },
-  { label: "Conversion rate", value: "4.8x", tone: "linear-gradient(150deg, rgba(20,241,149,0.4), rgba(18,18,18,0.92) 70%)", active: true },
-  { label: "Time to launch", value: "-62%", tone: "linear-gradient(150deg, rgba(5,150,105,0.25), rgba(18,18,18,0.92) 70%)" },
+  { label: "Organic traffic", value: "+186%", tone: "linear-gradient(150deg, rgba(143,188,148,0.5), rgba(253,246,233,0.92) 70%)" },
+  { label: "Qualified leads", value: "+240%", tone: "linear-gradient(150deg, rgba(168,216,232,0.35), rgba(253,246,233,0.92) 70%)" },
+  { label: "Conversion rate", value: "4.8x", tone: "linear-gradient(150deg, rgba(244,169,136,0.4), rgba(253,246,233,0.92) 70%)", active: true },
+  { label: "Time to launch", value: "-62%", tone: "linear-gradient(150deg, rgba(143,188,148,0.25), rgba(253,246,233,0.92) 70%)" },
 ];
 
 const points = [22, 30, 26, 40, 46, 58, 54, 66, 72, 80, 88, 96];
@@ -14,7 +14,7 @@ export default function HeroVisual() {
         className="absolute -inset-16 -z-10 blur-3xl"
         style={{
           background:
-            "radial-gradient(220px circle at 30% 20%, rgba(5,150,105,0.35), transparent 65%), radial-gradient(260px circle at 80% 70%, rgba(34,197,94,0.18), transparent 65%)",
+            "radial-gradient(220px circle at 30% 20%, rgba(143,188,148,0.35), transparent 65%), radial-gradient(260px circle at 80% 70%, rgba(168,216,232,0.18), transparent 65%)",
         }}
         aria-hidden="true"
       />
@@ -49,7 +49,7 @@ export default function HeroVisual() {
                 style={{
                   backgroundImage: metric.tone,
                   borderColor: metric.active ? "var(--signal)" : "var(--line)",
-                  boxShadow: metric.active ? "0 0 0 2px rgba(5,150,105,0.25)" : "none",
+                  boxShadow: metric.active ? "0 0 0 2px rgba(143,188,148,0.25)" : "none",
                 }}
               >
                 <p className="font-display text-sm text-paper">{metric.value}</p>

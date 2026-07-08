@@ -19,21 +19,21 @@ const features: Feature[] = [
     title: "AI Digital Marketing",
     description: "Growth marketing built around measurable pipeline, not vanity metrics.",
     points: ["SEO", "Paid Ads", "Content Marketing", "Lead Generation", "Analytics"],
-    tone: "linear-gradient(150deg, rgba(5,150,105,0.35), transparent 70%)",
+    tone: "linear-gradient(150deg, rgba(143,188,148,0.35), transparent 70%)",
   },
   {
     icon: Code2,
     title: "Website & Software Development",
     description: "Corporate sites, ecommerce, and custom software engineered to scale.",
     points: ["Corporate Websites", "E-commerce", "CRM", "ERP", "Web Apps", "Custom Software"],
-    tone: "linear-gradient(150deg, rgba(34,197,94,0.3), transparent 70%)",
+    tone: "linear-gradient(150deg, rgba(168,216,232,0.3), transparent 70%)",
   },
   {
     icon: Bot,
     title: "AI Automation",
     description: "Chatbots and intelligent workflows that remove manual work from your day.",
     points: ["Chatbots", "AI Agents", "Workflow Automation", "Business Intelligence", "Machine Learning"],
-    tone: "linear-gradient(150deg, rgba(20,241,149,0.3), transparent 70%)",
+    tone: "linear-gradient(150deg, rgba(244,169,136,0.3), transparent 70%)",
   },
 ];
 
@@ -80,7 +80,7 @@ function TiltCard({ feature, delay }: { feature: Feature; delay: number }) {
           aria-hidden="true"
         />
         <div className="relative flex h-full flex-col">
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[var(--line-strong)] bg-black/30">
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[var(--line-strong)] bg-white/50">
             <Icon className="h-7 w-7 text-accent" strokeWidth={1.5} />
           </div>
           <h3 className="font-display mt-6 text-xl text-paper sm:text-2xl">{feature.title}</h3>
