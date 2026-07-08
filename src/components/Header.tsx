@@ -3,34 +3,20 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import MagneticLink from "./MagneticLink";
 
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/solutions", label: "Solutions" },
-  { href: "/services", label: "Services" },
   { href: "/team", label: "Team" },
   { href: "/contact", label: "Contact" },
-];
-
-const megaMenuServices = [
-  { name: "AI Digital Marketing", href: "/services#digital-marketing", description: "SEO, paid ads, and AI-driven growth campaigns." },
-  { name: "Website Development", href: "/services#website-development", description: "Corporate, ecommerce, and portfolio websites." },
-  { name: "Software Development", href: "/services#software-development", description: "Custom platforms, ERP, CRM, and SaaS." },
-  { name: "AI Product Development", href: "/services#ai-product-development", description: "Chatbots, agents, and applied ML products." },
-  { name: "Mobile App Development", href: "/services#mobile-app-development", description: "Native and cross-platform apps that ship." },
-  { name: "Social Media Marketing", href: "/services#social-media-marketing", description: "Content, community, and paid social growth." },
-  { name: "SEO Optimization", href: "/services#seo-optimization", description: "Technical, on-page, and authority-building SEO." },
-  { name: "UI/UX Design", href: "/services#ui-ux-design", description: "Research-led interfaces people enjoy using." },
-  { name: "Business Automation & Cloud", href: "/services#business-automation-cloud", description: "Workflow automation, CRM, and cloud infrastructure." },
 ];
 
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="hairline-b sticky top-0 z-50 bg-ink/70 backdrop-blur-xl shadow-[0_1px_0_0_rgba(244,169,136,0.15)]">
@@ -68,49 +54,6 @@ export default function Header() {
           >
             Solutions
           </Link>
-          <div
-            className="relative"
-            onMouseEnter={() => setMenuOpen(true)}
-            onMouseLeave={() => setMenuOpen(false)}
-          >
-            <button
-              className={`border-b pb-1 transition-colors hover:text-paper ${
-                pathname === "/services" ? "border-indigo text-paper" : "border-transparent"
-              }`}
-              aria-expanded={menuOpen}
-              aria-haspopup="true"
-            >
-              Services
-            </button>
-            {menuOpen && (
-              <div className="glass-panel absolute left-1/2 top-full mt-3 w-[600px] -translate-x-1/2 rounded-2xl p-6">
-                <div className="grid grid-cols-2 gap-1">
-                  {megaMenuServices.map((service) => (
-                    <Link
-                      key={service.name}
-                      href={service.href}
-                      onClick={() => setMenuOpen(false)}
-                      className="rounded-lg p-3 transition-colors hover:bg-white/5"
-                    >
-                      <p className="text-xs font-semibold normal-case tracking-normal text-paper">
-                        {service.name}
-                      </p>
-                      <p className="mt-1 text-[11px] normal-case tracking-normal text-muted">
-                        {service.description}
-                      </p>
-                    </Link>
-                  ))}
-                </div>
-                <Link
-                  href="/services"
-                  onClick={() => setMenuOpen(false)}
-                  className="mt-3 flex items-center gap-1.5 rounded-lg p-3 text-xs font-semibold normal-case tracking-normal text-accent hover:bg-white/5"
-                >
-                  View all services <ArrowRight className="h-3.5 w-3.5" />
-                </Link>
-              </div>
-            )}
-          </div>
           <Link
             href="/team"
             className={`border-b pb-1 transition-colors hover:text-paper ${

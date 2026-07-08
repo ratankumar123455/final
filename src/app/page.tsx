@@ -60,7 +60,7 @@ export default function Home() {
               <MagneticLink href="/contact" variant="primary">
                 Get Started
               </MagneticLink>
-              <MagneticLink href="/services" variant="secondary">
+              <MagneticLink href="#services-preview" variant="secondary">
                 Explore Services
               </MagneticLink>
             </Reveal>

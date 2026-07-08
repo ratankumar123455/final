@@ -37,16 +37,6 @@ function YouTubeIcon(props: React.SVGProps<SVGSVGElement>) {
 
 const columns = [
   {
-    heading: "Services",
-    links: [
-      { href: "/services#digital-marketing", label: "AI Digital Marketing" },
-      { href: "/services#website-development", label: "Website Development" },
-      { href: "/services#software-development", label: "Software Development" },
-      { href: "/services#ai-product-development", label: "AI Product Development" },
-      { href: "/services", label: "View all services" },
-    ],
-  },
-  {
     heading: "Company",
     links: [
       { href: "/about", label: "About" },
