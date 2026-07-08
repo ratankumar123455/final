@@ -72,12 +72,10 @@ export default function ContactPage() {
                   Chat on WhatsApp
                 </a>
                 <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="tel:+917459887412"
                   className="btn-secondary rounded-full px-5 py-2.5 text-sm font-semibold"
                 >
-                  Start Live Chat
+                  Call us directly
                 </a>
               </div>
             </Reveal>

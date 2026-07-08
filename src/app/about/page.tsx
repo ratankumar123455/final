@@ -8,7 +8,7 @@ import Industries from "@/components/Industries";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Sutertai Private Limited is an AI-powered digital marketing and technology agency based in Prayagraj, India, serving startups and enterprises worldwide.",
+    "Sutertai Private Limited is an AI-powered digital marketing and technology agency based in Prayagraj, India — websites, software, AI products, and business automation for small businesses, healthcare, and IT companies worldwide.",
 };
 
 const stats = [
@@ -30,6 +30,10 @@ const values = [
   {
     title: "Craft",
     description: "We'd rather ship fewer features that work perfectly than a long list that half-works.",
+  },
+  {
+    title: "AI-first, human-led",
+    description: "We automate the repetitive work with AI so our people can spend their time on strategy and judgment calls.",
   },
   {
     title: "Long-term thinking",
@@ -55,19 +59,19 @@ const goals = [
     label: "Now",
     title: "Deepening AI product capability",
     description:
-      "Expanding our applied AI and automation practice so more clients can run chatbots, agents, and predictive analytics in production.",
+      "Expanding our applied AI and automation practice — chatbots, AI agents, and predictive analytics — so more of our small business, healthcare, and IT clients can run these systems in production, not just pilot them.",
   },
   {
     label: "Next",
     title: "Regional expansion across India and the Gulf",
     description:
-      "Growing our team and client base across Uttar Pradesh, wider India, and the Middle East, closer to the businesses we serve.",
+      "Growing our team and client base across Uttar Pradesh, wider India, and the Middle East, so we're closer to the businesses we serve and can respond faster when it matters.",
   },
   {
     label: "Later",
     title: "A dedicated products division",
     description:
-      "Turning repeatable client solutions — CRM templates, automation kits, AI agents — into products businesses can adopt directly.",
+      "Turning the solutions we build repeatedly for clients — CRM templates, automation kits, industry-specific AI agents — into standalone products smaller businesses can adopt directly, without a full custom engagement.",
   },
 ];
 
@@ -91,7 +95,7 @@ export default function AboutPage() {
           <SectionHeading
             eyebrow="Who we are"
             title="A full-service digital partner, not a single-service vendor"
-            description="Sutertai Private Limited was founded to close the gap between marketing agencies that don't build technology, and software vendors that don't understand growth. We do both, as one team, so your website, your SEO, your CRM, and your AI automation are never working against each other."
+            description="Sutertai Private Limited designs and builds websites, develops custom software, creates AI products, runs digital marketing campaigns, and automates business operations. Our services span AI-powered digital marketing (SEO, paid ads, content, and marketing automation), website and software development (corporate sites, ecommerce, ERP, CRM, and SaaS platforms), AI product development (chatbots, AI agents, and applied machine learning), mobile app development, UI/UX design, and business automation with cloud infrastructure on AWS. We work primarily with small businesses, healthcare providers, and IT and software companies — clients who need a technology partner that understands growth, not just a vendor who delivers a spec sheet. Instead of hiring a marketing agency, a software vendor, and an AI consultant separately, you get one accountable team building your website, running your campaigns, and automating your operations, all pulling in the same direction."
           />
         </div>
       </section>
@@ -105,13 +109,19 @@ export default function AboutPage() {
               <p className="mt-4 text-muted">
                 Sutertai started in Prayagraj with a simple observation:
                 small and mid-sized businesses were being sold marketing
-                without technology, or technology without a growth plan.
-                We began as a small team building websites and running
-                campaigns for local businesses, and grew into a full digital
-                agency as clients asked us to solve bigger problems —
-                custom software, CRM systems, and eventually AI automation.
-                Every capability we offer today exists because a client
-                needed it first.
+                without technology, or technology without a growth plan. We
+                began as a small team building websites and running SEO and
+                ad campaigns for local businesses, and grew into a full
+                digital agency as clients asked us to solve bigger problems
+                — a CRM to replace their spreadsheets, a mobile app for
+                their customers, an AI chatbot to handle support after
+                hours. Every capability we offer today exists because a
+                client needed it first, not because it looked good on a
+                services page. Along the way we standardized our
+                infrastructure on AWS — EC2 for compute, S3 for storage,
+                and Amplify for full-stack apps — so every client, whether
+                a two-person clinic or a growing SaaS company, runs on the
+                same production-grade foundation.
               </p>
             </Reveal>
             <Reveal delay={80} className="hairline-t pt-8 sm:border-l sm:border-[var(--line)] sm:pl-12">
@@ -123,7 +133,10 @@ export default function AboutPage() {
                 enterprises with in-house teams. We want Sutertai to be the
                 team that makes advanced technology and disciplined growth
                 marketing accessible to founders who are still doing three
-                jobs at once.
+                jobs at once — the clinic owner managing patient records by
+                hand, the retailer who knows they need a real website, the
+                startup founder who needs software built before the
+                funding runs out.
               </p>
             </Reveal>
           </div>
@@ -136,7 +149,7 @@ export default function AboutPage() {
           <SectionHeading
             eyebrow="Our mission"
             title="Make world-class digital growth accessible"
-            description="Our mission is to give every client — from a two-person startup to an established enterprise — a single, accountable partner for marketing, technology, and AI. We measure success in client revenue, leads, and hours saved, not in hours billed."
+            description="Our mission is to give every client — from a two-person startup to an established enterprise — a single, accountable partner for marketing, technology, and AI. For small businesses, that means an affordable website and a marketing plan that actually generates leads. For healthcare providers, it means patient-facing apps and intake automation that respect compliance from day one. For IT and software companies, it means extra development capacity and AI features shipped on their timeline, not ours. We measure success in client revenue, leads, and hours saved — not in hours billed."
             align="center"
           />
         </div>
@@ -146,7 +159,7 @@ export default function AboutPage() {
       <section className="hairline-t py-24">
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading eyebrow="What drives us" title="Our core values" />
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
             {values.map((item, i) => (
               <Reveal
                 key={item.title}
@@ -167,6 +180,7 @@ export default function AboutPage() {
           <SectionHeading
             eyebrow="Why businesses trust us"
             title="Ten reasons clients stay with Sutertai"
+            description="Most of our clients come to us for one service and stay for years, because the same team that built their website ends up running their CRM, their marketing, and their next AI feature. Here's what that partnership looks like in practice."
           />
           <div className="mb-14 grid gap-6 sm:grid-cols-4">
             {stats.map((stat, i) => (
@@ -227,7 +241,12 @@ export default function AboutPage() {
             <p className="mt-4 max-w-2xl text-muted">
               Sutertai Private Limited is headquartered in Prayagraj, Uttar
               Pradesh, India, building digital marketing, software, and AI
-              solutions for clients everywhere.
+              solutions for clients everywhere. Every platform we build runs
+              on AWS infrastructure — EC2 for virtual servers, S3 for object
+              storage, and Amplify for full-stack web and mobile apps — so
+              client projects launch on the same secure, scalable foundation
+              from day one, whether that&apos;s a five-page marketing site or a
+              multi-tenant SaaS platform.
             </p>
             <p className="mt-4 text-paper">
               174 Kasturba Gandhi Marg, Kachehri, near Hawaijahaj, Prayagraj,
