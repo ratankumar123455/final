@@ -1,42 +1,49 @@
+import { Bot, Workflow, Plug, BarChart3, GitBranch, Brain, type LucideIcon } from "lucide-react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
-const capabilities = [
+const capabilities: { tag: string; title: string; description: string; tone: string; icon: LucideIcon }[] = [
   {
     tag: "Support",
     title: "Chatbots & AI Agents",
     description: "Always-on conversational agents that qualify leads and resolve support tickets.",
     tone: "linear-gradient(150deg, rgba(143,188,148,0.5), rgba(253,246,233,0.92) 70%)",
+    icon: Bot,
   },
   {
     tag: "Ops",
     title: "Business & Workflow Automation",
     description: "Repetitive tasks — invoicing, follow-ups, reporting — running without a human in the loop.",
     tone: "linear-gradient(150deg, rgba(168,216,232,0.4), rgba(253,246,233,0.92) 70%)",
+    icon: Workflow,
   },
   {
     tag: "Build",
     title: "Custom GPT & AI Integrations",
     description: "Purpose-built AI tools wired into your existing systems and data.",
     tone: "linear-gradient(150deg, rgba(244,169,136,0.4), rgba(253,246,233,0.92) 70%)",
+    icon: Plug,
   },
   {
     tag: "Insight",
     title: "Data Analytics & ML",
     description: "Predictive models and dashboards that turn raw data into decisions.",
     tone: "linear-gradient(150deg, rgba(143,188,148,0.3), rgba(168,216,232,0.2) 60%, rgba(253,246,233,0.92))",
+    icon: BarChart3,
   },
   {
     tag: "Scale",
     title: "Automation Pipelines",
     description: "End-to-end pipelines connecting your CRM, marketing, and operations tools.",
     tone: "linear-gradient(150deg, rgba(168,216,232,0.25), rgba(253,246,233,0.92) 70%)",
+    icon: GitBranch,
   },
   {
     tag: "Future",
     title: "Machine Learning Solutions",
     description: "Applied ML for forecasting, personalization, and fraud detection.",
     tone: "linear-gradient(150deg, rgba(143,188,148,0.22), rgba(253,246,233,0.92) 70%)",
+    icon: Brain,
   },
 ];
 
@@ -73,10 +80,11 @@ export default function AiSolutions() {
               className="card-lift rounded-2xl border border-[var(--line)] p-5"
             >
               <div
-                className="h-28 rounded-lg border border-[var(--line)]"
+                className="flex h-28 items-center justify-center rounded-lg border border-[var(--line)]"
                 style={{ backgroundImage: item.tone }}
-                aria-hidden="true"
-              />
+              >
+                <item.icon className="h-8 w-8 text-pure" strokeWidth={1.25} aria-hidden="true" />
+              </div>
               <div className="mt-4 flex items-baseline justify-between">
                 <span className="mono-label text-[10px] text-accent">{item.tag}</span>
               </div>

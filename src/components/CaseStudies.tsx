@@ -1,9 +1,18 @@
+import { Store, Building2, HeartPulse, Rocket, type LucideIcon } from "lucide-react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
-const cases = [
+const cases: {
+  tag: string;
+  icon: LucideIcon;
+  metric: string;
+  metricLabel: string;
+  title: string;
+  description: string;
+}[] = [
   {
     tag: "Retail",
+    icon: Store,
     metric: "186%",
     metricLabel: "increase in organic traffic",
     title: "A regional retail chain rebuilt its SEO and content from scratch",
@@ -12,6 +21,7 @@ const cases = [
   },
   {
     tag: "Real Estate",
+    icon: Building2,
     metric: "240%",
     metricLabel: "more qualified leads",
     title: "A real estate developer replaced spreadsheets with a real CRM",
@@ -20,6 +30,7 @@ const cases = [
   },
   {
     tag: "Healthcare",
+    icon: HeartPulse,
     metric: "62%",
     metricLabel: "faster patient onboarding",
     title: "A healthcare provider automated intake with an AI chatbot",
@@ -28,6 +39,7 @@ const cases = [
   },
   {
     tag: "SaaS",
+    icon: Rocket,
     metric: "3 weeks",
     metricLabel: "from kickoff to launch",
     title: "A startup shipped its MVP in three weeks, not three months",
@@ -52,10 +64,13 @@ export default function CaseStudies() {
               className="card-lift flex flex-col justify-between rounded-2xl border border-[var(--line)] p-8"
             >
               <div>
-                <span className="mono-label text-[10px] text-accent">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[var(--line-strong)] bg-white/50">
+                  <item.icon className="h-5 w-5 text-accent" strokeWidth={1.5} />
+                </div>
+                <span className="mono-label mt-4 block text-[10px] text-accent">
                   {item.tag}
                 </span>
-                <p className="font-display mt-6 text-4xl text-generated">
+                <p className="font-display mt-2 text-4xl text-generated">
                   {item.metric}
                 </p>
                 <p className="mono-label mt-1 text-[10px] text-muted">
