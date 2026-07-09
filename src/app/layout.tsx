@@ -79,7 +79,7 @@ const organizationJsonLd = {
   "@type": "ProfessionalService",
   name: "Sutertai Private Limited",
   url: siteUrl,
-  logo: `${siteUrl}/favicon.ico`,
+  logo: `${siteUrl}/icon`,
   foundingDate: "2023",
   founder: {
     "@type": "Person",
