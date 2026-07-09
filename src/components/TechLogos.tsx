@@ -17,14 +17,14 @@ import {
 } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
-const stack: { name: string; icon: LucideIcon }[] = [
+const stack: { name: string; icon: LucideIcon; color?: string }[] = [
   { name: "React", icon: Atom },
   { name: "Next.js", icon: Triangle },
   { name: "TypeScript", icon: FileCode },
   { name: "Node.js", icon: Server },
   { name: "Python", icon: Terminal },
   { name: "OpenAI", icon: Sparkles },
-  { name: "AWS", icon: Cloud },
+  { name: "AWS", icon: Cloud, color: "#FF9900" },
   { name: "Docker", icon: Box },
   { name: "MongoDB", icon: Database },
   { name: "PostgreSQL", icon: Database },
@@ -48,7 +48,11 @@ export default function TechLogos() {
               whileHover={{ y: -4 }}
               className="glass-panel flex flex-col items-center gap-3 rounded-2xl p-5 text-center"
             >
-              <tech.icon className="h-6 w-6 text-accent" strokeWidth={1.5} />
+              <tech.icon
+                className={tech.color ? "h-6 w-6" : "h-6 w-6 text-accent"}
+                style={tech.color ? { color: tech.color } : undefined}
+                strokeWidth={1.5}
+              />
               <span className="mono-label text-[10px] text-muted">{tech.name}</span>
             </motion.div>
           ))}

@@ -54,7 +54,7 @@ const techProblems = [
   { problem: "A confusing, dated UI", solution: "UI/UX redesign grounded in real user research, not just a fresh coat of paint." },
   { problem: "No mobile experience", solution: "Responsive, mobile-first design and native or cross-platform app builds." },
   { problem: "Outdated internal software", solution: "Modern replacements for legacy systems, migrated without disrupting operations." },
-  { problem: "Can't scale with demand", solution: "Cloud infrastructure and architecture designed to handle 10x growth without a rebuild." },
+  { problem: "Can't scale with demand", solution: "AWS cloud infrastructure and architecture designed to handle 10x growth without a rebuild." },
 ];
 
 const aiPoints = [
@@ -160,7 +160,7 @@ export default function SolutionsPage() {
             business. Sutertai migrates and rebuilds incrementally where
             possible — starting with what&apos;s costing you the most in
             speed, security, or lost conversions — on a modern stack
-            designed to scale with cloud infrastructure from day one.
+            designed to scale on AWS cloud infrastructure from day one.
           </p>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {techProblems.map((item, i) => (
