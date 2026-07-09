@@ -41,6 +41,29 @@ const values = [
   },
 ];
 
+const techStack = [
+  {
+    title: "AI Digital Marketing",
+    tools: ["Google Ads", "Meta Ads", "Google Analytics (GA4)", "HubSpot"],
+  },
+  {
+    title: "Website & Software Development",
+    tools: ["React", "Next.js", "Node.js", "PostgreSQL"],
+  },
+  {
+    title: "AI Product Development",
+    tools: ["OpenAI", "LangChain", "Python", "Vector Databases"],
+  },
+  {
+    title: "Mobile App Development",
+    tools: ["React Native", "Firebase", "Swift", "Kotlin"],
+  },
+  {
+    title: "Business Automation & Cloud",
+    tools: ["AWS (EC2, S3, Amplify)", "Docker", "Salesforce / CRM", "Zapier"],
+  },
+];
+
 const trustReasons = [
   "24/7 support from a dedicated account team",
   "Experienced, senior-led engineering and marketing team",
@@ -168,6 +191,36 @@ export default function AboutPage() {
               >
                 <h3 className="font-display text-lg text-paper">{item.title}</h3>
                 <p className="mt-3 text-sm text-muted">{item.description}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5b. Technology & Tools */}
+      <section className="hairline-t py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <SectionHeading
+            eyebrow="How we build"
+            title="The technology behind every service"
+            description="A different tool for every job — the same accountable team behind all of them. Here's what powers each part of what we do."
+          />
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+            {techStack.map((group, i) => (
+              <Reveal
+                key={group.title}
+                delay={i * 60}
+                className="card-lift rounded-xl border border-[var(--line)] p-6"
+              >
+                <h3 className="font-display text-base text-paper">{group.title}</h3>
+                <ul className="mt-4 space-y-2 text-sm text-muted">
+                  {group.tools.map((tool) => (
+                    <li key={tool} className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent" />
+                      {tool}
+                    </li>
+                  ))}
+                </ul>
               </Reveal>
             ))}
           </div>
