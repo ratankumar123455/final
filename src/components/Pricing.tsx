@@ -5,7 +5,7 @@ import SectionHeading from "./SectionHeading";
 const tiers = [
   {
     name: "Starter",
-    price: "$499",
+    price: "₹39,999",
     period: "one-time project",
     description: "For startups launching their first website or brand.",
     features: [
@@ -21,7 +21,7 @@ const tiers = [
   },
   {
     name: "Growth",
-    price: "$1,999",
+    price: "₹1,49,000",
     period: "per month retainer",
     description: "For businesses ready to invest in marketing and product together.",
     features: [
