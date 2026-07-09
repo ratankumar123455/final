@@ -18,19 +18,19 @@ const secondary = [
 
 const supporting = [
   {
-    stat: "150+",
+    stat: "40+",
     title: "Happy clients",
     description: "Startups and enterprises who've shipped growth with Sutertai.",
   },
   {
-    stat: "300+",
+    stat: "60+",
     title: "Projects delivered",
     description: "Websites, apps, and AI systems shipped on time, on budget.",
   },
   {
-    stat: "12",
+    stat: "4",
     title: "Countries served",
-    description: "Clients across India, the Gulf, Europe, and North America.",
+    description: "Clients across India, the Gulf, and North America.",
   },
 ];
 

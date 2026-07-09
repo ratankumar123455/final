@@ -29,7 +29,7 @@ const contactFaqs = [
   },
   {
     q: "Do you take on projects outside India?",
-    a: "Yes, we work with clients across 12+ countries. Calls are scheduled to overlap with your working hours wherever you're based.",
+    a: "Yes, we work with clients across multiple countries including India, the Gulf, and North America. Calls are scheduled to overlap with your working hours wherever you're based.",
   },
   {
     q: "Can we visit your office in Prayagraj?",

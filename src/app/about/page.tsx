@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "150+", label: "Happy clients" },
-  { value: "300+", label: "Projects delivered" },
-  { value: "12", label: "Countries served" },
-  { value: "6", label: "Industry awards" },
+  { value: "40+", label: "Happy clients" },
+  { value: "60+", label: "Projects delivered" },
+  { value: "4", label: "Countries served" },
+  { value: "2023", label: "Founded" },
 ];
 
 const values = [

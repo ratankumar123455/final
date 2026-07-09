@@ -22,8 +22,8 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import AmbientBlobs from "@/components/AmbientBlobs";
 
 const heroStats = [
-  { value: "500+", label: "Projects" },
-  { value: "200+", label: "Clients" },
+  { value: "60+", label: "Projects" },
+  { value: "40+", label: "Clients" },
   { value: "98%", label: "Satisfaction" },
   { value: "24/7", label: "Support" },
 ];
