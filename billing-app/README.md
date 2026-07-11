@@ -16,11 +16,13 @@ else in this repository.
 
 ## Getting started
 
+Requires a Postgres database (local, or a free one from Neon/Supabase).
+
 ```bash
 npm install
 cp .env.example .env
-# edit .env: set SESSION_SECRET (openssl rand -hex 32)
-npx prisma db push   # creates the local SQLite dev database
+# edit .env: set DATABASE_URL and SESSION_SECRET (openssl rand -hex 32)
+npx prisma db push   # creates the tables
 npm run dev
 ```
 
@@ -37,10 +39,13 @@ so you can use the whole app without a WhatsApp account. To actually send messag
    payload shape (the current code sends a generic `{ to, message }` JSON body —
    most providers want a different shape).
 
-## Before deploying to production
+## Deploying to Vercel
 
-- Switch `DATABASE_URL` from SQLite to a real Postgres database (e.g. Neon, Supabase,
-  Railway) — SQLite files don't persist on serverless hosts like Vercel.
-- Set a strong, unique `SESSION_SECRET`.
-- Run `npx prisma db push` (or set up migrations with `npx prisma migrate`) against
-  the production database.
+1. Import this repo into a new Vercel project, with **Root Directory** set to
+   `billing-app`.
+2. Add a Postgres database via Vercel's **Storage** tab (Neon-backed) and connect it
+   to the project — this auto-populates `DATABASE_URL`.
+3. Add a `SESSION_SECRET` environment variable (generate with `openssl rand -hex 32`).
+4. Deploy. Then run `npx prisma db push` once (with `DATABASE_URL` pointed at the
+   production database) to create the tables — either from your machine with
+   `vercel env pull` first, or via Vercel's own Postgres SQL console.
