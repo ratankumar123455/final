@@ -75,7 +75,7 @@ export default function SignupPage() {
             ✓
           </div>
           <p className="mt-4 text-sm text-muted">
-            This is a demo sign-up flow — Sutertai&apos;s client portal isn&apos;t connected yet.
+            Our team will reach out shortly to help you get started.
           </p>
           <Link href="/" className="btn-primary mt-6 inline-flex rounded-full px-6 py-3 text-sm font-semibold">
             Back to home
@@ -178,7 +178,7 @@ export default function SignupPage() {
           or continue with
           <span className="h-px flex-1 bg-[var(--line)]" />
         </div>
-        <SocialButtons onSelect={(provider) => setNotice(`${provider} sign-up isn't connected in this demo yet.`)} />
+        <SocialButtons onSelect={(provider) => setNotice(`${provider} sign-up is coming soon — use the form above for now.`)} />
         <p className="text-center text-sm text-muted">
           Already have an account?{" "}
           <Link href="/login" className="text-accent hover:underline">

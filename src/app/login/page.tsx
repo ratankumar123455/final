@@ -66,7 +66,7 @@ export default function LoginPage() {
             ✓
           </div>
           <p className="mt-4 text-sm text-muted">
-            This is a demo sign-in flow — Sutertai&apos;s client portal isn&apos;t connected yet.
+            You can close this and return anytime.
           </p>
           <Link href="/" className="btn-primary mt-6 inline-flex rounded-full px-6 py-3 text-sm font-semibold">
             Back to home
@@ -188,7 +188,7 @@ export default function LoginPage() {
           or continue with
           <span className="h-px flex-1 bg-[var(--line)]" />
         </div>
-        <SocialButtons onSelect={(provider) => setNotice(`${provider} sign-in isn't connected in this demo yet.`)} />
+        <SocialButtons onSelect={(provider) => setNotice(`${provider} sign-in is coming soon — use the form above for now.`)} />
         <p className="text-center text-sm text-muted">
           Don&apos;t have an account?{" "}
           <Link href="/signup" className="text-accent hover:underline">
