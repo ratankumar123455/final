@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Shop {
+  id           String        @id @default(cuid())
+  name         String
+  phone        String        @unique
+  passwordHash String
+  createdAt    DateTime      @default(now())
+  customers    Customer[]
+  transactions Transaction[]
+}
+
+model Customer {
+  id           String        @id @default(cuid())
+  shopId       String
+  shop         Shop          @relation(fields: [shopId], references: [id])
+  name         String
+  phone        String?
+  createdAt    DateTime      @default(now())
+  transactions Transaction[]
+
+  @@index([shopId])
+}
+
+enum TransactionType {
+  SALE
+  CREDIT
+  PAYMENT
+}
+
+model Transaction {
+  id         String          @id @default(cuid())
+  shopId     String
+  shop       Shop            @relation(fields: [shopId], references: [id])
+  customerId String?
+  customer   Customer?       @relation(fields: [customerId], references: [id])
+  type       TransactionType
+  amount     Float
+  note       String?
+  createdAt  DateTime        @default(now())
+
+  @@index([shopId])
+  @@index([customerId])
+}

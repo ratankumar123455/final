@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0f172a;
+  --paper: #f8fafc;
+  --card: #ffffff;
+  --muted: #64748b;
+  --line: rgba(15, 23, 42, 0.1);
+  --accent: #059669;
+  --accent-bright: #10b981;
+  --danger: #dc2626;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent-bright);
+}
+
+.input {
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  background: white;
+}
