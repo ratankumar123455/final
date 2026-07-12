@@ -26,10 +26,11 @@ const items = [
   {
     name: "AI & Automation",
     detail:
-      "Custom GPT integrations, ML pipelines, and workflow automation tools that remove manual work from your business.",
+      "Custom GPT integrations, ML pipelines, and conversational AI built on Amazon Bedrock, SageMaker, and Lex, plus workflow automation tools that remove manual work from your business.",
     specs: [
-      { k: "Models", v: "GPT / custom ML" },
-      { k: "Pipelines", v: "No-code + code" },
+      { k: "Generative AI", v: "Amazon Bedrock" },
+      { k: "ML training", v: "Amazon SageMaker" },
+      { k: "Chatbots", v: "Amazon Lex" },
     ],
   },
   {

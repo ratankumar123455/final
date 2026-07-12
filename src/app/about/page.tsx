@@ -52,7 +52,7 @@ const techStack = [
   },
   {
     title: "AI Product Development",
-    tools: ["OpenAI", "LangChain", "Python", "Vector Databases"],
+    tools: ["OpenAI", "Amazon Bedrock", "Amazon SageMaker", "Amazon Lex", "Python"],
   },
   {
     title: "Mobile App Development",
