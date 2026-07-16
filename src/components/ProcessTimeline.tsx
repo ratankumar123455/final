@@ -1,28 +1,28 @@
 "use client";
 
-import { Search, Target, PenTool, Code2, TestTube2, Rocket, type LucideIcon } from "lucide-react";
+import { Type, Sparkles, SlidersHorizontal, Clapperboard, Download, Share2, type LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 
 type Step = { icon: LucideIcon; title: string; description: string };
 
 const steps: Step[] = [
-  { icon: Search, title: "Discovery", description: "Goals, users, and constraints, mapped before anything is built." },
-  { icon: Target, title: "Strategy", description: "A concrete plan, timeline, and scope of work you sign off on." },
-  { icon: PenTool, title: "Design", description: "Wireframes and UI/UX turn the plan into a testable product." },
-  { icon: Code2, title: "Development", description: "Short sprints ship website, software, or app with APIs wired in." },
-  { icon: TestTube2, title: "Testing", description: "Cross-device QA, load, and security checks before launch." },
-  { icon: Rocket, title: "Launch", description: "We deploy, monitor, and stay on as your growth partner." },
+  { icon: Type, title: "Prompt", description: "Describe the image you want in plain language." },
+  { icon: Sparkles, title: "Generate", description: "NVIDIA GPUs render the image in a few seconds." },
+  { icon: SlidersHorizontal, title: "Refine", description: "Adjust style, composition, or inpaint a detail." },
+  { icon: Clapperboard, title: "Animate", description: "Turn the image into a short video clip." },
+  { icon: Download, title: "Export", description: "Download in the resolution and format you need." },
+  { icon: Share2, title: "Ship", description: "Use it in your campaign, product, or app via API." },
 ];
 
 export default function ProcessTimeline() {
   return (
-    <section id="website-development" className="hairline-b scroll-mt-24 py-24">
+    <section id="how-it-works" className="hairline-b scroll-mt-24 py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
-          eyebrow="Our Process"
-          title="From idea to a live, working product"
-          description="Custom websites, ecommerce, ERP, CRM, and SaaS platforms — built on a process that keeps you informed at every stage, not just at delivery."
+          eyebrow="How it works"
+          title="From prompt to finished video in six steps"
+          description="One workspace, one pipeline — describe it, generate it, animate it, and ship it."
         />
         <div className="relative overflow-x-auto pb-4">
           <div className="grid min-w-[720px] grid-cols-6 gap-4 sm:min-w-0">

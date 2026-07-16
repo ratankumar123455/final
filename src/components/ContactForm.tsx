@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 
-const WHATSAPP_NUMBER = "917459887412";
+const WHATSAPP_NUMBER = "919123456789";
 
 const schema = z.object({
   name: z.string().min(2, "Enter your name."),
@@ -21,7 +21,7 @@ export default function ContactForm() {
   } = useForm<FormValues>({ resolver: zodResolver(schema) });
 
   function onSubmit(data: FormValues) {
-    const text = `Hi Sutertai, my name is ${data.name}.\n\n${data.message}`;
+    const text = `Hi Metabob, my name is ${data.name}.\n\n${data.message}`;
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank", "noopener,noreferrer");
   }
@@ -67,7 +67,7 @@ export default function ContactForm() {
         <p className="text-xs text-accent">Opening WhatsApp with your message pre-filled…</p>
       )}
       <p className="text-xs text-muted">
-        This opens WhatsApp with your message pre-filled to +91 74598 87412.
+        This opens WhatsApp with your message pre-filled to +91 91234 56789.
       </p>
     </form>
   );

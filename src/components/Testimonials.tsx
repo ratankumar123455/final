@@ -8,34 +8,34 @@ import SectionHeading from "./SectionHeading";
 const testimonials = [
   {
     quote:
-      "Sutertai rebuilt our website and our SEO strategy at the same time — for the first time, our marketing and our technology were actually pulling in the same direction.",
+      "We generate every campaign visual in Metabob now — what used to be a two-week shoot-and-edit cycle is a same-day turnaround.",
     name: "Aditi Rao",
-    role: "Marketing Director",
-    company: "a retail chain client",
+    role: "Creative Director",
+    company: "an advertising agency client",
     tone: "linear-gradient(150deg, rgba(143,188,148,0.9), rgba(253,246,233,0.9))",
   },
   {
     quote:
-      "The CRM and automation build paid for itself in the first quarter. Our sales team spends its time closing deals now, not entering data.",
+      "The image-to-video pipeline is the reason we switched. We generate the product shot and animate it in the same workspace, no extra tools.",
     name: "Karan Mehta",
     role: "Founder",
-    company: "a real estate client",
+    company: "an e-commerce client",
     tone: "linear-gradient(150deg, rgba(168,216,232,0.85), rgba(253,246,233,0.9))",
   },
   {
     quote:
-      "They shipped our MVP in three weeks flat and stayed on afterward as our technology partner. That long-term relationship is rare to find.",
+      "As a two-person studio, Metabob is the difference between shipping a trailer and not shipping one at all.",
     name: "Priya Nair",
-    role: "Founder",
-    company: "a SaaS startup client",
+    role: "Co-founder",
+    company: "an independent game studio",
     tone: "linear-gradient(150deg, rgba(244,169,136,0.85), rgba(253,246,233,0.9))",
   },
   {
     quote:
-      "The AI chatbot they built handles most of our intake now. Response times dropped from hours to seconds, and our staff finally has room to breathe.",
+      "The API integrated into our content pipeline in an afternoon. Render times on NVIDIA GPUs are consistently under five seconds even at our peak volume.",
     name: "Devansh Iyer",
-    role: "Operations Lead",
-    company: "a healthcare client",
+    role: "Engineering Lead",
+    company: "a media & publishing client",
     tone: "linear-gradient(150deg, rgba(143,188,148,0.6), rgba(168,216,232,0.5))",
   },
 ];
@@ -61,7 +61,7 @@ export default function Testimonials() {
   return (
     <section className="hairline-b py-24">
       <div className="mx-auto max-w-3xl px-6">
-        <SectionHeading eyebrow="What clients say" title="Trusted by the teams doing the work" align="center" />
+        <SectionHeading eyebrow="What creators say" title="Trusted by the teams doing the work" align="center" />
         <div
           className="relative"
           onMouseEnter={() => setPaused(true)}

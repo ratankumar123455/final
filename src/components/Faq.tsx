@@ -6,44 +6,44 @@ export type FaqItem = { q: string; a: string };
 
 const defaultFaqs: FaqItem[] = [
   {
-    q: "What services does Sutertai actually offer?",
-    a: "AI-powered digital marketing, website and software development, AI product development, mobile apps, UI/UX design, and business automation with CRM and cloud solutions — everything a growing business needs, under one roof.",
+    q: "What does Metabob actually generate?",
+    a: "Images from a text prompt, and short videos from an image — either one you generated on Metabob or one you upload. Both run on the same NVIDIA GPU infrastructure.",
   },
   {
-    q: "Do you work with startups or only large enterprises?",
-    a: "Both. We run lean, fixed-scope engagements for startups and long-term retainers for enterprises, and scope every project to the budget and stage of the business we're working with.",
+    q: "Do I own the images and videos I generate?",
+    a: "Yes. On paid plans, you receive a commercial usage license for everything you generate. Free plan exports are watermarked and intended for evaluation and personal use.",
   },
   {
-    q: "How long does a typical website or app project take?",
-    a: "A marketing website typically ships in 2-4 weeks. Custom software, CRM, or app builds range from 6-16 weeks depending on scope, with a working version live early in the process.",
+    q: "How fast is generation?",
+    a: "Most images render in under 5 seconds and most video clips in under a minute, depending on resolution and current load, thanks to dedicated NVIDIA GPU capacity on AWS.",
   },
   {
-    q: "Can you handle both marketing and development for us?",
-    a: "Yes — that's the point. Sutertai runs marketing and engineering as one team, so your website, SEO, and ad campaigns are built to work together instead of being handed off between agencies.",
+    q: "What resolutions and formats are supported?",
+    a: "Images render up to 4K. Video clips render up to 1080p at 24-30fps and export as MP4, with looping and clip-extension options.",
   },
   {
-    q: "Do you offer ongoing support after launch?",
-    a: "Yes. Every engagement includes a support window after launch, and most clients move into an ongoing retainer for updates, monitoring, and continued growth work.",
+    q: "Can I use Metabob through an API?",
+    a: "Yes — a REST API and SDKs expose the same generation pipeline that powers the app, with usage-based billing and webhook callbacks for async jobs.",
   },
   {
-    q: "What does pricing look like?",
-    a: "Project-based pricing for defined scopes of work, and monthly retainers for ongoing marketing, development, or automation support. See our Pricing page for starting ranges.",
+    q: "What's the difference between the Free, Creator, and Enterprise plans?",
+    a: "Free is for evaluation with limited, watermarked credits. Creator adds full resolution, a commercial license, and monthly video generation. Enterprise adds dedicated GPU capacity, SSO, and SLA-backed support for teams generating at volume.",
   },
   {
-    q: "Do we own the code, content, and designs you build?",
-    a: "Yes. On completed and paid engagements, you own the resulting code, content, and designs outright.",
+    q: "Do you offer dedicated GPU capacity for high-volume use?",
+    a: "Yes. Enterprise plans can reserve dedicated NVIDIA GPU capacity on AWS so render times stay consistent regardless of platform-wide demand.",
   },
   {
-    q: "How do you handle data and client confidentiality?",
-    a: "All client data is encrypted at rest and in transit, access is role-restricted, and we sign NDAs on request before any project kickoff.",
+    q: "How is my data and generated content handled?",
+    a: "Content and account data are encrypted at rest and in transit. Enterprise plans include role-based access control, audit logs, and data residency options by AWS region.",
   },
   {
-    q: "Can you integrate with the tools we already use?",
-    a: "Yes — CRMs, payment gateways, ERPs, marketing platforms, and internal tools are integrated through APIs as part of most engagements.",
+    q: "Can I fine-tune the model on my own brand or style?",
+    a: "Custom style fine-tuning is available on Enterprise plans, trained on your reference imagery to match a specific brand or artistic style consistently.",
   },
   {
-    q: "How do we get started?",
-    a: "Book a free consultation through our Contact page. We'll scope your project, propose a plan and timeline, and get started once you're ready.",
+    q: "How do I get started?",
+    a: "Create a free account and start generating in minutes — no credit card required. Upgrade to Creator or talk to sales for Enterprise whenever you're ready.",
   },
 ];
 

@@ -2,50 +2,51 @@
 
 import { motion } from "framer-motion";
 import {
-  Atom,
-  Triangle,
-  FileCode,
+  Cloud,
+  Cpu,
+  Boxes,
+  Database,
   Server,
   Terminal,
-  Sparkles,
-  Brain,
-  Cloud,
-  Box,
-  Database,
-  Palette,
-  Wand2,
-  Smartphone,
-  Flame,
-  PenTool,
-  Target,
-  Share2,
+  Zap,
+  Image as ImageIcon,
+  Clapperboard,
+  Lock,
+  Gauge,
+  Globe,
+  Layers,
+  Code2,
+  Webhook,
   BarChart3,
-  Users,
+  Wand2,
+  ShieldCheck,
+  GitBranch,
+  Network,
   type LucideIcon,
 } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
 const stack: { name: string; icon: LucideIcon; color?: string }[] = [
-  { name: "React", icon: Atom },
-  { name: "Next.js", icon: Triangle },
-  { name: "TypeScript", icon: FileCode },
-  { name: "Tailwind CSS", icon: Palette },
-  { name: "Node.js", icon: Server },
-  { name: "Python", icon: Terminal },
-  { name: "PostgreSQL", icon: Database },
-  { name: "MongoDB", icon: Database },
-  { name: "OpenAI", icon: Sparkles },
-  { name: "LangChain", icon: Brain },
-  { name: "AWS", icon: Cloud, color: "#FF9900" },
-  { name: "Docker", icon: Box },
-  { name: "React Native", icon: Smartphone },
-  { name: "Firebase", icon: Flame },
-  { name: "Figma", icon: PenTool },
-  { name: "Google Ads", icon: Target },
-  { name: "Meta Ads", icon: Share2 },
-  { name: "Google Analytics", icon: BarChart3 },
-  { name: "HubSpot", icon: Users },
-  { name: "Framer Motion", icon: Wand2 },
+  { name: "NVIDIA H100", icon: Cpu, color: "#76B900" },
+  { name: "NVIDIA A100", icon: Zap, color: "#76B900" },
+  { name: "CUDA", icon: Terminal, color: "#76B900" },
+  { name: "AWS EC2", icon: Server, color: "#FF9900" },
+  { name: "AWS S3", icon: Database, color: "#FF9900" },
+  { name: "AWS SageMaker", icon: Boxes, color: "#FF9900" },
+  { name: "AWS Bedrock", icon: Cloud, color: "#FF9900" },
+  { name: "Diffusion Models", icon: ImageIcon },
+  { name: "Video Diffusion", icon: Clapperboard },
+  { name: "PyTorch", icon: Layers },
+  { name: "REST API", icon: Code2 },
+  { name: "Webhooks", icon: Webhook },
+  { name: "Global CDN", icon: Globe },
+  { name: "Auto-scaling", icon: Network },
+  { name: "SOC 2-aligned", icon: ShieldCheck },
+  { name: "Encryption", icon: Lock },
+  { name: "Low Latency", icon: Gauge },
+  { name: "Usage Analytics", icon: BarChart3 },
+  { name: "CI/CD", icon: GitBranch },
+  { name: "Style Control", icon: Wand2 },
 ];
 
 export default function TechLogos() {
@@ -54,8 +55,8 @@ export default function TechLogos() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="Technologies"
-          title="Tools across every service we deliver"
-          description="From marketing and design to engineering, AI, and cloud infrastructure — this is what we build, launch, and grow your business with."
+          title="The stack behind every render"
+          description="NVIDIA GPUs, AWS infrastructure, and a generation pipeline engineered for speed and reliability at scale."
           align="center"
         />
         <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 lg:grid-cols-5">

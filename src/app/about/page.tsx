@@ -8,93 +8,93 @@ import Industries from "@/components/Industries";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Sutertai Private Limited is an AI-powered digital marketing and technology agency based in Prayagraj, India — websites, software, AI products, and business automation for small businesses, healthcare, and IT companies worldwide.",
+    "Metabob Private Limited builds a generative AI platform for text-to-image and image-to-video generation, powered by NVIDIA GPUs on AWS infrastructure. Learn our mission, vision, and team.",
 };
 
 const stats = [
-  { value: "40+", label: "Happy clients" },
-  { value: "60+", label: "Projects delivered" },
-  { value: "4", label: "Countries served" },
-  { value: "2023", label: "Founded" },
+  { value: "40K+", label: "Creators & teams" },
+  { value: "12M+", label: "Images / month" },
+  { value: "4", label: "AWS regions" },
+  { value: "2024", label: "Founded" },
 ];
 
 const values = [
   {
-    title: "Client-first",
-    description: "Every roadmap, sprint, and campaign is scoped around your business outcome, not our convenience.",
+    title: "Speed without compromise",
+    description: "A render that takes a minute instead of a day is only useful if the quality holds up — we optimize for both.",
   },
   {
-    title: "Transparency",
-    description: "Clear pricing, clear timelines, and a single point of contact — no surprise invoices, ever.",
+    title: "Infrastructure first",
+    description: "Model quality means nothing if the GPUs can't keep up. We invest in NVIDIA and AWS capacity ahead of demand, not behind it.",
   },
   {
-    title: "Craft",
-    description: "We'd rather ship fewer features that work perfectly than a long list that half-works.",
+    title: "Creative control",
+    description: "Generation should feel like a tool a creator directs, not a slot machine — every feature adds control, not just novelty.",
   },
   {
-    title: "AI-first, human-led",
-    description: "We automate the repetitive work with AI so our people can spend their time on strategy and judgment calls.",
+    title: "Responsible by default",
+    description: "Commercial usage rights, content safeguards, and data handling are built in from day one, not bolted on after launch.",
   },
   {
-    title: "Long-term thinking",
-    description: "We build systems that scale with you for years, not campaigns that expire at delivery.",
+    title: "Ship, measure, retrain",
+    description: "Our models improve on a tight feedback loop from real generations, not just benchmark scores.",
   },
 ];
 
 const techStack = [
   {
-    title: "AI Digital Marketing",
-    tools: ["Google Ads", "Meta Ads", "Google Analytics (GA4)", "HubSpot"],
+    title: "Generative Models",
+    tools: ["Latent diffusion (image)", "Video diffusion (image-to-video)", "Custom fine-tuning pipeline", "PyTorch"],
   },
   {
-    title: "Website & Software Development",
-    tools: ["React", "Next.js", "Node.js", "PostgreSQL"],
+    title: "GPU Compute",
+    tools: ["NVIDIA H100", "NVIDIA A100", "CUDA-optimized inference", "Multi-GPU scheduling"],
   },
   {
-    title: "AI Product Development",
-    tools: ["OpenAI", "Amazon Bedrock", "Amazon SageMaker", "Amazon Lex", "Python"],
+    title: "Cloud Infrastructure",
+    tools: ["AWS EC2 (P5 / P4)", "AWS S3", "AWS SageMaker", "AWS Bedrock"],
   },
   {
-    title: "Mobile App Development",
-    tools: ["React Native", "Firebase", "Swift", "Kotlin"],
+    title: "Platform & API",
+    tools: ["REST API & SDKs", "Webhooks", "Global CDN delivery", "Usage-based billing"],
   },
   {
-    title: "Business Automation & Cloud",
-    tools: ["AWS (EC2, S3, Amplify)", "Docker", "Salesforce / CRM", "Zapier"],
+    title: "Security & Reliability",
+    tools: ["AES-256 encryption", "SOC 2-aligned controls", "Auto-scaling & failover", "Role-based access control"],
   },
 ];
 
 const trustReasons = [
-  "24/7 support from a dedicated account team",
-  "Experienced, senior-led engineering and marketing team",
-  "Affordable, transparent project and retainer pricing",
-  "Latest AI, cloud, and automation technology",
-  "Security and data privacy built into every build",
-  "Fast delivery — most projects launch inside 3 weeks",
-  "Custom-built solutions, never a one-size template",
-  "Scalable architecture that grows with your business",
-  "Long-term partnership, not one-off delivery",
-  "Full-service: marketing and engineering under one team",
+  "Dedicated NVIDIA GPU capacity, not shared best-effort compute",
+  "Sub-5-second average image render time",
+  "Commercial usage rights on every paid-plan generation",
+  "SOC 2-aligned security and encrypted storage by default",
+  "API and SDKs for embedding generation into your own product",
+  "Custom style fine-tuning available for Enterprise brands",
+  "Transparent, credit-based pricing with no hidden overage fees",
+  "Auto-scaling infrastructure that holds steady under peak demand",
+  "A model roadmap shaped by real usage, not just leaderboard scores",
+  "A support team that includes the engineers who built the pipeline",
 ];
 
 const goals = [
   {
     label: "Now",
-    title: "Deepening AI product capability",
+    title: "Longer, higher-fidelity video generation",
     description:
-      "Expanding our applied AI and automation practice — chatbots, AI agents, and predictive analytics — so more of our small business, healthcare, and IT clients can run these systems in production, not just pilot them.",
+      "Extending our image-to-video pipeline past short clips toward longer, multi-shot sequences with stronger temporal consistency — while holding render times down.",
   },
   {
     label: "Next",
-    title: "Regional expansion across India and the Gulf",
+    title: "Deeper enterprise fine-tuning",
     description:
-      "Growing our team and client base across Uttar Pradesh, wider India, and the Middle East, so we're closer to the businesses we serve and can respond faster when it matters.",
+      "Making it faster for brands and studios to fine-tune a private model on their own visual style, so generated output is on-brand from the first prompt.",
   },
   {
     label: "Later",
-    title: "A dedicated products division",
+    title: "Real-time interactive generation",
     description:
-      "Turning the solutions we build repeatedly for clients — CRM templates, automation kits, industry-specific AI agents — into standalone products smaller businesses can adopt directly, without a full custom engagement.",
+      "Pushing render latency low enough that image and short-video generation feel interactive — adjusting a prompt and seeing the result update live.",
   },
 ];
 
@@ -105,11 +105,11 @@ export default function AboutPage() {
         eyebrow="About us"
         title={
           <>
-            Building digital growth for{" "}
-            <span className="text-generated">ambitious businesses</span>
+            Generative AI for{" "}
+            <span className="text-generated">anyone with an idea to show</span>
           </>
         }
-        description="Sutertai Private Limited is an AI-powered digital marketing and technology agency. We build websites, software, AI products, and automation systems that help startups and enterprises grow."
+        description="Metabob Private Limited builds a generative AI platform that turns text into images and images into video — running on NVIDIA GPUs across AWS infrastructure."
       />
 
       {/* 1. Company Introduction */}
@@ -117,8 +117,8 @@ export default function AboutPage() {
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading
             eyebrow="Who we are"
-            title="A full-service digital partner, not a single-service vendor"
-            description="Sutertai Private Limited designs and builds websites, develops custom software, creates AI products, runs digital marketing campaigns, and automates business operations. Our services span AI-powered digital marketing (SEO, paid ads, content, and marketing automation), website and software development (corporate sites, ecommerce, ERP, CRM, and SaaS platforms), AI product development (chatbots, AI agents, and applied machine learning), mobile app development, UI/UX design, and business automation with cloud infrastructure on AWS. We work primarily with small businesses, healthcare providers, and IT and software companies — clients who need a technology partner that understands growth, not just a vendor who delivers a spec sheet. Instead of hiring a marketing agency, a software vendor, and an AI consultant separately, you get one accountable team building your website, running your campaigns, and automating your operations, all pulling in the same direction."
+            title="A generative AI company, built around one pipeline"
+            description="Metabob Private Limited develops and operates a generative AI platform focused on two capabilities: turning a text prompt into an image, and turning an image into a short video. Both run on the same infrastructure — dedicated NVIDIA H100 and A100 GPUs, orchestrated on AWS — so a creator, marketer, or developer can go from an idea to a finished image to a finished video clip without leaving one workspace or switching vendors. We serve individual creators on a free plan, creative teams and marketers on our Creator plan, and studios, agencies, and platforms building generation into their own products through our API and Enterprise plans. Rather than being a general-purpose AI company, we've stayed narrowly focused on making text-to-image and image-to-video generation as fast, controllable, and production-ready as possible."
           />
         </div>
       </section>
@@ -130,36 +130,34 @@ export default function AboutPage() {
             <Reveal className="hairline-t pt-8 pb-8 sm:pb-0 sm:pr-12">
               <h3 className="font-display text-2xl text-paper">Our story</h3>
               <p className="mt-4 text-muted">
-                Sutertai started in Prayagraj with a simple observation:
-                small and mid-sized businesses were being sold marketing
-                without technology, or technology without a growth plan. We
-                began as a small team building websites and running SEO and
-                ad campaigns for local businesses, and grew into a full
-                digital agency as clients asked us to solve bigger problems
-                — a CRM to replace their spreadsheets, a mobile app for
-                their customers, an AI chatbot to handle support after
-                hours. Every capability we offer today exists because a
-                client needed it first, not because it looked good on a
-                services page. Along the way we standardized our
-                infrastructure on AWS — EC2 for compute, S3 for storage,
-                and Amplify for full-stack apps — so every client, whether
-                a two-person clinic or a growing SaaS company, runs on the
-                same production-grade foundation.
+                Metabob started with a narrow frustration: generating a
+                single usable image was easy, but turning that image into
+                even a few seconds of usable video meant exporting it to a
+                completely different tool, often with a different account,
+                a different queue, and a very different wait time. We built
+                the first version of our image-to-video pipeline to solve
+                that gap for our own small team, then realized every
+                marketer, indie studio, and product team we talked to had
+                the exact same problem. From the start we standardized on
+                NVIDIA GPUs for every render and AWS for the infrastructure
+                around them — EC2 for compute, S3 for asset storage, and
+                SageMaker for training and fine-tuning — so the platform
+                could scale from a handful of early users to tens of
+                thousands of creators without a re-architecture along the
+                way.
               </p>
             </Reveal>
             <Reveal delay={80} className="hairline-t pt-8 sm:border-l sm:border-[var(--line)] sm:pl-12">
               <h3 className="font-display text-2xl text-paper">Our vision</h3>
               <p className="mt-4 text-muted">
-                A world where any business, regardless of size or location,
-                can access the same quality of digital marketing, software,
-                and AI infrastructure that used to be reserved for
-                enterprises with in-house teams. We want Sutertai to be the
-                team that makes advanced technology and disciplined growth
-                marketing accessible to founders who are still doing three
-                jobs at once — the clinic owner managing patient records by
-                hand, the retailer who knows they need a real website, the
-                startup founder who needs software built before the
-                funding runs out.
+                A world where the distance between an idea and a finished
+                visual — a still image or a short video — is a single
+                prompt, not a production pipeline. We want Metabob to be the
+                default place a marketer generates campaign visuals, a
+                studio storyboards a scene, or a developer plugs generation
+                straight into their own product, because the quality,
+                speed, and control are good enough that building or hiring
+                around the problem no longer makes sense.
               </p>
             </Reveal>
           </div>
@@ -171,8 +169,8 @@ export default function AboutPage() {
         <div className="mx-auto max-w-4xl px-6 text-center">
           <SectionHeading
             eyebrow="Our mission"
-            title="Make world-class digital growth accessible"
-            description="Our mission is to give every client — from a two-person startup to an established enterprise — a single, accountable partner for marketing, technology, and AI. For small businesses, that means an affordable website and a marketing plan that actually generates leads. For healthcare providers, it means patient-facing apps and intake automation that respect compliance from day one. For IT and software companies, it means extra development capacity and AI features shipped on their timeline, not ours. We measure success in client revenue, leads, and hours saved — not in hours billed."
+            title="Make high-quality generative visuals instantly accessible"
+            description="Our mission is to put production-quality image and video generation within reach of anyone who needs it — an independent creator on a free plan, a marketing team on a monthly retainer's worth of stock photography budget, or an enterprise generating at a volume that would otherwise require its own ML and infrastructure team. We measure success in render quality, render speed, and how much manual production work our platform removes — not just in how large a model we can train."
             align="center"
           />
         </div>
@@ -202,8 +200,8 @@ export default function AboutPage() {
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading
             eyebrow="How we build"
-            title="The technology behind every service"
-            description="A different tool for every job — the same accountable team behind all of them. Here's what powers each part of what we do."
+            title="The technology behind every render"
+            description="NVIDIA GPUs and AWS infrastructure, wrapped in a generation pipeline and API that make it usable. Here's what powers each part of the platform."
           />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
             {techStack.map((group, i) => (
@@ -231,9 +229,9 @@ export default function AboutPage() {
       <section className="hairline-t section-tint py-24">
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading
-            eyebrow="Why businesses trust us"
-            title="Ten reasons clients stay with Sutertai"
-            description="Most of our clients come to us for one service and stay for years, because the same team that built their website ends up running their CRM, their marketing, and their next AI feature. Here's what that partnership looks like in practice."
+            eyebrow="Why creators trust us"
+            title="Ten reasons teams stay on Metabob"
+            description="Most of our users start on the free plan to test quality and speed, then upgrade once generation becomes part of their actual workflow. Here's what keeps them there."
           />
           <div className="mb-14 grid gap-6 sm:grid-cols-4">
             {stats.map((stat, i) => (
@@ -258,8 +256,19 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 7. Industries We Serve */}
+      {/* 7. Who uses Metabob */}
       <Industries />
+
+      {/* 7b. Team background */}
+      <section className="hairline-t py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <SectionHeading
+            eyebrow="Our team"
+            title="Built by ML engineers and infrastructure people"
+            description="Metabob is led by a small team with a background in applied machine learning, GPU infrastructure, and creative tooling — the same combination the product depends on. Our AI team designs and fine-tunes the diffusion models behind image and video generation; our infrastructure team keeps NVIDIA GPU clusters on AWS running at 99.9% uptime under widely varying load; and our product and support teams make sure the platform stays usable for a solo creator and an enterprise studio alike. The full team profiles live on our Team page."
+          />
+        </div>
+      </section>
 
       {/* 8. Future Goals */}
       <section className="hairline-t py-24">
@@ -292,26 +301,26 @@ export default function AboutPage() {
               Registered and operated in India
             </p>
             <p className="mt-4 max-w-2xl text-muted">
-              Sutertai Private Limited is headquartered in Prayagraj, Uttar
-              Pradesh, India, building digital marketing, software, and AI
-              solutions for clients everywhere. Every platform we build runs
-              on AWS infrastructure — EC2 for virtual servers, S3 for object
-              storage, and Amplify for full-stack web and mobile apps — so
-              client projects launch on the same secure, scalable foundation
-              from day one, whether that&apos;s a five-page marketing site or a
-              multi-tenant SaaS platform.
+              Metabob Private Limited is headquartered in Bengaluru,
+              Karnataka, building generative AI infrastructure for creators
+              and enterprises everywhere. Every render runs on NVIDIA GPU
+              capacity orchestrated across AWS — EC2 for compute, S3 for
+              asset storage, and SageMaker and Bedrock for model training
+              and hosting — so every account, from a free-tier creator to an
+              enterprise studio, generates on the same production-grade
+              foundation.
             </p>
             <p className="mt-4 text-paper">
-              174 Kasturba Gandhi Marg, Kachehri, near Hawaijahaj, Prayagraj,
-              Uttar Pradesh 211002, India
+              4th Floor, Prestige Tech Park, Bengaluru, Karnataka 560103,
+              India
             </p>
           </Reveal>
         </div>
       </section>
 
       <CtaBanner
-        title="Meet the people building Sutertai"
-        description="Get to know the team behind the work, or reach out directly to start a project."
+        title="Meet the people building Metabob"
+        description="Get to know the team behind the platform, or reach out directly to start a conversation."
         primaryHref="/team"
         primaryLabel="Meet the team"
       />

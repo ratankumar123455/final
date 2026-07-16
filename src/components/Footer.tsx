@@ -40,8 +40,8 @@ const columns = [
     heading: "Company",
     links: [
       { href: "/about", label: "About" },
-      { href: "/solutions", label: "Solutions" },
-      { href: "/how-we-work", label: "Our Process" },
+      { href: "/product", label: "Product" },
+      { href: "/how-it-works", label: "How it works" },
       { href: "/team", label: "Team" },
       { href: "/pricing", label: "Pricing" },
       { href: "/contact", label: "Contact" },
@@ -72,12 +72,12 @@ export default function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.1fr]">
           <div>
             <p className="font-display text-lg text-paper">
-              Suter<span className="text-generated font-semibold">tai</span>
+              Meta<span className="text-generated font-semibold">bob</span>
             </p>
             <p className="mt-3 max-w-xs text-sm text-muted">
-              AI-powered digital marketing, web, software, and automation
-              solutions for startups and enterprises — engineered in
-              Prayagraj, India.
+              Generative AI that turns text into images and images into
+              video — running on NVIDIA GPUs across AWS infrastructure.
+              Built in Bengaluru, India.
             </p>
             <div className="mt-6 flex gap-3">
               {socials.map((social) => (
@@ -113,20 +113,20 @@ export default function Footer() {
           <div>
             <p className="mono-label text-[11px] text-paper">Stay in the loop</p>
             <p className="mt-4 text-sm text-muted">
-              Growth tips and product updates, once or twice a month.
+              New models and features, once or twice a month.
             </p>
             <div className="mt-4">
               <NewsletterForm />
             </div>
             <div className="mt-6 space-y-2 text-sm text-muted">
               <p>
-                <a href="tel:+917459887412" className="hover:text-paper">
-                  +91 74598 87412
+                <a href="tel:+919123456789" className="hover:text-paper">
+                  +91 91234 56789
                 </a>
               </p>
               <p>
-                <a href="mailto:hello@sutertai.com" className="hover:text-paper">
-                  hello@sutertai.com
+                <a href="mailto:hello@metabob.in" className="hover:text-paper">
+                  hello@metabob.in
                 </a>
               </p>
             </div>
@@ -135,8 +135,8 @@ export default function Footer() {
       </div>
       <div className="hairline-t py-5">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 text-xs text-muted sm:flex-row">
-          <p>© {new Date().getFullYear()} Sutertai Private Limited. All rights reserved.</p>
-          <p>174 Kasturba Gandhi Marg, Prayagraj, Uttar Pradesh 211002, India</p>
+          <p>© {new Date().getFullYear()} Metabob Private Limited. All rights reserved.</p>
+          <p>Prestige Tech Park, Bengaluru, Karnataka 560103, India</p>
         </div>
       </div>
     </footer>

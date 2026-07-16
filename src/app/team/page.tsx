@@ -6,58 +6,58 @@ import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Team",
-  description: "Meet the team behind Sutertai Private Limited.",
+  description: "Meet the team behind Metabob Private Limited's generative AI platform.",
 };
 
 const team = [
   {
-    name: "Ramesh Sharma",
+    name: "Aarav Mehta",
     role: "Founder & CEO",
     qualification: "B.Tech Computer Science",
     experience: "10+ Years",
-    bio: "Leads AI strategy, business development, digital transformation, and enterprise consulting with expertise in scalable technology solutions.",
+    bio: "Leads product strategy and enterprise partnerships, with a background in scaling infrastructure-heavy AI products.",
   },
   {
-    name: "Karan Kumar",
-    role: "Senior Software Engineer",
+    name: "Sanya Kapoor",
+    role: "Co-Founder & Chief AI Officer",
+    qualification: "M.S. Machine Learning",
+    experience: "9+ Years",
+    bio: "Leads generative model research — diffusion architectures for image and video generation, and the fine-tuning pipeline behind them.",
+  },
+  {
+    name: "Rohan Verma",
+    role: "Head of Infrastructure",
     qualification: "B.Tech Information Technology",
     experience: "8+ Years",
-    bio: "Specializes in full-stack development, enterprise software, cloud applications, APIs, and system architecture.",
+    bio: "Owns the NVIDIA GPU and AWS infrastructure that keeps generation fast and available at 99.9% uptime.",
   },
   {
-    name: "Rohit Singh",
-    role: "Digital Marketing Manager",
-    qualification: "MBA Marketing",
-    experience: "7+ Years",
-    bio: "Expert in SEO, PPC, social media campaigns, content strategy, analytics, and lead generation.",
+    name: "Ishita Bose",
+    role: "Lead ML Engineer, Image",
+    qualification: "M.Tech Artificial Intelligence",
+    experience: "6+ Years",
+    bio: "Trains and fine-tunes the text-to-image diffusion models, focused on photorealism, style range, and prompt fidelity.",
   },
   {
-    name: "Aman Singh",
-    role: "UI/UX Designer",
+    name: "Vikram Desai",
+    role: "Lead ML Engineer, Video",
+    qualification: "B.Tech Computer Science",
+    experience: "6+ Years",
+    bio: "Builds the image-to-video pipeline, with a focus on temporal consistency, camera motion control, and render speed.",
+  },
+  {
+    name: "Meera Iyer",
+    role: "Head of Product Design",
     qualification: "Bachelor of Design",
-    experience: "6+ Years",
-    bio: "Designs intuitive user experiences with modern interfaces, accessibility standards, and interactive prototypes.",
+    experience: "7+ Years",
+    bio: "Designs the generation workspace and API developer experience, grounded in how creators actually iterate on a prompt.",
   },
   {
-    name: "Raunit Kumar",
-    role: "AI & Automation Engineer",
-    qualification: "B.Tech Artificial Intelligence",
-    experience: "5+ Years",
-    bio: "Builds AI-powered chatbots, automation workflows, machine learning integrations, and intelligent business systems.",
-  },
-  {
-    name: "Nisha Singh",
-    role: "HR & Client Success Manager",
-    qualification: "MBA Human Resources",
-    experience: "6+ Years",
-    bio: "Manages talent acquisition, client relationships, onboarding, and long-term customer success.",
-  },
-  {
-    name: "Mayank Yadav",
-    role: "Business Development Executive",
+    name: "Karthik Rao",
+    role: "Head of Customer Success",
     qualification: "MBA Business Management",
     experience: "5+ Years",
-    bio: "Drives partnerships, identifies growth opportunities, manages enterprise sales, and develops strategic business relationships.",
+    bio: "Manages enterprise onboarding, API integrations, and support for Studio and Enterprise customers.",
   },
 ];
 
@@ -68,10 +68,10 @@ export default function TeamPage() {
         eyebrow="Team"
         title={
           <>
-            The people building <span className="text-generated">Sutertai</span>
+            The people building <span className="text-generated">Metabob</span>
           </>
         }
-        description="A focused team of engineers, marketers, designers, and strategists working across AI, software, and digital marketing."
+        description="A focused team of ML researchers, infrastructure engineers, and product designers working on generative image and video AI."
       />
 
       <section className="py-24">
@@ -107,11 +107,11 @@ export default function TeamPage() {
 
       <CtaBanner
         title="Want to work with us?"
-        description="Reach out if you're interested in joining Sutertai or partnering with us."
+        description="Reach out if you're interested in joining Metabob or partnering with us."
         primaryHref="/contact"
         primaryLabel="Contact us"
         secondaryHref="/about"
-        secondaryLabel="Learn about Sutertai"
+        secondaryLabel="Learn about Metabob"
       />
     </div>
   );

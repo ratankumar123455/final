@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { Megaphone, Code2, Bot, type LucideIcon } from "lucide-react";
+import { ImageIcon, Clapperboard, Cpu, type LucideIcon } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
 type Feature = {
@@ -15,24 +15,24 @@ type Feature = {
 
 const features: Feature[] = [
   {
-    icon: Megaphone,
-    title: "AI Digital Marketing",
-    description: "Growth marketing built around measurable pipeline, not vanity metrics.",
-    points: ["SEO", "Paid Ads", "Content Marketing", "Lead Generation", "Analytics"],
+    icon: ImageIcon,
+    title: "Text-to-Image Generation",
+    description: "Describe a scene in plain language and get production-ready images back in seconds.",
+    points: ["Prompt-to-image", "Style presets", "Up to 4K output", "Batch generation", "Negative prompts"],
     tone: "linear-gradient(150deg, rgba(143,188,148,0.35), transparent 70%)",
   },
   {
-    icon: Code2,
-    title: "Website & Software Development",
-    description: "Corporate sites, ecommerce, and custom software engineered to scale.",
-    points: ["Corporate Websites", "E-commerce", "CRM", "ERP", "Web Apps", "Custom Software"],
+    icon: Clapperboard,
+    title: "Image-to-Video Generation",
+    description: "Animate any still image into a short, motion-consistent video clip.",
+    points: ["Image-to-video", "Camera motion control", "Frame interpolation", "Up to 1080p", "Loop & extend"],
     tone: "linear-gradient(150deg, rgba(168,216,232,0.3), transparent 70%)",
   },
   {
-    icon: Bot,
-    title: "AI Automation",
-    description: "Chatbots and intelligent workflows that remove manual work from your day.",
-    points: ["Chatbots", "AI Agents", "Workflow Automation", "Business Intelligence", "Machine Learning"],
+    icon: Cpu,
+    title: "AWS + NVIDIA Infrastructure",
+    description: "Every render runs on dedicated NVIDIA GPUs, orchestrated on AWS for enterprise-grade reliability.",
+    points: ["NVIDIA H100 / A100 GPUs", "AWS auto-scaling", "99.9% uptime", "SOC 2-aligned security", "Global CDN delivery"],
     tone: "linear-gradient(150deg, rgba(244,169,136,0.3), transparent 70%)",
   },
 ];
@@ -107,8 +107,8 @@ export default function BentoFeatures() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="What we do"
-          title="Three pillars, one accountable team"
-          description="Marketing, engineering, and AI working together instead of three separate vendors."
+          title="From a prompt to a finished video, on one platform"
+          description="Generate the image, then animate it — without switching tools or vendors."
         />
         <div className="grid gap-6 lg:grid-cols-3">
           {features.map((feature, i) => (

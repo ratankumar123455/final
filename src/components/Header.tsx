@@ -9,8 +9,8 @@ import MagneticLink from "./MagneticLink";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/solutions", label: "Solutions" },
-  { href: "/team", label: "Team" },
+  { href: "/product", label: "Product" },
+  { href: "/pricing", label: "Pricing" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -26,58 +26,29 @@ export default function Header() {
           className="font-display text-xl tracking-tight text-paper"
           onClick={() => setOpen(false)}
         >
-          Suter<span className="text-generated font-semibold">tai</span>
+          Meta<span className="text-generated font-semibold">bob</span>
         </Link>
 
         <nav className="mono-label hidden gap-6 text-[11px] text-muted xl:flex">
-          <Link
-            href="/"
-            className={`border-b pb-1 transition-colors hover:text-paper ${
-              pathname === "/" ? "border-indigo text-paper" : "border-transparent"
-            }`}
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className={`border-b pb-1 transition-colors hover:text-paper ${
-              pathname === "/about" ? "border-indigo text-paper" : "border-transparent"
-            }`}
-          >
-            About
-          </Link>
-          <Link
-            href="/solutions"
-            className={`border-b pb-1 transition-colors hover:text-paper ${
-              pathname === "/solutions" ? "border-indigo text-paper" : "border-transparent"
-            }`}
-          >
-            Solutions
-          </Link>
-          <Link
-            href="/team"
-            className={`border-b pb-1 transition-colors hover:text-paper ${
-              pathname === "/team" ? "border-indigo text-paper" : "border-transparent"
-            }`}
-          >
-            Team
-          </Link>
-          <Link
-            href="/contact"
-            className={`border-b pb-1 transition-colors hover:text-paper ${
-              pathname === "/contact" ? "border-indigo text-paper" : "border-transparent"
-            }`}
-          >
-            Contact
-          </Link>
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`border-b pb-1 transition-colors hover:text-paper ${
+                pathname === item.href ? "border-indigo text-paper" : "border-transparent"
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         <div className="hidden items-center gap-5 xl:flex">
           <Link href="/login" className="mono-label text-[11px] text-muted transition-colors hover:text-paper">
-            Login
+            Log in
           </Link>
-          <MagneticLink href="/contact" variant="primary" className="!px-5 !py-2 !text-xs whitespace-nowrap">
-            Book Free Consultation
+          <MagneticLink href="/signup" variant="primary" className="!px-5 !py-2 !text-xs whitespace-nowrap">
+            Start Generating Free
           </MagneticLink>
         </div>
 
@@ -110,14 +81,14 @@ export default function Header() {
             onClick={() => setOpen(false)}
             className="mono-label rounded-lg px-3 py-2 text-xs text-muted transition-colors hover:bg-white/5 hover:text-paper"
           >
-            Login
+            Log in
           </Link>
           <Link
-            href="/contact"
+            href="/signup"
             onClick={() => setOpen(false)}
             className="btn-primary mt-2 rounded-full px-5 py-2.5 text-center text-sm font-semibold"
           >
-            Book Free Consultation
+            Start Generating Free
           </Link>
         </nav>
       )}

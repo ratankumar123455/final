@@ -1,12 +1,12 @@
 import {
-  Store,
-  HeartPulse,
-  Cpu,
+  Megaphone,
+  Film,
+  Gamepad2,
   ShoppingCart,
+  Newspaper,
   Building2,
-  Landmark,
   GraduationCap,
-  Briefcase,
+  Palette,
   type LucideIcon,
 } from "lucide-react";
 import Reveal from "./Reveal";
@@ -14,52 +14,52 @@ import SectionHeading from "./SectionHeading";
 
 const industries: { title: string; description: string; tone: string; icon: LucideIcon }[] = [
   {
-    title: "Small Business",
-    description: "Affordable websites, marketing, and automation that let a small team compete with bigger budgets.",
+    title: "Marketing & Advertising",
+    description: "Campaign visuals and short video ads generated and iterated in hours, not weeks.",
     tone: "linear-gradient(150deg, rgba(244,169,136,0.4), rgba(253,246,233,0.92) 70%)",
-    icon: Store,
+    icon: Megaphone,
   },
   {
-    title: "Healthcare",
-    description: "Patient-facing apps, intake automation, and internal tools that respect compliance from day one.",
+    title: "Film & Video Production",
+    description: "Concept art, storyboards, and animated pre-visualization clips for production teams.",
     tone: "linear-gradient(150deg, rgba(143,188,148,0.45), rgba(253,246,233,0.92) 70%)",
-    icon: HeartPulse,
+    icon: Film,
   },
   {
-    title: "IT & Software Companies",
-    description: "White-label development capacity, AI features, and cloud infrastructure for tech teams that need to move faster.",
+    title: "Gaming & Game Studios",
+    description: "Concept art, environment tiles, and character animation references at scale.",
     tone: "linear-gradient(150deg, rgba(168,216,232,0.4), rgba(253,246,233,0.92) 70%)",
-    icon: Cpu,
+    icon: Gamepad2,
   },
   {
-    title: "Retail & E-commerce",
-    description: "Storefronts, catalogs, and marketing funnels engineered to convert browsers into buyers.",
+    title: "E-commerce & Retail",
+    description: "Product shots and short turntable-style video clips without a physical photo shoot.",
     tone: "linear-gradient(150deg, rgba(143,188,148,0.3), rgba(168,216,232,0.2) 60%, rgba(253,246,233,0.92))",
     icon: ShoppingCart,
   },
   {
-    title: "Real Estate",
-    description: "Listing platforms, CRM, and lead-gen campaigns built for long sales cycles.",
+    title: "Media & Publishing",
+    description: "Editorial illustrations and social-ready video snippets for fast-moving newsrooms.",
     tone: "linear-gradient(150deg, rgba(168,216,232,0.32), rgba(253,246,233,0.92) 70%)",
+    icon: Newspaper,
+  },
+  {
+    title: "Enterprise & SaaS",
+    description: "On-brand imagery for product marketing, decks, and in-app content, generated via API.",
+    tone: "linear-gradient(150deg, rgba(143,188,148,0.25), rgba(168,216,232,0.18) 60%, rgba(253,246,233,0.92))",
     icon: Building2,
   },
   {
-    title: "Finance & Fintech",
-    description: "Secure platforms, dashboards, and automation that meet audit and compliance needs.",
-    tone: "linear-gradient(150deg, rgba(143,188,148,0.25), rgba(168,216,232,0.18) 60%, rgba(253,246,233,0.92))",
-    icon: Landmark,
-  },
-  {
-    title: "Education",
-    description: "Learning platforms and enrollment funnels that scale with your student base.",
+    title: "Education & E-learning",
+    description: "Custom illustrations and short explainer animations for course content.",
     tone: "linear-gradient(150deg, rgba(244,169,136,0.3), rgba(253,246,233,0.92) 70%)",
     icon: GraduationCap,
   },
   {
-    title: "Professional Services",
-    description: "Branding, websites, and CRM that make a small team look and run like a big one.",
+    title: "Independent Creators",
+    description: "Concept art, album covers, and animated clips for solo artists and small studios.",
     tone: "linear-gradient(150deg, rgba(143,188,148,0.35), rgba(253,246,233,0.92) 70%)",
-    icon: Briefcase,
+    icon: Palette,
   },
 ];
 
@@ -68,8 +68,8 @@ export default function Industries() {
     <section className="hairline-b py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
-          eyebrow="Industries"
-          title="Built for businesses that are ready to grow"
+          eyebrow="Who uses Metabob"
+          title="Built for anyone who needs visuals, fast"
         />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {industries.map((item, i) => (

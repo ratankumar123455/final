@@ -1,10 +1,10 @@
 import {
-  ShoppingBag,
-  LayoutDashboard,
+  Camera,
+  Sparkles,
   Palette,
-  Smartphone,
-  Megaphone,
-  Workflow,
+  Clapperboard,
+  ShoppingBag,
+  Mountain,
   type LucideIcon,
 } from "lucide-react";
 import Reveal from "./Reveal";
@@ -12,46 +12,46 @@ import SectionHeading from "./SectionHeading";
 
 const tiles: { label: string; span: string; height: string; tone: string; icon: LucideIcon }[] = [
   {
-    label: "Ecommerce storefront",
+    label: "Photorealistic portrait",
     span: "lg:col-span-4 lg:row-span-2",
     height: "h-64 lg:h-full",
     tone: "linear-gradient(155deg, rgba(143,188,148,0.55), rgba(253,246,233,0.95) 65%)",
-    icon: ShoppingBag,
+    icon: Camera,
   },
   {
-    label: "SaaS dashboard UI",
+    label: "Stylized concept art",
     span: "lg:col-span-4",
     height: "h-48",
     tone: "linear-gradient(155deg, rgba(168,216,232,0.4), rgba(253,246,233,0.95) 65%)",
-    icon: LayoutDashboard,
+    icon: Sparkles,
   },
   {
-    label: "Brand identity system",
+    label: "Brand & campaign visual",
     span: "lg:col-span-4",
     height: "h-48",
     tone: "linear-gradient(155deg, rgba(244,169,136,0.4), rgba(253,246,233,0.95) 65%)",
     icon: Palette,
   },
   {
-    label: "Mobile app design",
+    label: "Animated product turntable",
     span: "lg:col-span-4",
     height: "h-48",
     tone: "linear-gradient(155deg, rgba(143,188,148,0.3), rgba(168,216,232,0.25) 60%, rgba(253,246,233,0.95))",
-    icon: Smartphone,
+    icon: ShoppingBag,
   },
   {
-    label: "Marketing campaign creative",
+    label: "Image-to-video clip",
     span: "lg:col-span-4",
     height: "h-48",
     tone: "linear-gradient(155deg, rgba(168,216,232,0.5), rgba(253,246,233,0.95) 65%)",
-    icon: Megaphone,
+    icon: Clapperboard,
   },
   {
-    label: "CRM & automation build",
+    label: "Landscape & environment art",
     span: "lg:col-span-4",
     height: "h-48",
     tone: "linear-gradient(155deg, rgba(143,188,148,0.5), rgba(253,246,233,0.95) 65%)",
-    icon: Workflow,
+    icon: Mountain,
   },
 ];
 
@@ -60,9 +60,9 @@ export default function Gallery() {
     <section className="hairline-b py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
-          eyebrow="Portfolio"
-          title="A sample of what we've shipped"
-          description="A cross-section of recent work — websites, apps, brands, and automation, built for real businesses."
+          eyebrow="Gallery"
+          title="A sample of what gets generated"
+          description="A cross-section of image and video output — generated end-to-end on Metabob."
         />
         <div className="grid gap-4 lg:grid-cols-12 lg:grid-rows-2">
           {tiles.map((tile, i) => (

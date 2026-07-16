@@ -4,48 +4,48 @@ import SectionHeading from "./SectionHeading";
 
 const tiers = [
   {
-    name: "Starter",
-    price: "₹39,999",
-    period: "one-time project",
-    description: "For startups launching their first website or brand.",
+    name: "Free",
+    price: "₹0",
+    period: "forever",
+    description: "For trying text-to-image and image-to-video generation.",
     features: [
-      "5-page marketing website",
-      "Basic on-page SEO setup",
-      "Brand starter kit (logo + palette)",
-      "1 round of revisions",
-      "2 weeks turnaround",
+      "50 image credits / month",
+      "Standard resolution (1024px)",
+      "Watermarked exports",
+      "5 video-seconds / month",
+      "Community support",
     ],
-    cta: "Start a project",
-    href: "/contact",
+    cta: "Start for free",
+    href: "/signup",
     featured: false,
   },
   {
-    name: "Growth",
-    price: "₹1,49,000",
-    period: "per month retainer",
-    description: "For businesses ready to invest in marketing and product together.",
+    name: "Creator",
+    price: "₹1,499",
+    period: "per month",
+    description: "For creators and small teams generating regularly.",
     features: [
-      "Website or app development",
-      "SEO + performance ad management",
-      "Social media & content marketing",
-      "Monthly reporting & strategy calls",
-      "Priority support",
+      "1,000 image credits / month",
+      "Up to 4K resolution, no watermark",
+      "100 video-seconds / month",
+      "Commercial usage license",
+      "Priority render queue",
     ],
-    cta: "Start Growth plan",
-    href: "/contact",
+    cta: "Start Creator plan",
+    href: "/signup",
     featured: true,
   },
   {
     name: "Enterprise",
     price: "Custom",
     period: "annual contract",
-    description: "For companies running software, marketing, and automation at scale.",
+    description: "For studios and companies generating at scale.",
     features: [
-      "Dedicated project & account team",
-      "Custom software, CRM, or ERP builds",
-      "AI automation & chatbot deployment",
-      "SLA-backed support and security review",
-      "Quarterly business reviews",
+      "Custom / unlimited credits",
+      "Dedicated NVIDIA GPU capacity",
+      "API access & SDKs",
+      "SSO, roles & audit logs",
+      "SLA-backed support",
     ],
     cta: "Talk to sales",
     href: "/contact",
@@ -59,8 +59,8 @@ export default function Pricing() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="Pricing"
-          title="Plans that scale with your business"
-          description="Project-based pricing to launch, or a monthly retainer for ongoing marketing, development, and automation."
+          title="Plans that scale with how much you generate"
+          description="Start free, upgrade for higher resolution and video, or talk to us about dedicated GPU capacity."
           align="center"
         />
         <div className="grid gap-6 lg:grid-cols-3">

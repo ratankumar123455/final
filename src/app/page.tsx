@@ -6,7 +6,7 @@ import HeroVisual from "@/components/HeroVisual";
 import Gallery from "@/components/Gallery";
 import BentoFeatures from "@/components/BentoFeatures";
 import ProductShowcase from "@/components/ProductShowcase";
-import WhySutertai from "@/components/WhySutertai";
+import WhyMetabob from "@/components/WhyMetabob";
 import CapabilitiesGrid from "@/components/CapabilitiesGrid";
 import AiSolutions from "@/components/AiSolutions";
 import ProcessTimeline from "@/components/ProcessTimeline";
@@ -20,12 +20,13 @@ import Pricing from "@/components/Pricing";
 import Faq from "@/components/Faq";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import AmbientBlobs from "@/components/AmbientBlobs";
+import LoginPromo from "@/components/LoginPromo";
 
 const heroStats = [
-  { value: "60+", label: "Projects" },
-  { value: "40+", label: "Clients" },
-  { value: "98%", label: "Satisfaction" },
-  { value: "24/7", label: "Support" },
+  { value: "12M+", label: "Images / mo" },
+  { value: "40K+", label: "Creators" },
+  { value: "4.2s", label: "Avg. render" },
+  { value: "99.9%", label: "GPU uptime" },
 ];
 
 export default function Home() {
@@ -39,29 +40,29 @@ export default function Home() {
             <Reveal>
               <span className="eyebrow-chip">
                 <span className="dot">/</span>
-                <span>Sutertai Private Limited — AI-Powered Digital Agency</span>
+                <span>Metabob Private Limited — Generative AI Platform</span>
               </span>
             </Reveal>
             <Reveal delay={80}>
               <h1 className="font-display mt-6 max-w-2xl text-6xl leading-[1.02] font-medium text-paper sm:text-8xl">
-                Empowering Businesses with{" "}
-                <span className="text-generated">AI-Powered Digital Solutions</span>
+                Turn text into images,{" "}
+                <span className="text-generated">and images into video</span>
               </h1>
             </Reveal>
             <Reveal delay={160}>
               <p className="mt-8 max-w-xl text-xl text-muted">
-                We help businesses accelerate growth with intelligent
-                websites, AI automation, custom software, digital marketing,
-                branding, and scalable technology solutions that drive
-                measurable success.
+                Metabob is a generative AI platform that renders your prompts
+                into images and animates images into short videos — running
+                on dedicated NVIDIA GPUs across AWS infrastructure, built for
+                speed and scale.
               </p>
             </Reveal>
             <Reveal delay={240} className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <MagneticLink href="/contact" variant="primary">
-                Get Started
+              <MagneticLink href="/signup" variant="primary">
+                Start Generating Free
               </MagneticLink>
               <MagneticLink href="#services-preview" variant="secondary">
-                Explore Services
+                See the Product
               </MagneticLink>
             </Reveal>
             <Reveal delay={300} className="mt-12 grid w-full max-w-lg grid-cols-4 gap-4 border-t border-[var(--line)] pt-6">
@@ -87,20 +88,23 @@ export default function Home() {
 
       <ProductShowcase />
 
-      {/* Section 1: AI Digital Marketing */}
+      {/* Section 1: Text-to-Image */}
       <CapabilitiesGrid />
 
-      {/* Section 2: Website & Software Development */}
+      {/* Section 2: How it works */}
       <ProcessTimeline />
       <TechPanel />
       <TechLogos />
 
-      {/* Section 3: AI Solutions & Automation */}
+      {/* Section 3: Image-to-Video */}
       <AiSolutions />
       <ScaleChart />
 
-      {/* Section 4: Why Choose Sutertai */}
-      <WhySutertai />
+      {/* Section 4: Why Choose Metabob */}
+      <WhyMetabob />
+
+      {/* Section 5: Account access */}
+      <LoginPromo />
 
       <Industries />
       <Gallery />

@@ -2,12 +2,12 @@ import MagneticLink from "./MagneticLink";
 import Reveal from "./Reveal";
 
 export default function CtaBanner({
-  title = "Ready to Transform Your Business?",
-  description = "Let's build intelligent digital solutions together.",
-  primaryHref = "/contact#consultation",
-  primaryLabel = "Schedule a Meeting",
+  title = "Ready to bring your ideas to life?",
+  description = "Generate your first image free — no credit card required.",
+  primaryHref = "/signup",
+  primaryLabel = "Start Generating Free",
   secondaryHref = "/contact",
-  secondaryLabel = "Contact Us",
+  secondaryLabel = "Contact Sales",
 }: {
   title?: string;
   description?: string;

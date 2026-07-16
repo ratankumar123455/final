@@ -25,45 +25,45 @@ const displayGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://www.sutertai.com";
+const siteUrl = "https://www.metabob.in";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Sutertai — Transform Your Business With AI-Powered Digital Solutions",
-    template: "%s | Sutertai",
+    default: "Metabob — Generative AI for Text-to-Image and Image-to-Video",
+    template: "%s | Metabob",
   },
   description:
-    "Sutertai Private Limited is an AI-powered digital marketing and technology agency — websites, software, AI products, SEO, branding, mobile apps, and business automation for startups and enterprises.",
+    "Metabob Private Limited builds a generative AI platform that turns text prompts into images and images into video, running on NVIDIA GPU infrastructure across AWS — for creative teams, marketers, and studios.",
   keywords: [
-    "Sutertai",
-    "AI digital marketing agency",
-    "website development",
-    "software development company",
-    "AI product development",
-    "SEO agency India",
-    "social media marketing",
-    "business automation",
-    "CRM development",
-    "cloud solutions",
-    "branding agency Prayagraj",
+    "Metabob",
+    "text to image AI",
+    "image to video AI",
+    "generative AI platform",
+    "AWS generative AI",
+    "NVIDIA GPU AI",
+    "AI video generation",
+    "AI image generation",
+    "diffusion models",
+    "creative AI tools",
+    "AI content generation India",
   ],
-  authors: [{ name: "Sutertai Private Limited" }],
-  creator: "Sutertai Private Limited",
+  authors: [{ name: "Metabob Private Limited" }],
+  creator: "Metabob Private Limited",
   openGraph: {
-    title: "Sutertai — Transform Your Business With AI-Powered Digital Solutions",
+    title: "Metabob — Generative AI for Text-to-Image and Image-to-Video",
     description:
-      "Websites, software, AI products, marketing, and automation — everything a growing business needs under one roof.",
+      "Turn a prompt into an image, and an image into video — powered by NVIDIA GPUs on AWS infrastructure.",
     url: siteUrl,
-    siteName: "Sutertai",
+    siteName: "Metabob",
     type: "website",
     locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sutertai — Transform Your Business With AI-Powered Digital Solutions",
+    title: "Metabob — Generative AI for Text-to-Image and Image-to-Video",
     description:
-      "Websites, software, AI products, marketing, and automation — everything a growing business needs under one roof.",
+      "Turn a prompt into an image, and an image into video — powered by NVIDIA GPUs on AWS infrastructure.",
   },
   robots: {
     index: true,
@@ -76,39 +76,35 @@ export const metadata: Metadata = {
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "Sutertai Private Limited",
+  "@type": "Organization",
+  name: "Metabob Private Limited",
   url: siteUrl,
   logo: `${siteUrl}/icon`,
-  foundingDate: "2023",
+  foundingDate: "2024",
   founder: {
     "@type": "Person",
-    name: "Ramesh Sharma",
+    name: "Aarav Mehta",
   },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "174 Kasturba Gandhi Marg, Kachehri, near Hawaijahaj",
-    addressLocality: "Prayagraj",
-    addressRegion: "Uttar Pradesh",
-    postalCode: "211002",
+    streetAddress: "4th Floor, Prestige Tech Park, Kadubeesanahalli",
+    addressLocality: "Bengaluru",
+    addressRegion: "Karnataka",
+    postalCode: "560103",
     addressCountry: "IN",
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+91-7459887412",
+    telephone: "+91-91234-56789",
     contactType: "sales",
-    email: "hello@sutertai.com",
+    email: "hello@metabob.in",
   },
   areaServed: "Worldwide",
   makesOffer: [
-    "AI Powered Digital Marketing",
-    "Website Development",
-    "Software Development",
-    "AI Product Development",
-    "Mobile App Development",
-    "UI/UX Design",
-    "Business Automation & CRM",
-    "Cloud Solutions",
+    "Text-to-Image Generation",
+    "Image-to-Video Generation",
+    "Generative AI API",
+    "Enterprise AI Infrastructure",
   ].map((name) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name } })),
 };
 

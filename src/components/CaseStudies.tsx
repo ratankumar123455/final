@@ -1,4 +1,4 @@
-import { Store, Building2, HeartPulse, Rocket, type LucideIcon } from "lucide-react";
+import { Megaphone, ShoppingBag, Clapperboard, Gamepad2, type LucideIcon } from "lucide-react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
@@ -11,40 +11,40 @@ const cases: {
   description: string;
 }[] = [
   {
-    tag: "Retail",
-    icon: Store,
-    metric: "186%",
-    metricLabel: "increase in organic traffic",
-    title: "A regional retail chain rebuilt its SEO and content from scratch",
+    tag: "Advertising",
+    icon: Megaphone,
+    metric: "12x",
+    metricLabel: "faster campaign turnaround",
+    title: "An ad agency replaced its stock photo budget with generated visuals",
     description:
-      "Sutertai rebuilt technical SEO, restructured the content strategy, and shipped a faster storefront — organic traffic nearly tripled within two quarters.",
+      "Metabob generated on-brand campaign imagery in hours instead of the usual multi-week shoot-and-license cycle, freeing budget for media spend.",
   },
   {
-    tag: "Real Estate",
-    icon: Building2,
-    metric: "240%",
-    metricLabel: "more qualified leads",
-    title: "A real estate developer replaced spreadsheets with a real CRM",
+    tag: "E-commerce",
+    icon: ShoppingBag,
+    metric: "3,200+",
+    metricLabel: "product images generated monthly",
+    title: "A retail brand generates every new product shot with Metabob",
     description:
-      "A custom CRM and automated lead-scoring pipeline meant sales teams stopped chasing cold leads and started closing warm ones, faster.",
+      "Text-to-image generation replaced recurring studio photo shoots for catalog updates, with image-to-video adding turntable clips for the same SKUs.",
   },
   {
-    tag: "Healthcare",
-    icon: HeartPulse,
-    metric: "62%",
-    metricLabel: "faster patient onboarding",
-    title: "A healthcare provider automated intake with an AI chatbot",
+    tag: "Film",
+    icon: Clapperboard,
+    metric: "70%",
+    metricLabel: "less time on pre-visualization",
+    title: "An indie studio storyboards entire scenes before a single frame is shot",
     description:
-      "An AI-powered intake assistant cut manual data entry and appointment scheduling time, freeing front-desk staff for higher-value work.",
+      "Concept art generated from script excerpts, then animated into rough motion tests, gave the production team a shared visual language early.",
   },
   {
-    tag: "SaaS",
-    icon: Rocket,
-    metric: "3 weeks",
-    metricLabel: "from kickoff to launch",
-    title: "A startup shipped its MVP in three weeks, not three months",
+    tag: "Gaming",
+    icon: Gamepad2,
+    metric: "5x",
+    metricLabel: "more concept variations explored",
+    title: "A game studio explores five times more art directions per sprint",
     description:
-      "A tightly scoped sprint plan and a proven technology stack got a SaaS founder in front of investors with a working product, not a deck.",
+      "Batch generation let the art team compare dozens of environment and character concepts before committing an artist's time to final assets.",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function CaseStudies() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="Case studies"
-          title="What businesses build with Sutertai"
+          title="What teams build with Metabob"
         />
         <div className="grid gap-6 sm:grid-cols-2">
           {cases.map((item, i) => (

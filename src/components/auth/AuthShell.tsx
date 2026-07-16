@@ -32,7 +32,7 @@ export default function AuthShell({
         </div>
         <div className="glass-panel rounded-2xl p-8">{children}</div>
         <p className="mt-6 text-center text-xs text-muted">
-          By continuing, you agree to Sutertai&apos;s{" "}
+          By continuing, you agree to Metabob&apos;s{" "}
           <Link href="/terms" className="text-accent hover:underline">
             Terms
           </Link>{" "}

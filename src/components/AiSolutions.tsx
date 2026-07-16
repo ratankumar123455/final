@@ -1,76 +1,70 @@
-import { Bot, Workflow, Plug, BarChart3, GitBranch, Brain, type LucideIcon } from "lucide-react";
+import { Clapperboard, MoveDiagonal, RefreshCw, Gauge, Film, Sparkles, type LucideIcon } from "lucide-react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
 const capabilities: { tag: string; title: string; description: string; tone: string; icon: LucideIcon }[] = [
   {
-    tag: "Support",
-    title: "Chatbots & AI Agents",
-    description: "Always-on conversational agents that qualify leads and resolve support tickets.",
+    tag: "Motion",
+    title: "Image-to-Video Animation",
+    description: "Turn any still image into a short video clip with natural, consistent motion.",
     tone: "linear-gradient(150deg, rgba(143,188,148,0.5), rgba(253,246,233,0.92) 70%)",
-    icon: Bot,
+    icon: Clapperboard,
   },
   {
-    tag: "Ops",
-    title: "Business & Workflow Automation",
-    description: "Repetitive tasks — invoicing, follow-ups, reporting — running without a human in the loop.",
+    tag: "Camera",
+    title: "Camera Motion Control",
+    description: "Add pan, zoom, or orbit motion to a static frame without re-shooting anything.",
     tone: "linear-gradient(150deg, rgba(168,216,232,0.4), rgba(253,246,233,0.92) 70%)",
-    icon: Workflow,
+    icon: MoveDiagonal,
   },
   {
-    tag: "Build",
-    title: "Custom GPT & AI Integrations",
-    description: "Purpose-built AI tools wired into your existing systems and data.",
+    tag: "Consistency",
+    title: "Frame-Consistent Rendering",
+    description: "Temporal smoothing keeps subjects stable across every frame — no flicker or drift.",
     tone: "linear-gradient(150deg, rgba(244,169,136,0.4), rgba(253,246,233,0.92) 70%)",
-    icon: Plug,
+    icon: RefreshCw,
   },
   {
-    tag: "Insight",
-    title: "Data Analytics & ML",
-    description: "Predictive models and dashboards that turn raw data into decisions.",
+    tag: "Speed",
+    title: "Fast GPU Rendering",
+    description: "Most clips render in under a minute on dedicated NVIDIA GPU capacity.",
     tone: "linear-gradient(150deg, rgba(143,188,148,0.3), rgba(168,216,232,0.2) 60%, rgba(253,246,233,0.92))",
-    icon: BarChart3,
+    icon: Gauge,
   },
   {
-    tag: "Scale",
-    title: "Automation Pipelines",
-    description: "End-to-end pipelines connecting your CRM, marketing, and operations tools.",
+    tag: "Format",
+    title: "Loop, Extend & Export",
+    description: "Export as a seamless loop, extend clip length, or render straight to MP4.",
     tone: "linear-gradient(150deg, rgba(168,216,232,0.25), rgba(253,246,233,0.92) 70%)",
-    icon: GitBranch,
+    icon: Film,
   },
   {
-    tag: "Future",
-    title: "Machine Learning Solutions",
-    description: "Applied ML for forecasting, personalization, and fraud detection.",
+    tag: "Quality",
+    title: "Up to 1080p, 24-30fps",
+    description: "Broadcast- and social-ready output straight out of the render pipeline.",
     tone: "linear-gradient(150deg, rgba(143,188,148,0.22), rgba(253,246,233,0.92) 70%)",
-    icon: Brain,
+    icon: Sparkles,
   },
 ];
 
 export default function AiSolutions() {
   return (
-    <section id="ai-solutions" className="hairline-b section-tint scroll-mt-24 py-24">
+    <section id="image-to-video" className="hairline-b section-tint scroll-mt-24 py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
-          eyebrow="AI Solutions & Automation"
-          title="Put AI to work on the tasks slowing you down"
+          eyebrow="Image-to-Video"
+          title="Give a still image somewhere to go"
         />
         <p className="mb-10 max-w-2xl text-muted">
-          Most businesses don&apos;t need more software — they need the
-          software they already have to talk to each other, and the manual
-          work between systems to disappear. Sutertai builds chatbots and AI
-          agents that handle first-line support and lead qualification,
-          workflow automations that replace spreadsheets and manual
-          hand-offs, and custom GPT integrations wired directly into your
-          CRM, inventory, or support desk. Underneath it, our data analytics
-          and machine learning work turns the numbers you&apos;re already
-          collecting into forecasts, personalization, and fraud or anomaly
-          detection you can act on. We&apos;ve shipped these systems across
-          retail, real estate, healthcare, and financial services — the
-          pattern repeats everywhere: fewer manual steps, faster response
-          times, and a team that spends its day on judgment calls instead of
-          data entry. This is what a future-ready business looks like from
-          the inside.
+          A single image is a starting point, not the end of the story.
+          Metabob&apos;s image-to-video model takes any generated or uploaded
+          image and animates it into a short clip — a product turning under
+          studio light, a landscape drifting into motion, a character
+          blinking and breathing. Camera motion, loop points, and clip length
+          are all controllable, and the underlying video diffusion model runs
+          on the same NVIDIA GPU clusters as our image pipeline, so there&apos;s
+          no separate tool, export, or upload step between generating the
+          image and animating it.
         </p>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {capabilities.map((item, i) => (

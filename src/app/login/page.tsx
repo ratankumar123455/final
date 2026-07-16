@@ -60,13 +60,13 @@ export default function LoginPage() {
 
   if (view === "success") {
     return (
-      <AuthShell eyebrow="Client Portal" title="Welcome back" description="You're signed in.">
+      <AuthShell eyebrow="Metabob Account" title="Welcome back" description="You're signed in.">
         <div className="text-center">
           <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[var(--green)]/15 text-2xl text-generated">
             ✓
           </div>
           <p className="mt-4 text-sm text-muted">
-            You can close this and return anytime.
+            Your workspace, credits, and generation history are ready.
           </p>
           <Link href="/" className="btn-primary mt-6 inline-flex rounded-full px-6 py-3 text-sm font-semibold">
             Back to home
@@ -78,7 +78,7 @@ export default function LoginPage() {
 
   if (view === "sent") {
     return (
-      <AuthShell eyebrow="Client Portal" title="Check your email" description={`We've sent a password reset link to ${resetEmail}.`}>
+      <AuthShell eyebrow="Metabob Account" title="Check your email" description={`We've sent a password reset link to ${resetEmail}.`}>
         <div className="text-center">
           <p className="text-sm text-muted">
             Didn&apos;t get it? Check spam, or try again in a minute.
@@ -96,7 +96,7 @@ export default function LoginPage() {
 
   if (view === "forgot") {
     return (
-      <AuthShell eyebrow="Client Portal" title="Reset your password" description="Enter your email and we'll send you a reset link.">
+      <AuthShell eyebrow="Metabob Account" title="Reset your password" description="Enter your email and we'll send you a reset link.">
         <form onSubmit={handleForgotSubmit(onForgotSubmit)} className="flex flex-col gap-5" noValidate>
           <Controller
             name="email"
@@ -129,7 +129,7 @@ export default function LoginPage() {
   }
 
   return (
-    <AuthShell eyebrow="Client Portal" title="Welcome back" description="Sign in to your Sutertai account.">
+    <AuthShell eyebrow="Metabob Account" title="Welcome back" description="Sign in to your Metabob workspace.">
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5" noValidate>
         <Controller
           name="email"

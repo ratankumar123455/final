@@ -7,34 +7,34 @@ import Reveal from "./Reveal";
 
 const services = [
   {
-    tag: "Marketing",
-    title: "AI Digital Marketing",
-    description: "SEO, paid ads, content, and AI automation that turn visibility into revenue.",
-    features: ["SEO & performance ads", "AI marketing automation", "Content & email marketing", "Conversion optimization"],
+    tag: "Image",
+    title: "Text-to-Image Generation",
+    description: "Turn a written prompt into a finished image, in seconds, at production quality.",
+    features: ["Photorealistic & stylized modes", "Up to 4K resolution", "Batch & variation generation", "Custom style presets"],
   },
   {
-    tag: "Development",
-    title: "Website & Software Development",
-    description: "Corporate sites, ecommerce, ERP, CRM, and SaaS platforms built to scale.",
-    features: ["Custom websites & ecommerce", "ERP, CRM & SaaS platforms", "API integration", "Cloud hosting & DevOps"],
+    tag: "Video",
+    title: "Image-to-Video Generation",
+    description: "Bring any generated or uploaded image to life as a short, motion-consistent video clip.",
+    features: ["Camera pan, zoom & motion control", "Up to 1080p, 24-30fps", "Loop, extend & re-render", "Frame-consistent animation"],
   },
   {
-    tag: "AI",
-    title: "AI Solutions & Automation",
-    description: "Chatbots, AI agents, and workflow automation that cut manual work to zero.",
-    features: ["Chatbots & AI agents", "Workflow automation", "Custom GPT integrations", "Data analytics & ML"],
+    tag: "API",
+    title: "Developer API & Integrations",
+    description: "Call the same generation pipeline that powers our app directly from your product.",
+    features: ["REST API & SDKs", "Webhook callbacks", "Usage-based billing", "Sandbox & production keys"],
   },
   {
-    tag: "Mobile",
-    title: "Mobile App Development",
-    description: "Native and cross-platform apps designed for retention, not just launch.",
-    features: ["iOS & Android native", "Cross-platform builds", "App Store optimization", "Post-launch support"],
+    tag: "Infra",
+    title: "AWS + NVIDIA Infrastructure",
+    description: "Every request is routed to dedicated NVIDIA GPU capacity, orchestrated on AWS.",
+    features: ["NVIDIA H100 / A100 clusters", "AWS auto-scaling & failover", "Regional data residency", "SOC 2-aligned controls"],
   },
   {
-    tag: "Cloud",
-    title: "Business Automation & Cloud",
-    description: "CRM, ERP, and cloud infrastructure that removes manual, repetitive work.",
-    features: ["CRM & ERP implementation", "Workflow automation", "Cloud migration & scaling", "Security & monitoring"],
+    tag: "Team",
+    title: "Enterprise & Team Workspaces",
+    description: "Shared workspaces, roles, and usage controls for teams generating at scale.",
+    features: ["Role-based access control", "Shared asset libraries", "SSO & audit logs", "Volume pricing & SLAs"],
   },
 ];
 
@@ -46,8 +46,8 @@ export default function ProductShowcase() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="What we do"
-          title="One partner. Every digital capability."
-          description="Sutertai brings marketing, engineering, and AI under one roof — so your growth strategy and your technology actually work together."
+          title="One platform, from prompt to finished video"
+          description="Metabob brings image generation, video generation, and the infrastructure behind them under one roof, so creative teams don't have to stitch tools together."
         />
         <div className="grid gap-3">
           {services.map((service, i) => {

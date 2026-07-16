@@ -7,7 +7,7 @@ import CtaBanner from "@/components/CtaBanner";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Sutertai pricing — Starter project pricing, a Growth retainer for ongoing marketing and development, or a custom Enterprise plan.",
+    "Metabob pricing — a free plan to try text-to-image and image-to-video generation, a Creator plan for regular use, or a custom Enterprise plan with dedicated GPU capacity.",
 };
 
 export default function PricingPage() {
@@ -20,7 +20,7 @@ export default function PricingPage() {
             Simple plans, <span className="text-generated">built to scale</span>
           </>
         }
-        description="No hidden fees. No vague 'contact us for everything' pricing. Pick a plan that matches where your business is today."
+        description="No hidden per-render fees. Start free, upgrade for full resolution and video, or talk to us about dedicated GPU capacity."
       />
       <Pricing />
       <Faq />

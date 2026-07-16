@@ -6,50 +6,49 @@ import Reveal from "./Reveal";
 
 const items = [
   {
-    name: "Frontend & Design",
+    name: "Generative Models",
     detail:
-      "React, Next.js, TypeScript, and Tailwind CSS for interfaces that are fast, accessible, and easy to maintain.",
+      "Custom-trained diffusion models for text-to-image and image-to-video, fine-tuned on licensed and proprietary datasets for photorealism and style range.",
     specs: [
-      { k: "Frameworks", v: "React / Next.js" },
-      { k: "Lighthouse", v: "90+ target" },
+      { k: "Architecture", v: "Latent diffusion" },
+      { k: "Max resolution", v: "4K image / 1080p video" },
     ],
   },
   {
-    name: "Backend & APIs",
+    name: "NVIDIA GPU Compute",
     detail:
-      "Node.js, Python, and REST/GraphQL APIs power everything from marketing sites to enterprise ERP and CRM systems.",
+      "Every generation request runs on dedicated NVIDIA H100 and A100 GPUs, with CUDA-optimized inference for low-latency rendering at scale.",
     specs: [
-      { k: "Runtimes", v: "Node / Python" },
-      { k: "Uptime", v: "99.9%" },
+      { k: "GPUs", v: "NVIDIA H100 / A100" },
+      { k: "Avg. render", v: "4.2s / image" },
     ],
   },
   {
-    name: "AI & Automation",
+    name: "AWS Cloud Infrastructure",
     detail:
-      "Custom GPT integrations, ML pipelines, and conversational AI built on Amazon Bedrock, SageMaker, and Lex, plus workflow automation tools that remove manual work from your business.",
+      "GPU clusters are orchestrated on AWS — EC2 P5/P4 instances for compute, S3 for asset storage, and Bedrock/SageMaker for model hosting and fine-tuning pipelines.",
     specs: [
-      { k: "Generative AI", v: "Amazon Bedrock" },
-      { k: "ML training", v: "Amazon SageMaker" },
-      { k: "Chatbots", v: "Amazon Lex" },
-    ],
-  },
-  {
-    name: "Cloud & DevOps",
-    detail:
-      "We run client platforms on AWS — EC2 for virtual servers, S3 for object storage, and Amplify for full-stack web and mobile apps — with CI/CD pipelines, monitoring, and auto-scaling built in from day one.",
-    specs: [
-      { k: "Compute", v: "AWS EC2" },
+      { k: "Compute", v: "AWS EC2 P5 / P4" },
       { k: "Storage", v: "AWS S3" },
-      { k: "Full-stack", v: "AWS Amplify" },
+      { k: "ML platform", v: "AWS SageMaker" },
+    ],
+  },
+  {
+    name: "API & Delivery",
+    detail:
+      "A REST API and SDKs expose the same pipeline that powers our app, with rendered assets delivered through a global CDN for fast load times anywhere.",
+    specs: [
+      { k: "Interface", v: "REST API / SDKs" },
+      { k: "Delivery", v: "Global CDN" },
     ],
   },
   {
     name: "Security & Compliance",
     detail:
-      "Encryption at rest and in transit, access controls, and regular audits so client data stays protected as you scale.",
+      "Encryption at rest and in transit, role-based access control, and SOC 2-aligned operational practices keep generated content and account data protected.",
     specs: [
       { k: "Encryption", v: "AES-256" },
-      { k: "Reviews", v: "Continuous" },
+      { k: "Controls", v: "SOC 2-aligned" },
     ],
   },
 ];
@@ -59,9 +58,9 @@ export default function TechPanel() {
   const current = items[active];
 
   return (
-    <section id="software-development" className="hairline-b scroll-mt-24 py-24">
+    <section id="technology" className="hairline-b scroll-mt-24 py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionHeading eyebrow="Technology Stack" title="Modern technology, explained plainly" />
+        <SectionHeading eyebrow="Technology Stack" title="Built on NVIDIA GPUs and AWS infrastructure" />
         <Reveal className="grid gap-px overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--line)] lg:grid-cols-[280px_1fr]">
           <div className="bg-[var(--ink)] p-2">
             {items.map((item, i) => (

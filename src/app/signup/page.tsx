@@ -69,13 +69,13 @@ export default function SignupPage() {
 
   if (view === "success") {
     return (
-      <AuthShell eyebrow="Client Portal" title="You're all set" description="Your account has been created.">
+      <AuthShell eyebrow="Metabob Account" title="You're all set" description="Your account has been created.">
         <div className="text-center">
           <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[var(--green)]/15 text-2xl text-generated">
             ✓
           </div>
           <p className="mt-4 text-sm text-muted">
-            Our team will reach out shortly to help you get started.
+            Your free credits are ready — start generating whenever you like.
           </p>
           <Link href="/" className="btn-primary mt-6 inline-flex rounded-full px-6 py-3 text-sm font-semibold">
             Back to home
@@ -87,7 +87,7 @@ export default function SignupPage() {
 
   if (view === "otp") {
     return (
-      <AuthShell eyebrow="Client Portal" title="Verify your email" description={`Enter the 6-digit code we sent to ${signupEmail}.`}>
+      <AuthShell eyebrow="Metabob Account" title="Verify your email" description={`Enter the 6-digit code we sent to ${signupEmail}.`}>
         <form onSubmit={handleVerify} className="flex flex-col gap-5">
           <OtpInput value={otp} onChange={setOtp} />
           {otpError && <p className="text-xs text-red-400">{otpError}</p>}
@@ -107,7 +107,7 @@ export default function SignupPage() {
   }
 
   return (
-    <AuthShell eyebrow="Client Portal" title="Create your account" description="Set up access to Sutertai's client portal.">
+    <AuthShell eyebrow="Metabob Account" title="Create your account" description="Start generating with 50 free image credits.">
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5" noValidate>
         <Controller
           name="name"

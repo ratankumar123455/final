@@ -6,87 +6,87 @@ import AnimatedCounter from "./AnimatedCounter";
 const secondary = [
   {
     stat: "24/7",
-    title: "Always-on support",
-    description: "A dedicated account team that responds inside a business day, every day.",
+    title: "Always-on GPU capacity",
+    description: "Dedicated NVIDIA GPU clusters that scale on AWS, day or night, with no queue.",
   },
   {
     stat: "AES-256",
     title: "Security by default",
-    description: "Client data, credentials, and code are encrypted at rest and in transit, always.",
+    description: "Generated content and account data are encrypted at rest and in transit, always.",
   },
 ];
 
 const supporting = [
   {
-    stat: "40+",
-    title: "Happy clients",
-    description: "Startups and enterprises who've shipped growth with Sutertai.",
+    stat: "40K+",
+    title: "Creators & teams",
+    description: "Marketers, studios, and developers generating with Metabob every month.",
   },
   {
-    stat: "60+",
-    title: "Projects delivered",
-    description: "Websites, apps, and AI systems shipped on time, on budget.",
+    stat: "12M+",
+    title: "Images generated",
+    description: "Images and video clips rendered on our platform every month.",
   },
   {
     stat: "4",
-    title: "Countries served",
-    description: "Clients across India, the Gulf, and North America.",
+    title: "AWS regions",
+    description: "GPU capacity distributed across regions for low-latency rendering.",
   },
 ];
 
 const reasons = [
   {
     icon: Sparkles,
-    title: "AI-first approach",
-    description: "Every engagement looks for where AI genuinely saves time, not where it's a buzzword.",
+    title: "Frontier generative models",
+    description: "Diffusion models fine-tuned for photorealism, style range, and motion consistency.",
   },
   {
     icon: Blocks,
-    title: "Custom-built solutions",
-    description: "No fixed templates — every build is scoped to your workflow, not the other way around.",
+    title: "One pipeline, image to video",
+    description: "Generate the image and animate it in the same workspace — no exports, no re-uploads.",
   },
   {
     icon: Users,
-    title: "Experienced developers",
-    description: "A senior-led team that has shipped production software across a dozen industries.",
+    title: "Built by ML researchers",
+    description: "A team that has shipped production generative AI systems, not just research demos.",
   },
   {
     icon: Layers,
-    title: "Modern technology stack",
-    description: "React, Next.js, and AWS infrastructure built to scale from day one.",
+    title: "NVIDIA + AWS foundation",
+    description: "GPU compute and cloud infrastructure engineered to scale from day one.",
   },
   {
     icon: Rocket,
-    title: "Fast delivery",
-    description: "Most projects reach a live, working first version inside three weeks.",
+    title: "Seconds, not minutes",
+    description: "Most images render in under 5 seconds; most video clips in under a minute.",
   },
   {
     icon: Headset,
-    title: "Dedicated support",
-    description: "A named account team, not a rotating support queue.",
+    title: "Dedicated enterprise support",
+    description: "A named account team and SLA-backed support for Studio and Enterprise plans.",
   },
 ];
 
-export default function WhySutertai() {
+export default function WhyMetabob() {
   return (
     <section className="hairline-b section-tint py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
-          eyebrow="Why Sutertai"
-          title="Engineering and strategy, not just promises"
-          description="Serious growth needs serious infrastructure. Here's what's underneath every engagement."
+          eyebrow="Why Metabob"
+          title="Serious infrastructure behind every generation"
+          description="Fast, high-quality generation isn't magic — it's GPU capacity, model engineering, and reliability, all working together."
         />
 
         <div className="grid gap-5 lg:grid-cols-12">
           <Reveal className="card-lift flex flex-col justify-between rounded-2xl border border-[var(--line)] p-8 lg:col-span-5 lg:row-span-2">
             <div>
-              <span className="mono-label text-[10px] text-accent">Delivery speed</span>
+              <span className="mono-label text-[10px] text-accent">Render speed</span>
               <h3 className="font-display mt-3 text-2xl text-paper">
-                Fast delivery without cutting corners
+                Fast rendering without cutting quality
               </h3>
               <p className="mt-3 max-w-xs text-sm text-muted">
-                Median time from kickoff to a live, working first version across
-                our website and app engagements.
+                Median time from prompt submission to a finished image across
+                our platform.
               </p>
             </div>
             <div className="mt-8 flex items-center gap-6">
@@ -98,13 +98,13 @@ export default function WhySutertai() {
                 }}
               >
                 <div className="flex h-[88px] w-[88px] items-center justify-center rounded-full bg-[var(--ink)]">
-                  <span className="font-display text-2xl text-generated">3 wks</span>
+                  <span className="font-display text-2xl text-generated">4.2s</span>
                 </div>
               </div>
               <p className="mono-label text-[10px] text-muted-2">
-                85% of projects
+                85% of renders
                 <br />
-                reach v1 on schedule
+                complete under 5s
               </p>
             </div>
           </Reveal>

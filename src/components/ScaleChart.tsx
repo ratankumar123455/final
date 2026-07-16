@@ -22,9 +22,9 @@ function toAreaPath() {
 }
 
 const supporting = [
-  "Automation pipelines that run around the clock, not just business hours",
-  "AI agents that qualify leads before a human ever picks up the phone",
-  "Dashboards that show ROI in real time, not at the end of the quarter",
+  "NVIDIA GPU clusters that auto-scale on AWS around the clock",
+  "Rendering pipelines that hold steady through traffic spikes",
+  "Usage dashboards that show generation volume in real time",
 ];
 
 export default function ScaleChart() {
@@ -33,8 +33,8 @@ export default function ScaleChart() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="Built for scale"
-          title="Automation that compounds your output"
-          description="Average growth in qualified leads for clients running Sutertai's AI automation and chatbot systems, indexed to month one."
+          title="Infrastructure that compounds with demand"
+          description="Growth in monthly image and video generations on Metabob's platform, indexed to month one."
         />
         <Reveal className="surface rounded-2xl p-6 sm:p-10">
           <div className="wide-chart" style={{ overflowX: "auto" }}>
@@ -43,7 +43,7 @@ export default function ScaleChart() {
               className="w-full"
               style={{ minWidth: 480 }}
               role="img"
-              aria-label="Qualified leads trending upward over twelve months"
+              aria-label="Generation volume trending upward over twelve months"
             >
               <defs>
                 <linearGradient id="scale-fill" x1="0" y1="0" x2="0" y2="1">
